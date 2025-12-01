@@ -20,7 +20,7 @@ body {
 
 /* Header - top of page */
 header {
-  background-color: pink;
+    background-color: #1e1e1e;
 }
 
 /* Main content area - grows to fill available vertical space */
@@ -65,8 +65,35 @@ nav {
 .nav-link:hover {
   text-decoration: underline;
 }
+.countdown-bar {
+    background-color: #000;      /* black strip */
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px 0;
+}
 
-/* ===== HERO SECTION ===== */
+.countdown-box {
+    border: 2px solid #0D9BBC;  /* blue */
+    padding: 8px 18px;
+    text-align: center;
+    color: #dae0d0; 
+    font-family: "Lexend Exa", sans-serif;
+    border-radius: 4px;
+}
+
+.count-number {
+    display: block;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.count-label {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* HERO SECTION */
 
 /* Whole hero area */
 .introduction-section {
@@ -77,6 +104,7 @@ nav {
   background-size: 2000px auto; /* make splash large */
   padding-bottom: 400px; /* enough height to show splash */
 }
+
 
 /* Wrapper for logo + headings */
 .content-hero {
@@ -159,7 +187,7 @@ nav {
 }
 
 
-/* ===== FOOTER ===== */
+/*  FOOTER  */
 footer {
   background-color: green;
 }
