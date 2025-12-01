@@ -1,6 +1,14 @@
 /* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lexend+Exa:wght@100..900&display=swap");
 
+/*  Text in black divs make lightest-green #DAE0D0
+text in heading, titles, forms etc. blue #0B667A
+paragraphs off-black #1E1E1E
+background green #CEDDBB
+Black div with title blue #0D9BBC
+lighter black text (extra comments) #424242  */
+
+
 /* Reset all default styles */
 * {
   margin: 0;
@@ -154,9 +162,52 @@ nav {
   margin-top: 0;
 }
 
+/* hero buttons */
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.btn-hero {
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 18px;
+    font-weight: 600; /*  semi-bold */
+    padding: 12px 28px;
+    border-radius: 6px;  /* rounded corners */
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+/* light black button */
+.primary-btn {
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 2px solid #1e1e1e;
+}
+
+.primary-btn:hover {
+    background-color: #333; /* subtle fade */
+}
+
+/* Outlined button */
+.outline-btn {
+    background-color: transparent;
+    border: 2px solid #1e1e1e;
+    color: #1e1e1e;
+}
+
+.outline-btn:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+
 /* feature strip with icons */
 .feature-strip {
-    background-color: #000000;
+    background-color: #1e1e1e;
     color: #dae0d0;
     padding: 20px 0;
     display: flex;
