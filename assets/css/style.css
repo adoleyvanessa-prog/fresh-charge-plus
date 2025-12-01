@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lexend+Exa:wght@100..900&display=swap');
+
 /* Reset all default styles */
 * {
     margin: 0;           /* Remove default margins */
@@ -7,10 +10,13 @@
 
 /* Body container - flexbox layout for sticky footer */
 body {
-    background-color: blue;
+    background-color: #CEDDBB;
     display: flex;       /* Enable flexbox layout */
     flex-direction: column; /* Stack children vertically */
     min-height: 100vh;   /* Full viewport height minimum */
+    font-family: "Lexend Exa", sans-serif; /* Set global font */ 
+    font-weight: 400;    /* Normal font weight */
+    height: 2000px;
 }
 
 /* Header - top of page */
@@ -18,25 +24,48 @@ header {
     background-color: pink;
     /* Takes natural height, stays at top */
 }
+.container-fluid {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.navbar-nav {
+    gap: 30px;
+}
+
+/* Navbar brand styling */
+.navbar-brand {
+  color: #0D9BBC;
+  font-family: "Exo 2", sans-serif !important; /* Override Bootstrap font */
+  font-weight: 600;
+  font-style: italic;
+  font-size: 35px;
+}
+
 
 nav {
     background-color: #1E1E1E;
-    /* Removed padding-left - use Bootstrap's built-in spacing instead */
+    height: 70px;
 }
 
 /* Target nav links and override Bootstrap default color */
 .nav-link {
     color: #DAE0D0 !important; /* !important overrides Bootstrap */
+    font-size: 18px;
 }
 
+/* Active link - underline stays on current page */
+.nav-link.active {
+    text-decoration: underline !important; /* Permanent underline for active link */
+}
+
+/* Hover state - underline appears on hover */
 .nav-link:hover {
-    color: #DAE0D0 !important; /* Optional: lighter color on hover */
-    text-decoration: underline !important; /* Underline on hover instead of color change */
+    text-decoration: underline; /* Underline on hover instead of color change */
 }
 
 /* Main content area - expands to fill available space */
 main {
-    background-color: yellow;
+    background-color: #CEDDBB;
     flex: 1;             /* Grows to fill remaining space, pushes footer down */
 }
 
