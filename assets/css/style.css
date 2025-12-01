@@ -71,19 +71,29 @@ nav {
 /* Whole hero area */
 .introduction-section {
   position: relative;
-  background-color: #ceddbb;
+  background-image: url("../images/half-can-splash.webp");
+  background-repeat: no-repeat;
+  background-position: center bottom; /* splash near bottom */
+  background-size: 2000px auto; /* make splash large */
+  padding-bottom: 400px; /* enough height to show splash */
+}
+
+/* Wrapper for logo + headings */
+.content-hero {
+  position: relative; /* so it sits above background */
+  z-index: 1;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-top: 10px; /* room under the nav */
-  padding-bottom: 80px;
-  gap: 24px;
+
+  padding-top: 10px; /* space under nav */
+  gap: 3px; /* spacing between logo, h1, h2 */
 }
 
-/* Logo */
+/* Logo in hero section */
 .fc-logo {
-  position: static;
   width: 260px;
   height: auto;
 }
@@ -93,7 +103,7 @@ nav {
   color: #0b667a;
   font-family: "Lexend Exa", sans-serif;
   font-weight: 600;
-  font-size: 80px; /* lock the size */
+  font-size: 80px;
   margin: 0;
   line-height: 1.2;
 }
@@ -113,20 +123,6 @@ nav {
   font-size: 28px;
   color: #1e1e1e;
   margin-top: 0;
-}
-.introduction-section-section h1,
-.introduction-section-section h2 {
-  position: relative;
-  z-index: 2;
-}
-.hero-image {
-  display: block;
-  margin-top: -700px;
-  margin-bottom: 30px;
-  width: min(100%, 1830px); /* max 2000px, but never wider than screen */
-  height: auto;
-  z-index: 0;
-  opacity: 0.8;
 }
 
 /* ===== FOOTER ===== */
