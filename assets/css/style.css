@@ -1,3 +1,32 @@
+/* Reset all default styles */
+* {
+    margin: 0;           /* Remove default margins */
+    padding: 0;          /* Remove default padding */
+    box-sizing: border-box; /* Include padding/border in width/height calculations */
+}
+
+/* Body container - flexbox layout for sticky footer */
 body {
     background-color: blue;
+    display: flex;       /* Enable flexbox layout */
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh;   /* Full viewport height minimum */
+}
+
+/* Header - top of page */
+header {
+    background-color: pink;
+    /* Takes natural height, stays at top */
+}
+
+/* Main content area - expands to fill available space */
+main {
+    background-color: yellow;
+    flex: 1;             /* Grows to fill remaining space, pushes footer down */
+}
+
+/* Footer - sticks to bottom */
+footer {
+    background-color: green;
+    /* Pushed to bottom by main's flex: 1 */
 }
