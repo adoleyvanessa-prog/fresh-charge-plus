@@ -55,7 +55,7 @@ nav {
 /* Nav links */
 .nav-link {
   color: #dae0d0 !important;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .nav-link.active {
@@ -124,6 +124,40 @@ nav {
   color: #1e1e1e;
   margin-top: 0;
 }
+
+/* feature strip with icons */
+.feature-strip {
+    background-color: #000000;
+    color: #dae0d0;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 400px; /* increase spacing between items */
+    text-align: center;
+}
+.sugar-icon {  /* sugar icon increase in size */
+    margin-right: 40px;
+    width: 200px;
+    height: auto;
+}
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.features-icon {
+    width: 140px;      /* increase size */
+    height: auto;
+    margin-bottom: 12px; /* space between icon and label */
+}
+
+.feature-item p {
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+
 
 /* ===== FOOTER ===== */
 footer {
