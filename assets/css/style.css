@@ -65,17 +65,18 @@ nav {
 .nav-link:hover {
   text-decoration: underline;
 }
+/* COUNTDOWN BAR within nav */
 .countdown-bar {
-    background-color: #000;      /* black strip */
+    background-color: #1e1e1e;      /* light black strip */
     display: flex;
     justify-content: center;
     gap: 40px;
-    padding: 10px 0;
+    padding-left: 500px;
 }
 
 .countdown-box {
     border: 2px solid #0D9BBC;  /* blue */
-    padding: 8px 18px;
+    padding: 1px 10px;
     text-align: center;
     color: #dae0d0; 
     font-family: "Lexend Exa", sans-serif;
@@ -84,12 +85,12 @@ nav {
 
 .count-number {
     display: block;
-    font-size: 26px;
+    font-size: 19px;
     font-weight: 700;
 }
 
 .count-label {
-    font-size: 16px;
+    font-size: 15px;
     opacity: 0.9;
 }
 
@@ -191,3 +192,4 @@ nav {
 footer {
   background-color: green;
 }
+
