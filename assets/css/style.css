@@ -1,76 +1,135 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lexend+Exa:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lexend+Exa:wght@100..900&display=swap");
 
 /* Reset all default styles */
 * {
-    margin: 0;           /* Remove default margins */
-    padding: 0;          /* Remove default padding */
-    box-sizing: border-box; /* Include padding/border in width/height calculations */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Body container - flexbox layout for sticky footer */
 body {
-    background-color: #CEDDBB;
-    display: flex;       /* Enable flexbox layout */
-    flex-direction: column; /* Stack children vertically */
-    min-height: 100vh;   /* Full viewport height minimum */
-    font-family: "Lexend Exa", sans-serif; /* Set global font */ 
-    font-weight: 400;    /* Normal font weight */
-    height: 2000px;
+  background-color: #ceddbb;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Lexend Exa", sans-serif;
+  font-weight: 400;
 }
 
 /* Header - top of page */
 header {
-    background-color: pink;
-    /* Takes natural height, stays at top */
+  background-color: pink;
 }
+
+/* Main content area - grows to fill available vertical space */
+main {
+  background-color: #ceddbb;
+  flex: 1;
+}
+
 .container-fluid {
-    padding-left: 50px;
-    padding-right: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
+
 .navbar-nav {
-    gap: 30px;
+  gap: 30px;
 }
 
 /* Navbar brand styling */
 .navbar-brand {
-  color: #0D9BBC;
-  font-family: "Exo 2", sans-serif !important; /* Override Bootstrap font */
+  color: #0d9bbc;
+  font-family: "Exo 2", sans-serif !important;
   font-weight: 600;
   font-style: italic;
   font-size: 35px;
 }
 
-
 nav {
-    background-color: #1E1E1E;
-    height: 70px;
+  background-color: #1e1e1e;
+  height: 70px;
 }
 
-/* Target nav links and override Bootstrap default color */
+/* Nav links */
 .nav-link {
-    color: #DAE0D0 !important; /* !important overrides Bootstrap */
-    font-size: 18px;
+  color: #dae0d0 !important;
+  font-size: 18px;
 }
 
-/* Active link - underline stays on current page */
 .nav-link.active {
-    text-decoration: underline !important; /* Permanent underline for active link */
+  text-decoration: underline !important;
 }
 
-/* Hover state - underline appears on hover */
 .nav-link:hover {
-    text-decoration: underline; /* Underline on hover instead of color change */
+  text-decoration: underline;
 }
 
-/* Main content area - expands to fill available space */
-main {
-    background-color: #CEDDBB;
-    flex: 1;             /* Grows to fill remaining space, pushes footer down */
+/* ===== HERO SECTION ===== */
+
+/* Whole hero area */
+.introduction-section {
+  position: relative;
+  background-color: #ceddbb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 10px; /* room under the nav */
+  padding-bottom: 80px;
+  gap: 24px;
 }
 
-/* Footer - sticks to bottom */
+/* Logo */
+.fc-logo {
+  position: static;
+  width: 260px;
+  height: auto;
+}
+
+/* Hero heading */
+.hero-heading {
+  color: #0b667a;
+  font-family: "Lexend Exa", sans-serif;
+  font-weight: 600;
+  font-size: 80px; /* lock the size */
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Brand part of heading */
+.brand-text {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 80px;
+}
+
+/* Sub-heading under hero */
+.hero-subheading {
+  font-family: "Lexend Exa", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: #1e1e1e;
+  margin-top: 0;
+}
+.introduction-section-section h1,
+.introduction-section-section h2 {
+  position: relative;
+  z-index: 2;
+}
+.hero-image {
+  display: block;
+  margin-top: -700px;
+  margin-bottom: 30px;
+  width: min(100%, 1830px); /* max 2000px, but never wider than screen */
+  height: auto;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+/* ===== FOOTER ===== */
 footer {
-    background-color: green;
-    /* Pushed to bottom by main's flex: 1 */
+  background-color: green;
 }
