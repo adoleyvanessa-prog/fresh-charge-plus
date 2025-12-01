@@ -18,7 +18,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg"> <!-- removed bootstrap background utility, overriding custom css -->
         <div class="container-fluid">
           <a class="navbar-brand" href="#">FreshCharge</a>
           <button
@@ -32,11 +32,14 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="#">Features</a>
-              <a class="nav-link" href="#">Pricing</a>
+          <!-- Collapse navbar for mobile responsiveness -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Navigation links container - ms-auto pushes links to the right -->
+            <div class="navbar-nav ms-auto">
+              <!-- Page links -->
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link" href="#">Flavours</a>
+              <a class="nav-link" href="#">Community</a>
             </div>
           </div>
         </div>

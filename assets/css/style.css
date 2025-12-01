@@ -19,6 +19,21 @@ header {
     /* Takes natural height, stays at top */
 }
 
+nav {
+    background-color: #1E1E1E;
+    /* Removed padding-left - use Bootstrap's built-in spacing instead */
+}
+
+/* Target nav links and override Bootstrap default color */
+.nav-link {
+    color: #DAE0D0 !important; /* !important overrides Bootstrap */
+}
+
+.nav-link:hover {
+    color: #DAE0D0 !important; /* Optional: lighter color on hover */
+    text-decoration: underline !important; /* Underline on hover instead of color change */
+}
+
 /* Main content area - expands to fill available space */
 main {
     background-color: yellow;
