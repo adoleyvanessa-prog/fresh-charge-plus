@@ -148,7 +148,7 @@ nav {
 }
 
 /* Brand part of heading */
-.brand-text {
+.brand-text-heading {
   font-family: "Exo 2", sans-serif;
   font-weight: 700;
   font-style: italic;
@@ -187,7 +187,7 @@ nav {
 /* light black button */
 .primary-btn {
     background-color: #1e1e1e;
-    color: #fff;
+    color: #dae0d0;
     border: 2px solid #1e1e1e;
 }
 
@@ -217,10 +217,14 @@ nav {
     gap: 400px; /* increase spacing between items */
     text-align: center;
 }
-.sugar-icon {  /* sugar icon increase in size */
+#sugar {  /* sugar icon increase in size */
     margin-right: 40px;
     width: 200px;
     height: auto;
+    margin-bottom: 0;
+}
+#zero-sugar {
+  margin-top: 0;
 }
 .feature-item {
     display: flex;
@@ -240,6 +244,52 @@ nav {
     margin: 0;
 }
 
+/* why fresh charge+ section */
+.why-freshcharge-section {
+  /* linear gradient effect in background for this section */
+  background: linear-gradient(to bottom, #dae0d0 0%, #ceddbb 100%);
+  display: flex;
+  align-items: center;  /* vertically center items */
+  justify-content: center;  /* content centered */
+  gap: 60px;
+  padding: 60px 50px;
+}
+.why-freshcharge-sub {
+  color: #1e1e1e;
+  font-size: 30px ;
+  font-family: "Lexend Exa", sans-serif;
+  font-weight: 600;
+}
+.brand-text {  /* brand text in why freshcharge section separated due to different font use */
+  color: #0b667a;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 60px;
+}
+
+.why-freshcharge {
+  color: #0B667A;
+  font-size: 58px;
+  font-weight: 600;
+}
+.three-cans-image {
+  border-radius: 100%;
+  width: 700px;
+  height: auto;
+}
+.comparison-link-list {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 20px;
+  color: #0b667a;
+  text-decoration: underline;  /* underline to indicate link */
+}
+.why-freshcharge-list {
+  margin-top: 20px;
+  font-size: 25px;
+  color: #1e1e1e;
+}
 
 /*  FOOTER  */
 footer {
