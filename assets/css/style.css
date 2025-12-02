@@ -1,7 +1,9 @@
 /* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lexend+Exa:wght@100..900&display=swap");
 
-/*  Text in black divs make lightest-green #DAE0D0
+/* Color Scheme Reference:
+
+Text in black divs make lightest-green #DAE0D0
 text in heading, titles, forms etc. blue #0B667A
 paragraphs off-black #1E1E1E
 background green #CEDDBB
