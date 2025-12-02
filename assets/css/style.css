@@ -268,12 +268,12 @@ nav {
   font-size: 60px;
 }
 
-.why-freshcharge {
+.why-freshcharge, .when-to-drink-heading{
   color: #0B667A;
   font-size: 58px;
   font-weight: 600;
 }
-.three-cans-image {
+#three-cans-image {
   border-radius: 100%;
   width: 700px;
   height: auto;
@@ -291,6 +291,18 @@ nav {
   color: #1e1e1e;
 }
 
+/* when to drink section */
+.when-to-drink-section {
+  background-color: #dae0d0;
+  padding: 60px 50px;
+  text-align: center;
+  align-items: center;
+}
+.when-to-drink-img {
+  width: 300px;
+  height: auto;
+  margin-top: 30px;
+}
 /*  FOOTER  */
 footer {
   background-color: green;
