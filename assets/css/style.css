@@ -342,6 +342,112 @@ nav {
   border-radius: 100%;
   display: block;             /* block so margin: auto works */
 }
+
+/* review section */
+#review-section {
+  background-color: #dae0d0;
+  padding: 60px 50px;
+  display: flex;
+  justify-content: center;      /* Center container horizontally */
+  align-items: center;          /* Center vertically if needed */
+  min-height: 600px;            /* Give section height */
+}
+
+.review-section-divider {
+  display: flex;                /* Enable flexbox */
+  flex-direction: column;       /* Stack content vertically */
+  justify-content: center;      /* Center vertically */
+  align-items: center;          /* Center horizontally */
+  width: 80%;
+  margin: 0 auto;               /* Center the container itself */
+  gap: 20px;                    /* Space between elements */
+}
+
+/* Heading */
+.review-section-heading {
+  font-size: 32px;
+  color: #0b667a;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Overall star row under heading */
+.review-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+  margin-bottom: 24px;
+}
+
+.overall-stars i {
+  font-size: 24px;
+}
+
+.review-score {
+  margin: 0;
+  color: #1e1e1e;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Review list container */
+.review-list {
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Each individual review */
+.single-review {
+  text-align: left;
+  padding: 10px 0;
+}
+
+.reviewer-name {
+  font-size: 18px;
+  color: #1e1e1e;
+  margin-bottom: 4px;
+}
+
+/* Stars under each name */
+.person-stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.review-stars i {
+  color: #1e1e1e;
+  font-size: 18px;
+}
+
+/* Review body text */
+.review-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1e1e1e;
+  margin: 0;
+}
+
+/* Divider lines between reviews */
+.review-divider {
+  border: none;
+  border-top: 1px solid #1e1e1e;
+  opacity: 0.4;
+  margin: 14px 0;
+}
+
+/* See all reviews link */
+.see-all-reviews {
+  margin-top: 24px;
+  font-size: 16px;
+  color: #0b667a;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
 /*  FOOTER  */
 footer {
   background-color: green;
