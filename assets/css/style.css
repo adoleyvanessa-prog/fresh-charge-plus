@@ -448,9 +448,21 @@ nav {
 }
 
 
-/*  FOOTER  */
+/*  footer section  */
 footer {
   background-color: #1e1e1e;
   height: 300px;
+  display: flex;           /* Enable flex for footer content */
+  flex-direction: column;  /* Stack children vertically */
+  align-items: flex-start; /* Align items to the left */
+  padding-left: 30px;      /* Add left padding for spacing */
 }
 
+#footer-logo {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 250px;
+    height: auto;
+    display: block;
+    /* removed margin-left: auto and margin-right: auto */
+}
