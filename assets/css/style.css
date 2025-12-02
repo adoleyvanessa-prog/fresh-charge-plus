@@ -449,20 +449,86 @@ nav {
 
 
 /*  footer section  */
+
 footer {
   background-color: #1e1e1e;
-  height: 300px;
-  display: flex;           /* Enable flex for footer content */
-  flex-direction: column;  /* Stack children vertically */
-  align-items: flex-start; /* Align items to the left */
-  padding-left: 30px;      /* Add left padding for spacing */
+  color: #dae0d0;
+  padding: 40px 60px 20px;
 }
 
-#footer-logo {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    width: 250px;
-    height: auto;
-    display: block;
-    /* removed margin-left: auto and margin-right: auto */
+/* Inner flex container to line up logo, links, contact */
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 80px;                 /* space between columns */
+  align-items: flex-start;
 }
+
+/* Each column */
+.footer-col {
+  flex: 1;
+}
+
+/* Logo column */
+#footer-logo {
+  width: 230px;
+  height: auto;
+  display: block;
+}
+
+/* Links column */
+.footer-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #dae0d0;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Headings in contact column */
+.footer-heading {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* Social icons row */
+.footer-socials {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.footer-socials a {
+  color: #dae0d0;
+  font-size: 22px;
+}
+
+/* Address text */
+.footer-address {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Bottom copyright line */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #dae0d0;
+  opacity: 0.9;
+}
+
