@@ -107,7 +107,7 @@ nav {
 /* HERO SECTION */
 
 /* Whole hero area */
-.introduction-section {
+#introduction-section {
   position: relative;
   background-image: url("../images/half-can-splash.webp");
   background-repeat: no-repeat;
@@ -208,7 +208,7 @@ nav {
 
 
 /* feature strip with icons */
-.feature-strip {
+#feature-strip {
     background-color: #1e1e1e;
     color: #dae0d0;
     padding: 20px 0;
@@ -245,9 +245,8 @@ nav {
 }
 
 /* why fresh charge+ section */
-.why-freshcharge-section {
-  /* linear gradient effect in background for this section */
-  background: linear-gradient(to bottom, #dae0d0 0%, #ceddbb 100%);
+#why-freshcharge-section {
+  background-color: #dae0d0;
   display: flex;
   align-items: center;  /* vertically center items */
   justify-content: center;  /* content centered */
@@ -292,16 +291,56 @@ nav {
 }
 
 /* when to drink section */
-.when-to-drink-section {
-  background-color: #dae0d0;
+#when-to-drink-section {
+  /* linear gradient effect in background for this section */
+  background: linear-gradient(to bottom, #dae0d0 0%, #ceddbb 100%);
+  margin-top: 50px;
   padding: 60px 50px;
   text-align: center;
   align-items: center;
 }
+
+.card-div-section {
+  background-color: #dae0d0;
+  margin-top: 20px;
+  width: 90%;
+  margin: 20px auto 0;        /* Center horizontally (20px top, auto left/right) */
+  justify-content: center;
+}
+/* Container for cards - line up horizontally with even spacing */
+.when-to-drink-cards {
+  display: flex;                /* Line up horizontally */
+  justify-content: space-around; /* Evenly distribute spacing */
+  gap: 20px;                    /* Space between cards */
+  flex-wrap: wrap;              /* Wrap on smaller screens */
+}
+
+/* Individual card styling */
+.when-to-drink-card {
+  flex: 1;                      /* Cards grow equally */
+  width: 300px;             /* Minimum width per card */
+  overflow: hidden;    /* Contain text inside card */
+  text-align: center;
+}
+.when-to-drink-card-heading {
+  color: #0b667a;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 15px 0 10px;
+}
+
+.when-to-drink-card-text {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #1e1e1e;
+}
+
 .when-to-drink-img {
   width: 300px;
   height: auto;
-  margin-top: 30px;
+  margin: 0 auto 30px;        /* center horizontally + 30px bottom spacing */
+  border-radius: 100%;
+  display: block;             /* block so margin: auto works */
 }
 /*  FOOTER  */
 footer {
