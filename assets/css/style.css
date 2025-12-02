@@ -303,7 +303,7 @@ nav {
 .card-div-section {
   background-color: #dae0d0;
   margin-top: 20px;
-  width: 90%;
+  width: 95%;
   margin: 20px auto 0;        /* Center horizontally (20px top, auto left/right) */
   justify-content: center;
 }
@@ -324,14 +324,14 @@ nav {
 }
 .when-to-drink-card-heading {
   color: #0b667a;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 600;
   margin: 15px 0 10px;
 }
 
 .when-to-drink-card-text {
   margin-top: 15px;
-  font-size: 20px;
+  font-size: 25px;
   color: #1e1e1e;
 }
 
@@ -343,7 +343,7 @@ nav {
   display: block;             /* block so margin: auto works */
 }
 
-/* review section */
+/* Review section */
 #review-section {
   background-color: #dae0d0;
   padding: 60px 50px;
@@ -365,7 +365,7 @@ nav {
 
 /* Heading */
 .review-section-heading {
-  font-size: 32px;
+  font-size: 58px;
   color: #0b667a;
   text-align: center;
   font-weight: 600;
@@ -388,7 +388,7 @@ nav {
 .review-score {
   margin: 0;
   color: #1e1e1e;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
 }
 
@@ -405,7 +405,7 @@ nav {
 }
 
 .reviewer-name {
-  font-size: 18px;
+  font-size: 20px;
   color: #1e1e1e;
   margin-bottom: 4px;
 }
@@ -424,7 +424,7 @@ nav {
 
 /* Review body text */
 .review-text {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   color: #1e1e1e;
   margin: 0;
@@ -441,7 +441,7 @@ nav {
 /* See all reviews link */
 .see-all-reviews {
   margin-top: 24px;
-  font-size: 16px;
+  font-size: 20px;
   color: #0b667a;
   text-decoration: underline;
   cursor: pointer;
@@ -450,6 +450,7 @@ nav {
 
 /*  FOOTER  */
 footer {
-  background-color: green;
+  background-color: #1e1e1e;
+  height: 300px;
 }
 
