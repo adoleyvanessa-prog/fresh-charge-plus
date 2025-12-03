@@ -648,7 +648,6 @@ nav {
   padding: 14px 18px;
 }
 
-/* alternating row colours like Figma */
 .nutrient-table tbody tr:nth-child(odd) td,
 .nutrient-table tbody tr:nth-child(odd) th {
   background-color: #dae0d0;
@@ -669,7 +668,25 @@ nav {
 #value {
   text-decoration: underline;
 }
+/* ========== FLAVOURS PAGE END ========== */
+/* wrapper text styles */
+#community-call-text {
+  font-weight: 600;
+}
 
+/* section background + padding (breathing room) */
+#community-call {
+  background-color: #CEDDBB;      /* same light green as the page */
+  padding: 60px 50px 70px;        /* top/right/left/bottom spacing */
+  text-align: center;
+}
+
+/* subtext spacing */
+.community-call-subtext {
+  font-size: 20px;
+  margin-top: 8px;
+  margin-bottom: 26px;
+}
 
 
 /* ========== FOOTER ========== */
@@ -759,6 +776,7 @@ footer {
 .footer-address {
   font-size: 16px;
   line-height: 1.6;
+  color: #dae0d0;
 }
 
 .footer-bottom {
