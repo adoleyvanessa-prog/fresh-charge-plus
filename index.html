@@ -4,67 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FreshCharge</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lexend+Exa:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <!-- bootstrap css -->
+
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <!-- font awesome icons -->
-    <script src="https://kit.fontawesome.com/720fe4f688.js" crossorigin="anonymous"></script>
-    <!-- custom css after so it overrides bootstrap -->
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/720fe4f688.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
-    <!-- favicon -->
+
+    <!-- Favicon -->
     <link rel="icon" href="assets/icons/fc-logo.webp" type="image/webp" />
   </head>
   <body>
-    <!-- header section -->
+    <!-- ================= HEADER ================= -->
     <header>
-      <!-- bootstrap nav -->
-      <nav class="navbar navbar-expand-lg">
-        <!-- removed bootstrap background utility, overriding custom css -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+
         <div class="container-fluid">
           <a class="navbar-brand" href="#">FreshCharge</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="countdown-bar">
-            <!-- countdown bar inside-->
+
+          <!-- Countdown in NAV: only on XL screens and up -->
+          <div class="nav-countdown d-none d-xl-flex">
             <div class="countdown-box">
               <span class="count-number">6</span>
               <span class="count-label">Days</span>
             </div>
-
             <div class="countdown-box">
               <span class="count-number">17</span>
               <span class="count-label">Hours</span>
             </div>
-
             <div class="countdown-box">
               <span class="count-number">59</span>
               <span class="count-label">Min</span>
             </div>
           </div>
-          <!-- Collapse navbar for mobile responsiveness -->
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
           <div class="collapse navbar-collapse" id="navbarNav">
-            <!-- Navigation links container - ms-auto pushes links to the right -->
             <div class="navbar-nav ms-auto">
-              <!-- Page links -->
               <a class="nav-link active" aria-current="page" href="index.html"
                 >Home</a
               >
@@ -75,40 +81,53 @@
         </div>
       </nav>
     </header>
+
+    <!-- ================= MAIN ================= -->
     <main>
-      <!-- first section homepage -->
+      <!-- HERO -->
       <section id="introduction-section">
         <div class="content-hero">
-          <!-- favicon -->
           <img
-            src="assets/icons/fc-logo.webp"  
+            src="assets/icons/fc-logo.webp"
             alt="FreshCharge logo"
             class="fc-logo"
           />
-<!-- hero heading -->
+
           <h1 class="hero-heading">
-            <!-- span class for different font in FreshCharge+ -->
-            <span class="brand-text-heading">FreshCharge+</span> is almost here...
+            <span class="brand-text-heading">FreshCharge+</span> is almost
+            here...
           </h1>
 
           <h2 class="hero-subheading">
             More energy. Fewer calories. Same natural goodness.
           </h2>
+
+          <!-- Countdown in HERO: only below XL -->
+          <div class="hero-countdown d-flex d-xl-none">
+            <div class="countdown-box">
+              <span class="count-number">6</span>
+              <span class="count-label">Days</span>
+            </div>
+            <div class="countdown-box">
+              <span class="count-number">17</span>
+              <span class="count-label">Hours</span>
+            </div>
+            <div class="countdown-box">
+              <span class="count-number">59</span>
+              <span class="count-label">Min</span>
+            </div>
+          </div>
         </div>
 
-        <!-- buttons -->
         <div class="hero-buttons">
-          <!-- links to community page-->
           <a href="#" class="btn-hero primary-btn">Join the community</a>
-          <!-- links to flavours to drinks page-->
           <a href="#" class="btn-hero outline-btn">Explore what's new</a>
         </div>
       </section>
-      
-      <!-- black feature bar -->
+
+      <!-- FEATURE STRIP -->
       <section id="feature-strip">
         <div class="feature-item">
-          <!-- icons in black div image -->
           <img
             src="assets/icons/zero-sugar.webp"
             alt="zero sugar icon"
@@ -134,149 +153,195 @@
           <p>Hydrating Electrolytes</p>
         </div>
       </section>
-      <!-- why freshcharge+ section -->
+
+      <!-- WHY FRESHCHARGE+ -->
       <section id="why-freshcharge-section">
-        <img src="assets/images/three-cans.webp" alt="three cans of freshcharge+" id="three-cans-image"/>
+        <img
+          src="assets/images/three-cans.webp"
+          alt="three cans of freshcharge+"
+          id="three-cans-image"
+        />
         <div class="why-freshcharge-text">
-        <h2 class="why-freshcharge">
-          Why <span class="brand-text">FreshCharge+</span>?</h2>
-          <h3 class="why-freshcharge-sub">Same natural goodness - now cleaner, lighter, and stronger.</h3>
+          <h2 class="why-freshcharge">
+            Why <span class="brand-text">FreshCharge+</span>?
+          </h2>
+          <h3 class="why-freshcharge-sub">
+            Same natural goodness - now cleaner, lighter, and stronger.
+          </h3>
           <ul class="why-freshcharge-list">
-            <li><strong>Increased natural caffeine </strong>for a smoother energy boost</li>
+            <li>
+              <strong>Increased natural caffeine </strong>for a smoother energy
+              boost
+            </li>
             <li><strong>Fewer calories </strong>across all flavours</li>
             <li>Updated electrolytes for better hydration</li>
-            <li>Still <strong>0 added sugar and naturally flavoured</strong></li>
+            <li>
+              Still <strong>0 added sugar and naturally flavoured</strong>
+            </li>
           </ul>
-          <p class="why-freshcharge-list click-link-text"><strong>Click the link below to see the comparison of the old formula to the new one:</strong></p>
-          <a href="#" class="comparison-link-list"><strong>See the full comparison</strong></a>
+          <p class="why-freshcharge-list click-link-text">
+            <strong
+              >Click the link below to see the comparison of the old formula to
+              the new one:</strong
+            >
+          </p>
+          <a href="#" class="comparison-link-list"
+            ><strong>See the full comparison</strong></a
+          >
         </div>
-
       </section>
-      <!-- when to drink freshcharge+ -->
+
+      <!-- WHEN TO DRINK -->
       <section id="when-to-drink-section">
-        <h2 class="when-to-drink-heading">When to drink <span class="brand-text">FreshCharge+</span>?</h2>
+        <h2 class="when-to-drink-heading">
+          When to drink <span class="brand-text">FreshCharge+</span>?
+        </h2>
         <div class="card-div-section">
-        <div class="when-to-drink-cards">
-          <!-- card 1 -->
-          <div class="when-to-drink-card">
-            <img src="assets/images/woman-desk.webp" alt="Woman working on her desk" class="when-to-drink-1 when-to-drink-img"/>
-            <h3 class="when-to-drink-card-heading">Morning Boost</h3>
-            <p class="when-to-drink-card-text">Kickstart your day with a refreshing can of FreshCharge+ to fuel your morning activities.</p>
-          </div>
-          <!-- card 2 -->
-          <div class="when-to-drink-card">
-            <img src="assets/images/gym-guy.webp" alt="Guy on treadmill" class="when-to-drink-2 when-to-drink-img"/>
-            <h3 class="when-to-drink-card-heading">Pre-Workout</h3>
-            <p class="when-to-drink-card-text">Enhance your workout performance with the natural caffeine and electrolytes in FreshCharge+.</p>
-          </div>
-          <!-- card 3 -->
-          <div class="when-to-drink-card">
-            <img src="assets/images/woman-drinking.webp" alt="Woman drinking FreshCharge+" class="when-to-drink-3 when-to-drink-img"/>
-            <h3 class="when-to-drink-card-heading">Runs or even Hikes</h3>
-            <p class="when-to-drink-card-text">Stay hydrated and energized during your outdoor adventures with FreshCharge+.</p>
-          </div>
-          <!-- card 4 -->
-          <div class="when-to-drink-card">
-            <img src="assets/images/old-couple.webp" alt="Old couple playing games" class="when-to-drink-4 when-to-drink-img"/>
-            <h3 class="when-to-drink-card-heading">Or just to have fun</h3>
-            <p class="when-to-drink-card-text">Enjoy FreshCharge+ anytime you need a tasty and revitalizing beverage.</p>
+          <div class="when-to-drink-cards">
+            <!-- card 1 -->
+            <div class="when-to-drink-card">
+              <img
+                src="assets/images/woman-desk.webp"
+                alt="Woman working on her desk"
+                class="when-to-drink-1 when-to-drink-img"
+              />
+              <h3 class="when-to-drink-card-heading">Morning Boost</h3>
+              <p class="when-to-drink-card-text">
+                Kickstart your day with a refreshing can of FreshCharge+ to fuel
+                your morning activities.
+              </p>
+            </div>
+            <!-- card 2 -->
+            <div class="when-to-drink-card">
+              <img
+                src="assets/images/gym-guy.webp"
+                alt="Guy on treadmill"
+                class="when-to-drink-2 when-to-drink-img"
+              />
+              <h3 class="when-to-drink-card-heading">Pre-Workout</h3>
+              <p class="when-to-drink-card-text">
+                Enhance your workout performance with the natural caffeine and
+                electrolytes in FreshCharge+.
+              </p>
+            </div>
+            <!-- card 3 -->
+            <div class="when-to-drink-card">
+              <img
+                src="assets/images/woman-drinking.webp"
+                alt="Woman drinking FreshCharge+"
+                class="when-to-drink-3 when-to-drink-img"
+              />
+              <h3 class="when-to-drink-card-heading">Runs or even Hikes</h3>
+              <p class="when-to-drink-card-text">
+                Stay hydrated and energized during your outdoor adventures with
+                FreshCharge+.
+              </p>
+            </div>
+            <!-- card 4 -->
+            <div class="when-to-drink-card">
+              <img
+                src="assets/images/old-couple.webp"
+                alt="Old couple playing games"
+                class="when-to-drink-4 when-to-drink-img"
+              />
+              <h3 class="when-to-drink-card-heading">Or just to have fun</h3>
+              <p class="when-to-drink-card-text">
+                Enjoy FreshCharge+ anytime you need a tasty and revitalizing
+                beverage.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
+      <!-- REVIEWS -->
       <section id="review-section">
-  <div class="review-section-divider">
-    <!-- Heading -->
-    <h2 class="review-section-heading">
-      What people have said about <span class="brand-text">FreshCharge</span>
-    </h2>
+        <div class="review-section-divider">
+          <h2 class="review-section-heading">
+            What people have said about
+            <span class="brand-text">FreshCharge</span>
+          </h2>
 
-    <!-- Overall rating row -->
-    <div class="review-summary">
-      <div class="review-stars overall-stars">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-      </div>
+          <div class="review-summary">
+            <div class="review-stars overall-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h3 class="review-score">4.9 – 328 reviews</h3>
+          </div>
 
-      <h3 class="review-score">4.9 – 328 reviews</h3>
-    </div>
+          <div class="review-list">
+            <!-- Helen -->
+            <div class="single-review">
+              <p class="reviewer-name"><strong>Helen W.</strong></p>
+              <div class="review-stars person-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="review-text">
+                I’ve been drinking FreshCharge for over a year and it’s still
+                the cleanest boost I’ve found. Light, refreshing, and perfect
+                for long office days. If the new FreshCharge+ is even better,
+                I’m definitely excited to try it.
+              </p>
+            </div>
 
-    <!-- Individual reviews -->
-    <div class="review-list">
+            <hr class="review-divider" />
 
-      <!-- Helen review -->
-      <div class="single-review">
-        <p class="reviewer-name"><strong>Helen W.</strong></p>
-        <div class="review-stars person-stars">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
+            <!-- Daniel -->
+            <div class="single-review">
+              <p class="reviewer-name"><strong>Daniel M.</strong></p>
+              <div class="review-stars person-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p class="review-text">
+                The original FreshCharge gives me a smooth lift without the
+                jittery feeling I get from other brands. The natural caffeine
+                hits just right and the flavours are crisp. Honestly can’t wait
+                to see what the upgraded version brings.
+              </p>
+            </div>
+
+            <hr class="review-divider" />
+
+            <!-- Jason -->
+            <div class="single-review">
+              <p class="reviewer-name"><strong>Jason L.</strong></p>
+              <div class="review-stars person-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="review-text">
+                I love how FreshCharge tastes clean and not overly sweet. It’s
+                become my go-to for study sessions and gym days. Hearing that
+                FreshCharge+ is coming with fewer calories and more electrolytes
+                makes me even more excited for the launch.
+              </p>
+            </div>
+          </div>
+
+          <a href="#" class="see-all-reviews"><strong>See all reviews</strong></a>
         </div>
-        <p class="review-text">
-          I’ve been drinking FreshCharge for over a year and it’s still the
-          cleanest boost I’ve found. Light, refreshing, and perfect for long
-          office days. If the new FreshCharge+ is even better, I’m definitely
-          excited to try it.
-        </p>
-      </div>
-
-      <hr class="review-divider">
-
-      <!-- Daniel review -->
-      <div class="single-review">
-        <p class="reviewer-name"><strong>Daniel M.</strong></p>
-        <div class="review-stars person-stars">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-regular fa-star"></i> <!-- 4 stars -->
-        </div>
-        <p class="review-text">
-          The original FreshCharge gives me a smooth lift without the jittery
-          feeling I get from other brands. The natural caffeine hits just right
-          and the flavours are crisp. Honestly can’t wait to see what the
-          upgraded version brings.
-        </p>
-      </div>
-
-      <hr class="review-divider">
-
-      <!-- Jason review  -->
-      <div class="single-review">
-        <p class="reviewer-name"><strong>Jason L.</strong></p>
-        <div class="review-stars person-stars">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-        </div>
-        <p class="review-text">
-          I love how FreshCharge tastes clean and not overly sweet. It’s become
-          my go-to for study sessions and gym days. Hearing that FreshCharge+ is
-          coming with fewer calories and more electrolytes makes me even more
-          excited for the launch.
-        </p>
-      </div>
-
-    </div>
-
-    <!-- See all link -->
-    <a href="#" class="see-all-reviews"><strong>See all reviews</strong></a>
-  </div>
-</section>
-
-  
+      </section>
     </main>
-    <footer>
+
+<!-- ================= FOOTER ================= -->
+<footer>
   <div class="footer-inner">
-    <!-- Logo column -->
+    <!-- Left: logo -->
     <div class="footer-col footer-logo-col">
       <img
         src="assets/icons/fc-logo-plus.webp"
@@ -285,54 +350,62 @@
       />
     </div>
 
-    <!-- Page links column -->
-    <div class="footer-col footer-links">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">What’s new</a></li>
-        <li><a href="#">Community</a></li>
-        <li><a href="#">Contact/FAQs</a></li>
-      </ul>
-    </div>
+    <!-- Right: links + contact grouped together -->
+    <div class="footer-right">
+      <div class="footer-col footer-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">What’s new</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Contact/FAQs</a></li>
+        </ul>
+      </div>
 
-    <!-- Connect + address column -->
-    <div class="footer-col footer-contact">
-      <h4 class="footer-heading">Connect with us</h4>
+      <div class="footer-col footer-contact">
+        <h4 class="footer-heading">Connect with us</h4>
 
-      <div class="footer-socials">
-  <a href="https://www.instagram.com" 
-     target="_blank" 
-     rel="noopener noreferrer">
-    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-  </a>
+        <div class="footer-socials">
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
 
-  <a href="https://www.facebook.com" 
-     target="_blank" 
-     rel="noopener noreferrer">
-    <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
-  </a>
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+          </a>
 
-  <a href="https://twitter.com" 
-     target="_blank" 
-     rel="noopener noreferrer">
-    <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
-  </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+          </a>
 
-  <a href="https://www.youtube.com" 
-     target="_blank" 
-     rel="noopener noreferrer">
-    <i class="fa-brands fa-youtube" aria-hidden="true"></i>
-  </a>
-</div>
+          <a
+            href="https://www.youtube.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+          </a>
+        </div>
 
-
-      <h4 class="footer-heading address-heading">Address:</h4>
-      <p class="footer-address">
-        FreshCharge HQ<br />
-        21 Hidden Leaf Street,<br />
-        ZF2 4LO,<br />
-        United Kingdom
-      </p>
+        <h4 class="footer-heading address-heading">Address:</h4>
+        <p class="footer-address">
+          FreshCharge HQ<br />
+          21 Hidden Leaf Street,<br />
+          ZF2 4LO,<br />
+          United Kingdom
+        </p>
+      </div>
     </div>
   </div>
 
@@ -342,7 +415,7 @@
 </footer>
 
 
-    <!-- bootstrap Javascript -->
+    <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
@@ -350,3 +423,4 @@
     ></script>
   </body>
 </html>
+
