@@ -20,7 +20,7 @@ lighter black text (extra comments) #424242  */
 
 /* Body container - flexbox layout for sticky footer */
 body {
-  background-color: #ceddbb;
+  
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -171,7 +171,7 @@ nav {
   color: #0b667a;
   font-family: "Lexend Exa", sans-serif;
   font-weight: 600;
-  font-size: 80px;
+  font-size: 70px;
   margin: 0;
   line-height: 1.2;
 }
@@ -180,7 +180,7 @@ nav {
   font-family: "Exo 2", sans-serif;
   font-weight: 700;
   font-style: italic;
-  font-size: 80px;
+  font-size: 70px;
 }
 
 .hero-subheading {
@@ -245,12 +245,6 @@ nav {
   flex-wrap: wrap;
 }
 
-#sugar {
-  margin-right: 40px;
-  width: 200px;
-  height: auto;
-  margin-bottom: 0;
-}
 
 #zero-sugar {
   margin-top: 0;
@@ -922,45 +916,287 @@ footer {
     display: inline-block; /* Prevent it from stretching full width */
   }
  
-  /* FOOTER: logo left, text right on same row */
+
   footer {
-    padding: 30px 20px 20px;     /* slightly smaller padding on small screens */
+    padding: 30px 20px 20px;
   }
 
+  /* STACK EVERYTHING FIRST */
   .footer-inner {
-    flex-direction: row;         /* still side-by-side */
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 100px;
+    flex-direction: column;     /* logo on top */
+    align-items: center;        /* center logo */
+    text-align: center;
+    gap: 24px;
   }
 
-  .footer-logo-col {
-    flex: 0 0 40%;               /* logo column ~40% width */
+  /* LOGO centered */
+  #footer-logo {
+    width: 120px;
+    margin-bottom: 10px;
   }
 
+  /* --- TWO COLUMNS UNDER LOGO --- */
   .footer-right {
-    flex: 1;
-    flex-direction: column;      /* links + contact stacked vertically */
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /* 2 equal columns */
     gap: 20px;
+    text-align: left;
   }
 
-  .footer-links,
+  /* Left column = links */
+  .footer-links {
+    text-align: left;
+  }
+
+  /* Right column = socials + address */
   .footer-contact {
-    flex: unset;                 /* don’t try to share row space */
+    text-align: left;
   }
 
+  /* Icon row alignment */
   .footer-socials {
     justify-content: flex-start;
   }
+  .when-to-drink-img {
+  width: 100%;
+  max-width: 290px;
+  height: auto;
+  margin: 0 auto 20px;
+  border-radius: 100%;
+  display: block;
+}
+.review-stars i {
+  color: #1e1e1e;
+  font-size: 15px;
 }
 
-/* ≤ 576px (small phones) */
 @media (max-width: 576px) {
-  #three-cans-image {
-    width: 320px;
+  /* TYPO SIZING */
+  .footer-heading {
+    font-size: 14px;
+    margin-bottom: 8px;
   }
 
-  .when-to-drink-section {
-    padding: 40px 20px;
+  .footer-links a {
+    font-size: 14px;
   }
+
+  .footer-address {
+    font-size: 14px;
+  }
+  .footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 12px;
+  color: #dae0d0;
+  opacity: 0.9;
+  }
+    .why-freshcharge,
+  .when-to-drink-heading,
+  .why-freshcharge,
+  .review-section-heading {
+    font-size: 33px;
+  }
+    .brand-text {
+    font-size: 33px;
+  }
+  #three-cans-image {
+    width: 300px;
+  }
+  .why-freshcharge-sub {
+    font-size: 18px;
+  }
+
+  .why-freshcharge-list {
+    font-size: 14px;
+  }
+  .comparison-link-list {
+    font-size: 12px;
+  }
+    #feature-strip {
+    background-color: #1e1e1e;
+    color: #dae0d0;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  #sugar {
+    margin-right: 35px;
+    width: 120px;
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  #zero-sugar {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features-icon {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .feature-item p {
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .brand-text-heading {
+    font-size: 38px;
+  }
+  .hero-heading {
+    font-size: 35px;
+  }
+.hero-subheading {
+    font-size: 15px;
+  }
+  .hero-countdown {
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .countdown-box {
+    padding: 2px 6px;
+    min-width: 40px;
+  }
+
+  .count-number {
+    font-size: 12px;
+  }
+
+  .count-label {
+    font-size: 10px;
+  }
+  .hero-buttons {
+  display: flex;
+  gap: 18px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.btn-hero {
+  font-family: "Lexend Exa", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+  width: 130px;
+}
+.fc-logo {
+  width: 150px;
+  height: auto;
+}
+.when-to-drink-img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  margin: 0 auto 20px;
+  border-radius: 100%;
+  display: block;
+}
+.when-to-drink-card-text {
+  font-size: 14px;
+}
+.when-to-drink-card-heading {
+  font-size: 22px;
+}
+
+
+.review-section-divider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+
+
+.review-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+  margin-bottom: 24px;
+}
+
+.overall-stars i {
+  font-size: 15px;
+}
+
+.review-score {
+  margin: 0;
+  color: #1e1e1e;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+
+.single-review {
+  text-align: left;
+  padding: 10px 0;
+}
+
+.reviewer-name {
+  font-size: 15px;
+  color: #1e1e1e;
+  margin-bottom: 4px;
+}
+
+.person-stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.review-stars i {
+  color: #1e1e1e;
+  font-size: 11px;
+}
+
+.review-text {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #1e1e1e;
+  margin: 0;
+}
+
+.review-divider {
+  border: none;
+  border-top: 1px solid #1e1e1e;
+  opacity: 0.4;
+  margin: 14px 0;
+}
+
+.see-all-reviews {
+  margin-top: 24px;
+  font-size: 12px;
+  color: #0b667a;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+}
 }
