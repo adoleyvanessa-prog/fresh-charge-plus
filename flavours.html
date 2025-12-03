@@ -37,7 +37,6 @@
     <!-- ================= HEADER ================= -->
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark">
-
         <div class="container-fluid">
           <a class="navbar-brand" href="#">FreshCharge</a>
 
@@ -71,10 +70,13 @@
 
           <div class="collapse navbar-collapse" id="navbarNav">
             <div class="navbar-nav ms-auto">
-              <a class="nav-link" href="index.html"
-                >Home</a
+              <a class="nav-link" href="index.html">Home</a>
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="flavours.html"
+                >Flavours</a
               >
-              <a class="nav-link active" aria-current="page" href="flavours.html">Flavours</a>
               <a class="nav-link" href="#">Community</a>
             </div>
           </div>
@@ -85,7 +87,7 @@
     <!-- ================= MAIN ================= -->
     <main>
       <!-- HERO -->
-      <section id="introduction-section">
+      <section id="introduction-section" class="flavours-hero">
         <div class="content-hero">
           <img
             src="assets/icons/fc-logo.webp"
@@ -93,11 +95,13 @@
             class="fc-logo"
           />
 
-          <h1 class="hero-heading">What is new in <span class="brand-text-heading">FreshCharge+</span>
+          <h1 class="hero-heading">
+            What is new in <span class="brand-text-heading">FreshCharge+</span>
           </h1>
 
           <h2 class="hero-subheading">
-            Same natural, plant-powered base - now with more energy and fewer calories.
+            Same natural, plant-powered base - now with more energy and fewer
+            calories.
           </h2>
 
           <!-- Countdown in HERO: only below XL -->
@@ -116,12 +120,19 @@
             </div>
           </div>
         </div>
-
-       
+        <div class="flavours-hero-text">
+          <p>
+            FreshCharge was already known for its natural ingredients and smooth
+            lift - but FreshCharge+ takes it even further. The new pre-launch
+            formula is cleaner, lighter, and stronger, with improved hydration
+            and more natural caffeine. It’s the same refreshing taste, now
+            upgraded for better energy and fewer calories.
+          </p>
+        </div>
       </section>
 
       <!-- FEATURE STRIP -->
-      <section id="feature-strip">
+      <section id="feature-strip" class="flavours-features">
         <div class="feature-item">
           <img
             src="assets/icons/sugar-icon.webp"
@@ -149,42 +160,9 @@
         </div>
       </section>
 
-      <!-- WHY FRESHCHARGE+ -->
-      <section id="why-freshcharge-section">
-        <img
-          src="assets/images/three-cans.webp"
-          alt="three cans of freshcharge+"
-          id="three-cans-image"
-        />
-        <div class="why-freshcharge-text">
-          <h2 class="why-freshcharge">
-            Why <span class="brand-text">FreshCharge+</span>?
-          </h2>
-          <h3 class="why-freshcharge-sub">
-            Same natural goodness - now cleaner, lighter, and stronger.
-          </h3>
-          <ul class="why-freshcharge-list">
-            <li>
-              <strong>Increased natural caffeine </strong>for a smoother energy
-              boost
-            </li>
-            <li><strong>Fewer calories </strong>across all flavours</li>
-            <li>Updated electrolytes for better hydration</li>
-            <li>
-              Still <strong>0 added sugar and naturally flavoured</strong>
-            </li>
-          </ul>
-          <p class="why-freshcharge-list click-link-text">
-            <strong
-              >Click the link below to see the comparison of the old formula to
-              the new one:</strong
-            >
-          </p>
-          <a href="#" class="comparison-link-list"
-            ><strong>See the full comparison</strong></a
-          >
-        </div>
-      </section>
+      <!-- FLAVOUR CANS -->
+      
+
 
       <!-- WHEN TO DRINK -->
       <section id="when-to-drink-section">
@@ -328,87 +306,88 @@
             </div>
           </div>
 
-          <a href="#" class="see-all-reviews"><strong>See all reviews</strong></a>
+          <a href="#" class="see-all-reviews"
+            ><strong>See all reviews</strong></a
+          >
         </div>
       </section>
     </main>
 
-<!-- ================= FOOTER ================= -->
-<footer>
-  <div class="footer-inner">
-    <!-- Left: logo -->
-    <div class="footer-col footer-logo-col">
-      <img
-        src="assets/icons/fc-logo-plus.webp"
-        alt="FreshCharge+ logo"
-        id="footer-logo"
-      />
-    </div>
-
-    <!-- Right: links + contact grouped together -->
-    <div class="footer-right">
-      <div class="footer-col footer-links">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">What’s new</a></li>
-          <li><a href="#">Community</a></li>
-          <li><a href="#">Contact/FAQs</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-contact">
-        <h4 class="footer-heading">Connect with us</h4>
-
-        <div class="footer-socials">
-          <a
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-          </a>
-
-          <a
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
-          </a>
-
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
-          </a>
-
-          <a
-            href="https://www.youtube.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
-          </a>
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <div class="footer-inner">
+        <!-- Left: logo -->
+        <div class="footer-col footer-logo-col">
+          <img
+            src="assets/icons/fc-logo-plus.webp"
+            alt="FreshCharge+ logo"
+            id="footer-logo"
+          />
         </div>
 
-        <h4 class="footer-heading address-heading">Address:</h4>
-        <p class="footer-address">
-          FreshCharge HQ<br />
-          21 Hidden Leaf Street,<br />
-          ZF2 4LO,<br />
-          United Kingdom
-        </p>
+        <!-- Right: links + contact grouped together -->
+        <div class="footer-right">
+          <div class="footer-col footer-links">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">What’s new</a></li>
+              <li><a href="#">Community</a></li>
+              <li><a href="#">Contact/FAQs</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col footer-contact">
+            <h4 class="footer-heading">Connect with us</h4>
+
+            <div class="footer-socials">
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+              </a>
+
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              </a>
+
+              <a
+                href="https://www.youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+              </a>
+            </div>
+
+            <h4 class="footer-heading address-heading">Address:</h4>
+            <p class="footer-address">
+              FreshCharge HQ<br />
+              21 Hidden Leaf Street,<br />
+              ZF2 4LO,<br />
+              United Kingdom
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <p class="footer-bottom">
-    © 2025 FreshCharge by Vanessa Addo. All rights reserved.
-  </p>
-</footer>
-
+      <p class="footer-bottom">
+        © 2025 FreshCharge by Vanessa Addo. All rights reserved.
+      </p>
+    </footer>
 
     <!-- Bootstrap JS -->
     <script

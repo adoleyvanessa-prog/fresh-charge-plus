@@ -464,6 +464,64 @@ nav {
   cursor: pointer;
 }
 
+/* ========== FLAVOURS PAGE HERO ========== */
+
+#introduction-section.flavours-hero {
+  background-image: url("../images/fruits-splash.webp");
+  background-repeat: no-repeat;
+  background-position: bottom right;      /* Position at bottom right */
+  background-size: 50% auto;              /* Cover right quarter only */
+  padding-bottom: 700px;                  /* Space to accomodate image */
+}
+
+/* Pull up the features to overlap the hero background */
+.flavours-features {
+  margin-top: -200px;           /* Pull up to overlap hero background */
+  position: relative;
+  z-index: 2;                   /* Ensure it sits on top of the image */
+}
+
+/* Make hero text overlay the background (no longer pushes section height) */
+.flavours-hero-text {
+  position: absolute;           /* remove from normal flow so it won't increase section height */
+  left: 6%;                     /* horizontal placement — adjust as needed */
+  bottom: 30%;                  /* vertical placement — adjust until the visual looks right */
+  max-width: 640px;             /* constrain width so it doesn't cover image */
+  font-size: 24px;
+  margin: 0;                    /* reset margins since element is absolute */
+  z-index: 3;                   /* sit above the background image and features */
+  /* optional: add a faint backdrop for readability on busy images:
+     background: rgba(255,255,255,0.6);
+     padding: 12px;
+     border-radius: 6px;
+  */
+}
+
+/* Responsive: on smaller screens keep text in normal flow so it doesn't overlap awkwardly */
+@media (max-width: 768px) {
+  #introduction-section.flavours-hero .flavours-hero-text {
+    position: static;           /* return to document flow */
+    max-width: 100%;
+    margin: 20px auto 0;       /* restore spacing and center */
+    left: auto;
+    bottom: auto;
+    z-index: auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  /* reduce the hero padding so mobile doesn't have huge empty space */
+  #introduction-section.flavours-hero {
+    padding-bottom: 420px;
+    background-size: 80% auto;
+    background-position: bottom right;
+  }
+
+  .flavours-features {
+    margin-top: -80px;         /* smaller overlap on mobile */
+  }
+}
+
 /* ========== FOOTER ========== */
 
 footer {
