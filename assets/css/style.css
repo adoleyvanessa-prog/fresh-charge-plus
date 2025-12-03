@@ -597,6 +597,65 @@ nav {
   z-index: 5;
 }
 
+/* ====== Table comparison section ======== */
+#table-comparison {
+  /* same gradient as when-to-drink section */
+  background: linear-gradient(to bottom, #dae0d0 0%, #ceddbb 100%);
+  padding: 60px 50px 40px;
+}
+
+.comparison-heading {
+  font-size: 58px;
+  font-weight: 600;
+  color: #0b667a;
+  margin-bottom: 30px;
+}
+
+/* custom table look */
+.nutrient-table {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #ceddbb;
+}
+.table-nutrient-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nutrient-table thead th {
+  background-color: #ceddbb;
+  border-bottom: none;
+  font-weight: 600;
+  font-size: 24px;
+  color: #1e1e1e;
+}
+.nutrient-table td {
+  font-size: 20px;
+}
+.nutrient-table th,
+.nutrient-table td {
+  border-color: transparent;          /* remove default grey borders */
+  padding: 14px 18px;
+}
+
+/* alternating row colours like Figma */
+.nutrient-table tbody tr:nth-child(odd) td,
+.nutrient-table tbody tr:nth-child(odd) th {
+  background-color: #dae0d0;
+}
+
+.nutrient-table tbody tr:nth-child(even) td,
+.nutrient-table tbody tr:nth-child(even) th {
+  background-color: #ceddbb;
+}
+.table-note {
+  font-size: 20px;
+  font-weight: 600;
+  max-width: 900px;
+  margin: 0 auto;               /* Center horizontally */
+  padding: 20px 0;              /* Add vertical spacing */
+  text-align: center;           /* Center text inside */
+}
 
 
 
