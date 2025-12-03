@@ -249,7 +249,9 @@ nav {
 
 /* ========== FEATURE STRIP ========== */
 
-#feature-strip {
+/* both feature strips (home + flavours) */
+#feature-strip,
+#flavours-feature-strip {
   background-color: #1e1e1e;
   padding: 20px 20px;
   display: flex;
@@ -259,6 +261,7 @@ nav {
   text-align: center;
   flex-wrap: wrap;
 }
+
 
 
 
@@ -281,6 +284,13 @@ nav {
   font-size: 20px;
   margin: 0;
 }
+/* font-awesome icons used in flavours feature strip */
+.features-icon-fa {
+  font-size: 44px;
+  color: #dae0d0;
+  margin-bottom: 12px;
+}
+
 
 /* ========== WHY FRESHCHARGE+ ========== */
 
@@ -824,7 +834,8 @@ footer {
     opacity: 0.9;
   }
 
-  #feature-strip {
+    #feature-strip,
+  #flavours-feature-strip {
     background-color: #1e1e1e;
     color: #dae0d0;
     padding: 18px 18px;
@@ -835,6 +846,7 @@ footer {
     text-align: center;
     flex-wrap: wrap;
   }
+
 
   
 
@@ -883,8 +895,12 @@ footer {
   h3 {
     font-size: 26px;
   }
-}
+  .flavours-hero-text {
+    font-size: 20px;
 
+  }
+}
+/* ======== 12000px Medium laptops and large tablets =====*/
 /* ≤ 1200px */
 @media (max-width: 1200px) {
   .fc-logo {
@@ -933,7 +949,8 @@ footer {
   #three-cans-image {
     width: 350px;
   }
-  #feature-strip {
+      #feature-strip,
+  #flavours-feature-strip {
     background-color: #1e1e1e;
     color: #dae0d0;
     padding: 12px 12px;
@@ -944,6 +961,8 @@ footer {
     text-align: center;
     flex-wrap: wrap;
   }
+
+
 
   
 
@@ -1001,9 +1020,14 @@ h1 {
   h3 {
     font-size: 22px;
   }
+  .flavours-hero-text {
+    font-size: 15px;
+    width: 30%;
+  }
 }
 
-/* ≤ 992px (tablets) */
+
+/*=========== ≤ 992px (tablets)=========== */
 @media (max-width: 992px) {
   #feature-strip {
     gap: 40px;
@@ -1090,6 +1114,12 @@ h1 {
 
   h3 {
     font-size: 20px;
+  }
+  .flavours-hero-text {
+    font-size: 15px;
+    width: 45%;
+    height: 190px;
+    margin-bottom: 10px;
   }
 }
 
@@ -1244,7 +1274,22 @@ h1 {
 .comparison-heading {
   margin-bottom: 20px;
 }
+.flavours-hero-text {
+    font-size: 12px;
+    width: 80%;
+    height: 190px;
+    margin-bottom: 10px;
+  }
 
+  #introduction-section.flavours-hero {
+  background-image: url("../images/background-flavours.webp");
+  background-repeat: no-repeat;
+  background-size: 1200px;        /* fills full width + height */
+  background-position: 70%;
+  margin-bottom: 0;
+ 
+}
+  
 }
 
 
@@ -1287,7 +1332,8 @@ h1 {
   .comparison-link-list {
     font-size: 12px;
   }
-    #feature-strip {
+      #feature-strip,
+  #flavours-feature-strip {
     background-color: #1e1e1e;
     color: #dae0d0;
     padding: 10px 10px;
@@ -1298,6 +1344,7 @@ h1 {
     text-align: center;
     flex-wrap: wrap;
   }
+
 
   
 
