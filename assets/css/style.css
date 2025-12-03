@@ -27,6 +27,45 @@ body {
   font-family: "Lexend Exa", sans-serif;
   font-weight: 400;
 }
+/* ========== GLOBAL HEADINGS ========== */
+
+h1 {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 700;
+  font-size: 80px;       /* same as old hero-heading */
+  line-height: 1.2;
+  color: #0b667a;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 700;
+  font-size: 58px;       /* same as old hero-subheading base size */
+  color: #0b667a;
+  margin: 0;
+}
+
+/* “FreshCharge+” accent inside headings */
+h1 .brand-text,
+h2 .brand-text {
+  font-style: italic;
+  font-weight: 700;
+  color: #0b667a;
+}
+
+h3 {
+  font-family: "Lexend Exa", sans-serif;
+  font-weight: 700;
+  font-size: 28px;       /* same as old hero-subheading base size */
+  color: #1e1e1e;
+  margin: 0;
+}
+/* Extra breathing room under these main section headings */
+.why-freshcharge,
+.comparison-heading {
+  margin-bottom: 28px;   /* space between the h2 and the content under it */
+}
 
 /* Header - top of page */
 header {
@@ -168,31 +207,6 @@ nav {
   width: 260px;
   height: auto;
 }
-
-.hero-heading {
-  color: #0b667a;
-  font-family: "Lexend Exa", sans-serif;
-  font-weight: 600;
-  font-size: 70px;
-  margin: 0;
-  line-height: 1.2;
-}
-
-.brand-text-heading {
-  font-family: "Exo 2", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-  font-size: 70px;
-}
-
-.hero-subheading {
-  font-family: "Lexend Exa", sans-serif;
-  font-weight: 600;
-  font-size: 28px;
-  color: #1e1e1e;
-  margin-top: 0;
-}
-
 /* hero buttons */
 
 .hero-buttons {
@@ -287,19 +301,13 @@ nav {
 }
 
 .brand-text {
-  color: #0b667a;
-  font-family: "Exo 2", sans-serif;
-  font-weight: 700;
   font-style: italic;
-  font-size: 60px;
+  font-weight: 700;
+  color: #0b667a;
 }
 
-.why-freshcharge,
-.when-to-drink-heading {
-  color: #0b667a;
-  font-size: 58px;
-  font-weight: 600;
-}
+
+
 
 #three-cans-image {
   border-radius: 100%;
@@ -361,12 +369,14 @@ nav {
   border-radius: 100%;
   display: block;
 }
+
+.when-to-drink-card-text {
+  font-size: 22px;
+}
 .when-to-drink-card-heading {
   color: #0b667a;
   font-weight: 600;
-}
-.when-to-drink-card-text {
-  font-size: 22px;
+  font-size: 28px;
 }
 
 /* ========== REVIEW SECTION ========== */
@@ -390,12 +400,7 @@ nav {
   gap: 20px;
 }
 
-.review-section-heading {
-  font-size: 58px;
-  color: #0b667a;
-  text-align: center;
-  font-weight: 600;
-}
+
 
 .review-summary {
   display: flex;
@@ -469,11 +474,9 @@ nav {
 /* ========== FLAVOURS PAGE HERO ========== */
 
 #introduction-section.flavours-hero {
-  background-image: url("../images/fruits-splash.webp");
+  background-image: url("../images/background-flavours.webp");
   background-repeat: no-repeat;
-  background-position: bottom right;      /* Position at bottom right */
-  background-size: 50% auto;              /* Cover right quarter only */
-  padding-bottom: 700px;                  /* Space to accomodate image */
+  background-size: contain;
 }
 
 /* Pull up the features to overlap the hero background */
@@ -487,7 +490,7 @@ nav {
 .flavours-hero-text {
   position: absolute;           /* remove from normal flow so it won't increase section height */
   left: 6%;                     /* horizontal placement — adjust as needed */
-  bottom: 30%;                  /* vertical placement — adjust until the visual looks right */
+  bottom: 8%;                  /* vertical placement — adjust until the visual looks right */
   max-width: 640px;             /* constrain width so it doesn't cover image */
   font-size: 24px;
   margin: 0;                    /* reset margins since element is absolute */
@@ -606,12 +609,7 @@ nav {
   padding: 60px 50px 40px;
 }
 
-.comparison-heading {
-  font-size: 58px;
-  font-weight: 600;
-  color: #0b667a;
-  margin-bottom: 30px;
-}
+
 
 /* custom table look */
 .nutrient-table {
@@ -789,12 +787,7 @@ footer {
     width: 500px;
   }
 
-  .why-freshcharge,
-  .when-to-drink-heading,
-  .why-freshcharge,
-  .review-section-heading {
-    font-size: 44px;
-  }
+ 
 
   .brand-text {
     font-size: 48px;
@@ -870,6 +863,26 @@ footer {
   .when-to-drink-card-text {
     font-size: 18px;
   }
+  /* HERO HEADING */
+  h1 {
+    font-size: 60px;      /* was hero-heading 60px */
+  }
+
+  /* SECONDARY HEADINGS (WHY FC+, WHEN TO DRINK, REVIEWS) */
+  h2 {
+    font-size: 44px;      /* matches old .why-freshcharge/.review-section-heading */
+  }
+
+  /* BRAND TEXT INSIDE HEADINGS */
+  h1 .brand-text,
+  h2 .brand-text {
+    font-size: inherit;
+  }
+
+  /* SUBHEADING (your h3 under hero) */
+  h3 {
+    font-size: 26px;
+  }
 }
 
 /* ≤ 1200px */
@@ -904,12 +917,7 @@ footer {
   .when-to-drink-card-text {
     font-size: 18px;
   }
-  .why-freshcharge,
-  .when-to-drink-heading,
-  .why-freshcharge,
-  .review-section-heading {
-    font-size: 40px;
-  }
+
 
   .brand-text {
     font-size: 43px;
@@ -977,6 +985,22 @@ footer {
 #flavours-can-section .container {
   max-width: 1400px;   /* default is 1140px – this makes each col wider */
 }
+h1 {
+    font-size: 52px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h1 .brand-text,
+  h2 .brand-text {
+    font-size: inherit;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
 }
 
 /* ≤ 992px (tablets) */
@@ -1056,6 +1080,17 @@ footer {
   cursor: pointer;
   transition: 0.25s ease;
 }
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
 }
 
 /* ≤ 768px (large phones / small tablets) */
@@ -1193,6 +1228,23 @@ footer {
   .flavour-details li {
     font-size: 14px;
   }
+  h1 {
+    font-size: 42px;
+  }
+
+  /* section headings like “Why FreshCharge+?” */
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+  .why-freshcharge,
+.comparison-heading {
+  margin-bottom: 20px;
+}
+
 }
 
 
@@ -1218,12 +1270,7 @@ footer {
   color: #dae0d0;
   opacity: 0.9;
   }
-    .why-freshcharge,
-  .when-to-drink-heading,
-  .why-freshcharge,
-  .review-section-heading {
-    font-size: 33px;
-  }
+   
     .brand-text {
     font-size: 33px;
   }
@@ -1412,6 +1459,26 @@ footer {
   color: #0b667a;
   text-decoration: underline;
   cursor: pointer;
+}
+h1 {
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 33px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  h1 .brand-text,
+  h2 .brand-text {
+    font-size: inherit;
+  }
+.why-freshcharge,
+.comparison-heading {
+  margin-bottom: 16px;
 }
 
 }
