@@ -497,30 +497,109 @@ nav {
   */
 }
 
-/* Responsive: on smaller screens keep text in normal flow so it doesn't overlap awkwardly */
-@media (max-width: 768px) {
-  #introduction-section.flavours-hero .flavours-hero-text {
-    position: static;           /* return to document flow */
-    max-width: 100%;
-    margin: 20px auto 0;       /* restore spacing and center */
-    left: auto;
-    bottom: auto;
-    z-index: auto;
-    padding: 0;
-    text-align: center;
-  }
-
-  /* reduce the hero padding so mobile doesn't have huge empty space */
-  #introduction-section.flavours-hero {
-    padding-bottom: 420px;
-    background-size: 80% auto;
-    background-position: bottom right;
-  }
-
-  .flavours-features {
-    margin-top: -80px;         /* smaller overlap on mobile */
-  }
+#flavours-can-section {
+  background-image: url("../images/background-splash.webp");
+  background-repeat: no-repeat;
+  background-size: cover;        /* fills full width + height */
+  background-position: center;   /* centers the splash */
+  background-attachment: fixed; /* parallax effect */
+  padding-top: 120px;            /* more breathing room */
+  padding-bottom: 120px;
 }
+
+
+/* Card base (Bootstrap card customised) */
+.flavour-card {
+  background-color: #ceddbb;
+  border: none;
+  border-radius: 0;
+  padding: 40px 15px 38px;   /* more padding */
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+              background-color 0.25s ease;
+  position: relative;
+}
+
+/* Hover “toggle” – lift & glow */
+.flavour-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.28);
+  background-color: #dfe8cc;
+}
+
+/* Circular can image */
+/* bigger circular image */
+.flavour-img {
+  width: 100%;
+  max-width: 380px;   /* was smaller – increase for bigger circle */
+  border-radius: 50%;
+  margin: 0 auto 24px;
+  display: block;
+}
+
+/* slightly larger title */
+.flavour-title {
+  font-family: "Lexend Exa", sans-serif;
+  font-size: 34px;    /* bump up if you like, e.g. 36px–38px */
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #0b667a;
+  text-decoration: none;
+  border: none;
+  background: none;
+}
+
+.flavour-title:hover {
+  text-decoration: none;
+  color: #0d9bbc;
+}
+
+/* Little chevron rotates when open */
+.flavour-chevron {
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
+.flavour-title[aria-expanded="true"] .flavour-chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown details */
+.flavour-details ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  text-align: left;
+  margin: 12px auto 0;
+  max-width: 260px;
+}
+
+.flavour-details li {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e1e1e;
+  margin-bottom: 4px;
+}
+/* NEW! badge */
+.flavour-badge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background-color: #0b667a;
+  color: #dae0d0;
+  font-family: "Lexend Exa", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  z-index: 5;
+}
+
+
+
+
 
 /* ========== FOOTER ========== */
 
@@ -832,6 +911,9 @@ footer {
   cursor: pointer;
   transition: 0.25s ease;
 }
+#flavours-can-section .container {
+  max-width: 1400px;   /* default is 1140px – this makes each col wider */
+}
 }
 
 /* ≤ 992px (tablets) */
@@ -1007,6 +1089,51 @@ footer {
   font-size: 15px;
 }
 
+#introduction-section.flavours-hero .flavours-hero-text {
+    position: static;           /* return to document flow */
+    max-width: 100%;
+    margin: 20px auto 0;       /* restore spacing and center */
+    left: auto;
+    bottom: auto;
+    z-index: auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  /* reduce the hero padding so mobile doesn't have huge empty space */
+  #introduction-section.flavours-hero {
+    padding-bottom: 420px;
+    background-size: 80% auto;
+    background-position: bottom right;
+  }
+
+  .flavours-features {
+    margin-top: -80px;         /* smaller overlap on mobile */
+  }
+
+#flavours-can-section {
+    padding: 40px 20px;
+  }
+
+  .flavours-heading {
+    font-size: 32px;
+  }
+
+  .flavour-img {
+    max-width: 260px;
+  }
+
+  .flavour-title {
+    font-size: 22px;
+  }
+
+  .flavour-details li {
+    font-size: 14px;
+  }
+}
+
+
+  /* ========== EXTRA SMALL SCREENS (MOBILE) ========== */
 @media (max-width: 576px) {
   /* TYPO SIZING */
   .footer-heading {
@@ -1224,5 +1351,4 @@ footer {
   cursor: pointer;
 }
 
-}
 }
