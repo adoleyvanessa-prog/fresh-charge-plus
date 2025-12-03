@@ -43,7 +43,9 @@ main {
   padding-left: 50px;
   padding-right: 50px;
 }
-
+p {
+  color: #1e1e1e;
+}
 /* ========== NAVBAR ========== */
 
 nav {
@@ -235,7 +237,6 @@ nav {
 
 #feature-strip {
   background-color: #1e1e1e;
-  color: #dae0d0;
   padding: 20px 20px;
   display: flex;
   justify-content: center;
@@ -262,6 +263,7 @@ nav {
 
 .feature-item p {
   font-family: "Lexend Exa", sans-serif;
+  color: #dae0d0;
   font-size: 20px;
   margin: 0;
 }
@@ -656,7 +658,9 @@ nav {
   padding: 20px 0;              /* Add vertical spacing */
   text-align: center;           /* Center text inside */
 }
-
+#value {
+  text-decoration: underline;
+}
 
 
 
