@@ -654,7 +654,7 @@ nav {
   font-size: 20px;
   font-weight: 600;
   max-width: 900px;
-  margin: 0 auto;               /* Center horizontally */
+  margin: 40px auto 0;               /* Center horizontally */
   padding: 20px 0;              /* Add vertical spacing */
   text-align: center;           /* Center text inside */
 }
