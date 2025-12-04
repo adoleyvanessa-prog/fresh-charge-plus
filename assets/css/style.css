@@ -698,7 +698,7 @@ nav {
 
 /* section background + padding (breathing room) */
 #community-call {
-  background-color: #CEDDBB;      /* same light green as the page */
+  background-color: #dae0d0;
   padding: 60px 50px 70px;        /* top/right/left/bottom spacing */
   text-align: center;
 }
