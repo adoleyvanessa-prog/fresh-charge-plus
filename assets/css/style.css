@@ -549,7 +549,7 @@ nav {
 .flavour-card {
   background-color: #ceddbb;
   border: none;
-  border-radius: 0;
+  border-radius: 6px !important;
   padding: 40px 15px 38px;   /* more padding */
   text-align: center;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
@@ -780,7 +780,7 @@ nav {
 /* Tiny text under button */
 .community-privacy {
   font-size: 13px;
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 /* “Questions?” heading */
@@ -794,7 +794,7 @@ nav {
 /* ========== FAQ SECTION ========== */
 
 #faq-section {
-  background-color: #CEDDBB;
+  background: linear-gradient(to bottom, #dae0d0 0%, #ceddbb 100%);
   padding: 60px 0 80px;
 }
 
@@ -841,7 +841,7 @@ nav {
 
 /* Keep same background when open */
 #faq-section .accordion-button:not(.collapsed) {
-  background-color: #DAE0D0;
+  background-color: #ceddbb;
   color: #1E1E1E;
   box-shadow: none;
 }
@@ -905,6 +905,37 @@ nav {
   font-size: 22px;
 }
 
+/* ========== CONTACT SECTION ========== */
+
+#contact-section {
+  background-color: #ceddbb;      
+  padding: 60px 50px 80px;
+}
+
+.contact-wrapper {
+  max-width: 780px;                 /* same as community-wrapper */
+  margin: 0 auto;
+}
+
+/* Intro text above form */
+.contact-intro {
+  font-size: 14px;
+  max-width: 620px;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+/* 24–48 hours note */
+.contact-note {
+  font-size: 13px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  opacity: 0.85;
+}
+
+#mail-to {
+  color: #0b667a;
+}
 
 /* ========== FOOTER ========== */
 
@@ -1620,6 +1651,10 @@ h1 {
     font-size: 24px;
   }
 
+  .nav-link {
+    font-size: 15px;
+  }
+
   .footer-links a {
     font-size: 12px;
   }
@@ -1895,4 +1930,16 @@ h1 {
     font-size: 18px;
   }
   
+  #contact-section {
+    padding: 40px 20px 60px;
+  }
+
+  .contact-intro {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  .contact-note {
+    font-size: 11px;
+  }
 }
