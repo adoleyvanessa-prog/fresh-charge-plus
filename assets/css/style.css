@@ -154,6 +154,19 @@ nav {
   margin-left: 200px;
 }
 
+/* Countdown bar under nav on community page (for < 1200px) */
+.community-countdown-wrapper {
+  background: linear-gradient(to bottom, #dae0d0 0%, #ceddbb 100%);
+  justify-content: center;
+  padding: 14px 0;
+}
+
+.nav-countdown-community {
+  margin-left: 0;              /* override desktop offset */
+  gap: 12px;
+}
+
+
 .hero-countdown {
   display: flex;
   justify-content: center;
@@ -698,7 +711,7 @@ nav {
 
 /* ============= COMMUNITY FORM SECTION ==========*/
 #community-section {
-  background: linear-gradient(to bottom, #dae0d0 0%, #ceddbb 100%);
+  background-color: #CEDDBB;
   padding: 60px 0;
 }
 
@@ -1000,6 +1013,11 @@ footer {
 @media (max-width: 1200px) {
   .fc-logo {
     width: 200px;
+  }
+
+  /* Make nav countdown (under nav) centered on smaller screens */
+  .nav-countdown-community {
+    justify-content: center;
   }
 
   .hero-heading,
@@ -1434,6 +1452,18 @@ h1 {
   .features-icon-fa {
     font-size: 22px;
   }
+  .nav-countdown-community .countdown-box {
+    min-width: 46px;
+    padding: 2px 6px;
+  }
+
+  .nav-countdown-community .count-number {
+    font-size: 14px;
+  }
+
+  .nav-countdown-community .count-label {
+    font-size: 11px;
+  }
   
 }
 
@@ -1629,5 +1659,57 @@ h1 {
 
   .reviewer-name {
     font-size: 16px;
+  }
+
+   /* Wrapper (form card) */
+  .community-wrapper {
+    padding: 20px 22px;
+    border-width: 1.5px;
+  }
+
+  /* Intro text */
+  .community-intro {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  /* Form fields */
+  .community-form .form-label {
+    font-size: 14px;
+  }
+
+  .community-form .form-control {
+    padding: 8px 10px;
+    font-size: 14px;
+    border-width: 1.5px;
+  }
+
+  /* Perks title */
+  .community-perks-heading {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  /* Perk boxes */
+  .perk-box {
+    padding: 8px 10px;
+    font-size: 14px;
+    gap: 8px;
+    border-width: 1.5px;
+  }
+
+  .perk-box i {
+    font-size: 15px;
+  }
+
+  /* Privacy text */
+  .community-privacy {
+    font-size: 11px;
+    margin-top: 6px;
+  }
+
+  /* Questions heading */
+  .community-questions-heading {
+    font-size: 18px;
   }
 }
