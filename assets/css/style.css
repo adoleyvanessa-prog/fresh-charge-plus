@@ -221,7 +221,7 @@ nav {
 }
 
 .fc-logo {
-  width: 260px;
+  width: 230px;
   height: auto;
 }
 /* hero buttons */
@@ -710,6 +710,13 @@ nav {
 }
 
 /* ============= COMMUNITY FORM SECTION ==========*/
+
+.community-logo {
+  width: 180px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
 #community-section {
   background-color: #CEDDBB;
   padding: 60px 0;
@@ -884,7 +891,7 @@ footer {
 /* Slightly smaller for typical laptops (≤ 1400px) */
 @media (max-width: 1400px) {
   .fc-logo {
-    width: 200px;
+    width: 160px;
   }
 
   .hero-heading,
@@ -1012,7 +1019,7 @@ footer {
 /* ≤ 1200px */
 @media (max-width: 1200px) {
   .fc-logo {
-    width: 200px;
+    width: 140px;
   }
 
   /* Make nav countdown (under nav) centered on smaller screens */
@@ -1404,7 +1411,7 @@ h1 {
     margin-bottom: 10px;
   }
   .fc-logo {
-    width: 150px;
+    width: 130px;
     height: auto;
   }
 
