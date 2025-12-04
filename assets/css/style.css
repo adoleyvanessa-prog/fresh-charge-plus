@@ -156,7 +156,7 @@ nav {
 
 /* Countdown bar under nav on community page (for < 1200px) */
 .community-countdown-wrapper {
-  background: linear-gradient(to bottom, #dae0d0 0%, #ceddbb 100%);
+  background-color: #1E1E1E;
   justify-content: center;
   padding: 14px 0;
 }
@@ -522,13 +522,13 @@ nav {
   position: absolute;           /* remove from normal flow so it won't increase section height */
   left: 6%;                     /* horizontal placement — adjust as needed */
   bottom: 8%;                  /* vertical placement — adjust until the visual looks right */
-  max-width: 640px;             /* constrain width so it doesn't cover image */
+  max-width: 610px;             /* constrain width so it doesn't cover image */
   font-size: 24px;
   margin: 0;                    /* reset margins since element is absolute */
   z-index: 3;                   /* sit above the background image and features */
-  /* optional: add a faint backdrop for readability on busy images:*/
+  /* faint backdrop for readability on busy images:*/
      background: rgba(206, 221, 187, 0.6);
-  padding: 12px;
+  padding: 6px;
   border-radius: 6px;
   
 }
@@ -718,7 +718,10 @@ nav {
   margin: 0 auto 20px;
 }
 #community-section {
-  background-color: #CEDDBB;
+  background-image: url("../images/falling-fruits.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding: 60px 0;
 }
 
@@ -1011,7 +1014,7 @@ footer {
     font-size: 26px;
   }
   .flavours-hero-text {
-    font-size: 20px;
+    font-size: 18px;
 
   }
 }
