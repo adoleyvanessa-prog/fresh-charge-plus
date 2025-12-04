@@ -791,6 +791,120 @@ nav {
   font-size: 22px;
 }
 
+/* ========== FAQ SECTION ========== */
+
+#faq-section {
+  background-color: #CEDDBB;
+  padding: 60px 0 80px;
+}
+
+/* Logo + heading */
+.faq-heading-wrap {
+  margin-bottom: 30px;
+}
+
+.faq-logo {
+  width: 90px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+/* Outer FAQ box like your Figma strip */
+.faq-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #DAE0D0;
+  border: 2px solid #1E1E1E;
+}
+
+/* Remove default accordion borders */
+#faq-section .accordion-item {
+  border: none;
+  border-bottom: 1px solid #1E1E1E;
+}
+
+#faq-section .accordion-item:last-child {
+  border-bottom: none;
+}
+
+/* Question row */
+#faq-section .accordion-button {
+  background-color: #DAE0D0;
+  color: #1E1E1E;
+  font-family: "Lexend Exa", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 16px 24px;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Keep same background when open */
+#faq-section .accordion-button:not(.collapsed) {
+  background-color: #DAE0D0;
+  color: #1E1E1E;
+  box-shadow: none;
+}
+
+/* Hide Bootstrap icon */
+#faq-section .accordion-button::after {
+  display: none;
+}
+
+/* Flex layout for text + chevron */
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Chevron icon */
+.faq-chevron {
+  margin-left: 20px;
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+/* Rotate chevron when open */
+#faq-section .accordion-button[aria-expanded="true"] .faq-chevron {
+  transform: rotate(180deg);
+}
+
+/* Answer area */
+.faq-answer {
+  background-color: #DAE0D0;
+  border-top: 1px solid #1E1E1E;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 16px 24px 20px;
+}
+
+/* ===== STILL HAVE QUESTIONS STRIP (under FAQs) ===== */
+#faq-still-questions {
+  background-color: #1E1E1E;      /* black bar like your nav */
+  padding: 16px 20px;
+}
+
+.still-questions-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #DAE0D0;                 /* light green/cream text */
+  font-family: "Lexend Exa", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  text-align: center;
+}
+
+.still-questions-inner i {
+  font-size: 22px;
+}
+
 
 /* ========== FOOTER ========== */
 
@@ -1745,6 +1859,40 @@ h1 {
   .flavours-hero-text {
     font-size: 13px;
   }
+#faq-section {
+    padding: 40px 0 60px;
+  }
 
+  .faq-logo {
+    width: 70px;
+  }
+
+  #faq-section .accordion-button {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+
+  .faq-answer {
+    font-size: 13px;
+    padding: 12px 16px 16px;
+  }
+
+  .faq-chevron {
+    font-size: 14px;
+    margin-left: 12px;
+  }
+
+  #faq-still-questions {
+    padding: 12px 14px;
+  }
+
+  .still-questions-inner {
+    font-size: 14px;
+    gap: 8px;
+  }
+
+  .still-questions-inner i {
+    font-size: 18px;
+  }
   
 }
