@@ -85,262 +85,164 @@
 
     <!-- ================= MAIN ================= -->
     <main>
-      <!-- HERO -->
-      <section id="introduction-section" class="flavours-hero">
-        <div class="content-hero">
-          <img
-            src="assets/icons/fc-logo.webp"
-            alt="FreshCharge logo"
-            class="fc-logo"
+      <!-- ================= COMMUNITY SIGN-UP ================= -->
+<section id="community-section">
+  <div class="container">
+    <div class="community-wrapper">
+
+      <!-- Heading / intro -->
+      <div class="text-center mb-4">
+        <h2>Join the <span class="brand-text">FreshCharge+</span> Community</h2>
+        <p class="community-intro">
+          Be the first to hear about new flavours, pre-launch drops, and updates.
+        </p>
+      </div>
+
+      <!-- Form card -->
+      <form class="community-form">
+
+        <!-- Full name -->
+        <div class="mb-3">
+          <label for="fullName" class="form-label">Full Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="fullName"
+            name="fullName"
+            required
           />
+        </div>
 
-          <h1>What is new in <span class="brand-text">FreshCharge+</span></h1>
+        <!-- Email -->
+        <div class="mb-3">
+          <label for="email" class="form-label">Email:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
 
-          <h3>
-            Same natural, plant-powered base - now with more energy<br />
-            and fewer calories.
-          </h3>
+        <!-- Flavours you’re most excited about -->
+        <div class="mb-3">
+          <p class="mb-1 fw-semibold">
+            Flavours you're most excited about:
+          </p>
 
-          <!-- Countdown in HERO: only below XL -->
-          <div class="hero-countdown d-flex d-xl-none">
-            <div class="countdown-box">
-              <span class="count-number">6</span>
-              <span class="count-label">Days</span>
-            </div>
-            <div class="countdown-box">
-              <span class="count-number">17</span>
-              <span class="count-label">Hours</span>
-            </div>
-            <div class="countdown-box">
-              <span class="count-number">59</span>
-              <span class="count-label">Min</span>
-            </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="citrus-lift"
+              id="flavourCitrus"
+              name="flavours[]"
+            />
+            <label class="form-check-label" for="flavourCitrus">
+              Citrus Lift
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="apple-rush"
+              id="flavourApple"
+              name="flavours[]"
+            />
+            <label class="form-check-label" for="flavourApple">
+              Apple Rush
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="juicy-berry"
+              id="flavourBerry"
+              name="flavours[]"
+            />
+            <label class="form-check-label" for="flavourBerry">
+              Juicy Berry
+            </label>
           </div>
         </div>
-        <div class="flavours-hero-text">
-          <p>
-            FreshCharge was already known for its natural ingredients and smooth
-            lift - but <strong>FreshCharge+</strong> takes it even further. The new pre-launch
-            formula is <strong>cleaner, lighter,</strong> and <strong>stronger,</strong> with improved <strong>hydration</strong>
-            and more <strong>natural caffeine.</strong> It’s the same refreshing taste, now
-            upgraded for <strong>better energy</strong> and <strong>fewer calories.</strong>
-          </p>
-        </div>
-      </section>
 
-      <!-- FLAVOUR CANS -->
-      <section id="flavours-can-section" class="py-5">
-        <div class="container">
-          <div class="row g-4 justify-content-center">
-            <!-- CITRUS LIFT -->
-            <div class="col-md-4">
-              <div class="card flavour-card h-100">
-                <div class="flavour-badge">NEW!</div>
-
-                <img
-                  src="assets/images/citrus-lift.webp"
-                  class="card-img-top flavour-img"
-                  alt="Citrus Lift can splashing in water"
-                />
-
-                <div class="card-body">
-                  <button
-                    class="flavour-title btn btn-link p-0 w-100 text-center"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#citrusDetails"
-                    aria-expanded="false"
-                    aria-controls="citrusDetails"
-                  >
-                    CITRUS LIFT
-                    <i
-                      class="fa-solid fa-chevron-down ms-2 flavour-chevron"
-                    ></i>
-                  </button>
-
-                  <div id="citrusDetails" class="collapse flavour-details mt-2">
-                    <ul>
-                      <li>Lemon-lime freshness</li>
-                      <li>8 kcal per can</li>
-                      <li>80mg natural caffeine</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- APPLE RUSH -->
-            <div class="col-md-4">
-              <div class="card flavour-card h-100">
-                <div class="flavour-badge">NEW!</div>
-
-                <img
-                  src="assets/images/apple-rush.webp"
-                  class="card-img-top flavour-img"
-                  alt="Apple Rush can splashing in water"
-                />
-
-                <div class="card-body">
-                  <button
-                    class="flavour-title btn btn-link p-0 w-100 text-center"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#appleDetails"
-                    aria-expanded="false"
-                    aria-controls="appleDetails"
-                  >
-                    APPLE RUSH
-                    <i
-                      class="fa-solid fa-chevron-down ms-2 flavour-chevron"
-                    ></i>
-                  </button>
-
-                  <div id="appleDetails" class="collapse flavour-details mt-2">
-                    <ul>
-                      <li>Green apple flavour</li>
-                      <li>10 kcal per can</li>
-                      <li>85mg natural caffeine</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- JUICY BERRY -->
-            <div class="col-md-4">
-              <div class="card flavour-card h-100">
-                <div class="flavour-badge">NEW!</div>
-
-                <img
-                  src="assets/images/juicy-berry.webp"
-                  class="card-img-top flavour-img"
-                  alt="Juicy Berry can splashing in water"
-                />
-
-                <div class="card-body">
-                  <button
-                    class="flavour-title btn btn-link p-0 w-100 text-center"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#berryDetails"
-                    aria-expanded="false"
-                    aria-controls="berryDetails"
-                  >
-                    JUICY BERRY
-                    <i
-                      class="fa-solid fa-chevron-down ms-2 flavour-chevron"
-                    ></i>
-                  </button>
-
-                  <div id="berryDetails" class="collapse flavour-details mt-2">
-                    <ul>
-                      <li>Mixed berry taste</li>
-                      <li>12 kcal per can</li>
-                      <li>75mg natural caffeine</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /row -->
-        </div>
-        <!-- /container -->
-      </section>
-
-      <!-- FRESHCHARGE VS NEW FRESHCHARGE+  -->
-      <section id="table-comparison">
-        <div class="container">
-          <h2 class="comparison-heading text-center">
-            FreshCharge vs new <span class="brand-text">FreshCharge+</span>
-          </h2>
-
-          <div class="table-responsive">
-            <table class="table nutrient-table">
-              <thead>
-                <tr>
-                  <th scope="col">Nutrient</th>
-                  <th scope="col">FreshCharge</th>
-                  <th scope="col">FreshCharge+</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">Calories</th>
-                  <td>18–20 kcal</td>
-                  <td><strong>8–12 kcal</strong></td>
-                </tr>
-                <tr>
-                  <th scope="row">Sugar</th>
-                  <td>3–4 g</td>
-                  <td><strong>0–1 g</strong></td>
-                </tr>
-                <tr>
-                  <th scope="row">Caffeine</th>
-                  <td>60 mg</td>
-                  <td><strong>75–85 mg</strong></td>
-                </tr>
-                <tr>
-                  <th scope="row">Vitamins</th>
-                  <td>None</td>
-                  <td><strong>B6 &amp; B12</strong></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="table-note">
-          <p id="value">*Values per 330ml can</p>
-          <p>
-            Ingredients: Carbonated water, natural fruit extracts, green tea
-            caffeine, electrolytes (potassium & magnesium), citric acid, natural
-            sweetener (stevia), and a vitamin blend including B6 & B12.
-          </p>
-          <p>
-            <strong
-              >Not suitable for children, pregnant or breastfeeding
-              women.</strong
-            >
-          </p>
-        </div>
-      </section>
-            <!-- FLAVOURS FEATURE STRIP  -->
-      <section id="flavours-feature-strip">
-  <div class="feature-item">
-    <i class="fa-solid fa-leaf features-icon-fa" aria-hidden="true"></i>
-    <p>Vegan</p>
-  </div>
-
-        <div class="feature-item">
-          <i
-            class="fa-solid fa-droplet features-icon-fa"
-            aria-hidden="true"
-          ></i>
-          <p>Hydrating</p>
+        <!-- Why you're interested (optional) -->
+        <div class="mb-4">
+          <label for="interestMessage" class="form-label">
+            Why you're interested (optional):
+          </label>
+          <textarea
+            class="form-control"
+            id="interestMessage"
+            name="interestMessage"
+            rows="3"
+            placeholder="Message..."
+          ></textarea>
         </div>
 
-        <div class="feature-item">
-          <i
-            class="fa-solid fa-recycle features-icon-fa"
-            aria-hidden="true"
-          ></i>
-          <p>100% Recyclable</p>
-        </div>
-      </section>
+        <!-- Join & get early perks -->
+        <h4 class="community-perks-heading">Join & get early perks:</h4>
 
-      <!-- COMMUNITY CALL TO ACTION  -->
-      <section id="community-call">
-  <div id="community-call-text" class="text-center">
-    <h2>
-      Ready to try the improved <span class="brand-text">FreshCharge+</span>?
-    </h2>
-    <p class="community-call-subtext">
-      Join the community for pre-launch updates and early news.
-    </p>
-    <div class="hero-buttons">
-      <a href="#" class="btn-hero primary-btn">Join the community</a>
+        <div class="perk-box">
+          <i class="fa-solid fa-check"></i>
+          Early pre-launch updates
+        </div>
+
+        <div class="perk-box">
+          <i class="fa-solid fa-check"></i>
+          Early previews of future flavours
+        </div>
+
+        <div class="perk-box mb-3">
+          <i class="fa-solid fa-check"></i>
+          Chance to be among the first to try FreshCharge+
+        </div>
+
+        <!-- Opt-in checkbox -->
+        <div class="form-check mb-4">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value="yes"
+            id="marketingOptIn"
+            name="marketingOptIn"
+          />
+          <label class="form-check-label" for="marketingOptIn">
+            Send me pre-launch updates and news.
+          </label>
+        </div>
+
+        <!-- Submit button -->
+        <div class="text-center">
+          <button type="submit" class="btn-hero primary-btn">
+            Submit
+          </button>
+        </div>
+
+        <!-- Small privacy note -->
+        <p class="community-privacy mt-3 text-center">
+          Your information is only used to send FreshCharge+ updates.
+          No spam – ever.
+        </p>
+      </form>
+
+      <!-- Questions link under form -->
+      <div class="text-center mt-4">
+        <p class="community-questions-heading">Questions?</p>
+        <p>
+          Go to our <a href="contact.html" class="comparison-link-list">FAQs/Contact</a> page for more information.
+        </p>
+      </div>
+
     </div>
-      </section>
+  </div>
+</section>
+
 
     </main>
 
