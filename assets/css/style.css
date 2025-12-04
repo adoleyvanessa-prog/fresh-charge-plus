@@ -202,10 +202,10 @@ nav {
 
 #introduction-section {
   position: relative;
-  background-image: url("../images/half-can-splash.webp");
+  background-image: url("../images/splash-cans-bg.webp");
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-size: 2000px auto;
+  background-size: cover;
   padding-bottom: 400px;
 }
 
@@ -345,11 +345,12 @@ nav {
   padding:0;
 }
 .comparison-link-list {
-  display: inline-block;
+  display: block;
   margin-top: 15px;
   font-size: 20px;
   color: #0b667a;
   text-decoration: underline;
+  text-align: center;
 }
 
 .why-freshcharge-list {
@@ -722,6 +723,7 @@ nav {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   padding: 60px 0;
 }
 
@@ -735,6 +737,7 @@ nav {
 
 .community-intro {
   font-size: 18px;
+  font-weight: 600;
 }
 
 /* Bootstrap form controls inside the card */
@@ -753,7 +756,7 @@ nav {
   color: #0B667A;
   font-family: "Lexend Exa", sans-serif;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
@@ -1017,6 +1020,9 @@ footer {
     font-size: 18px;
 
   }
+  .flavour-title {
+    font-size: 26px;
+  }
 }
 /* ======== 12000px Medium laptops and large tablets =====*/
 /* ≤ 1200px */
@@ -1086,7 +1092,9 @@ footer {
   }
 
 
-
+.flavour-title {
+    font-size: 22px;
+  }
   
 
   .feature-item {
@@ -1146,6 +1154,9 @@ h1 {
   .flavours-hero-text {
     font-size: 15px;
     width: 30%;
+  }
+  .flavour-details li {
+    font-size: 16px;
   }
 }
 
@@ -1248,6 +1259,12 @@ h1 {
     width: 45%;
     height: 190px;
     margin-bottom: 10px;
+  }
+  .flavour-title {
+    font-size: 18px;
+  }
+  .flavour-details li {
+    font-size: 14px;
   }
 }
 
@@ -1385,7 +1402,7 @@ h1 {
   }
 
   .flavour-title {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .flavour-details li {
@@ -1408,7 +1425,7 @@ h1 {
   margin-bottom: 20px;
 }
 .flavours-hero-text {
-    font-size: 12px;
+    font-size: 15px;
     width: 80%;
     height: 190px;
     margin-bottom: 10px;
@@ -1484,6 +1501,9 @@ h1 {
   .footer-heading {
     font-size: 12px;
     margin-bottom: 8px;
+  }
+  .navbar-brand {
+    font-size: 24px;
   }
 
   .footer-links a {
@@ -1722,4 +1742,9 @@ h1 {
   .community-questions-heading {
     font-size: 18px;
   }
+  .flavours-hero-text {
+    font-size: 13px;
+  }
+
+  
 }
