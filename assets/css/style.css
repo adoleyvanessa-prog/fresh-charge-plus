@@ -506,9 +506,12 @@ nav {
 /* ========== FLAVOURS PAGE HERO ========== */
 
 #introduction-section.flavours-hero {
-  background-image: url("../images/background-flavours.webp");
+  background-image: url("../images/flav-bg.webp");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 1200px;
+  background-position: left bottom;
+  margin-left: 0;
+  position: relative;
 }
 
 /* Pull up the features to overlap the hero background */
@@ -520,18 +523,19 @@ nav {
 
 /* Make hero text overlay the background (no longer pushes section height) */
 .flavours-hero-text {
-  position: absolute;           /* remove from normal flow so it won't increase section height */
-  left: 6%;                     /* horizontal placement — adjust as needed */
-  bottom: 8%;                  /* vertical placement — adjust until the visual looks right */
-  max-width: 610px;             /* constrain width so it doesn't cover image */
-  font-size: 24px;
-  margin: 0;                    /* reset margins since element is absolute */
-  z-index: 3;                   /* sit above the background image and features */
-  /* faint backdrop for readability on busy images:*/
-     background: rgba(206, 221, 187, 0.6);
-  padding: 6px;
+  position: absolute;           /* keep it out of document flow so it won't increase section height */
+  left: 50%;                    /* center horizontally relative to the hero */
+  transform: translateX(-50%);  /* exact horizontal centering */
+  top: 450px;                   /* place vertically under the H2 — tweak this value as needed */
+  width: 80%;
+  max-width: 610px;
+  text-align: center;           /* center text lines inside the box */
+  font-size: 22px;
+  margin: 0;                    /* reset margins for absolute element */
+  z-index: 3;                   /* sits above hero image / features */
+  background: rgba(206, 221, 187, 0.6); /* subtle green backdrop with opacity */
+  padding: 12px;
   border-radius: 6px;
-  
 }
 
 #flavours-can-section {
@@ -1050,6 +1054,9 @@ footer {
     font-size: 60px;
   }
 
+  .nav-link {
+    font-size: 18px;
+  }
   .hero-subheading {
     font-size: 20px;
   }
@@ -1070,11 +1077,11 @@ footer {
   }
 
   .why-freshcharge-sub {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .why-freshcharge-list {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   /* Box shared styles */
@@ -1113,7 +1120,9 @@ footer {
     flex-wrap: wrap;
   }
 
-
+.table-note {
+  font-size: 16px;
+}
   
 
   .feature-item {
@@ -1163,11 +1172,16 @@ footer {
   }
   .flavours-hero-text {
     font-size: 18px;
+    top: 350px;
 
   }
   .flavour-title {
     font-size: 26px;
   }
+  #introduction-section.flavours-hero {
+  background-image: url("../images/flav-bg.webp");
+  background-size: 900px;
+}
 }
 /* ======== 12000px Medium laptops and large tablets =====*/
 /* ≤ 1200px */
@@ -1180,6 +1194,9 @@ footer {
   .nav-countdown-community {
     justify-content: center;
   }
+  .nav-link {
+    font-size: 16px;
+  } 
 
   .hero-heading,
   .brand-text-heading {
@@ -1205,12 +1222,21 @@ footer {
   }
 
   .when-to-drink-card-text {
-    font-size: 18px;
+    font-size: 16px;
   }
+
 
 
   .brand-text {
     font-size: 43px;
+  }
+
+  .see-all-reviews {
+    font-size: 16px;
+  }
+
+  .comparison-link-list {
+    font-size: 16px;
   }
 
   .why-freshcharge-sub {
@@ -1280,6 +1306,11 @@ footer {
 #flavours-can-section .container {
   max-width: 1400px;   /* default is 1140px – this makes each col wider */
 }
+#introduction-section.flavours-hero {
+  background-image: url("../images/flav-bg.webp");
+  background-size: 800px;
+}
+
 h1 {
     font-size: 52px;
   }
@@ -1298,7 +1329,8 @@ h1 {
   }
   .flavours-hero-text {
     font-size: 15px;
-    width: 30%;
+    width: 40%;
+    top: 370px;
   }
   .flavour-details li {
     font-size: 16px;
@@ -1404,6 +1436,7 @@ h1 {
     width: 45%;
     height: 190px;
     margin-bottom: 10px;
+    top: 350px;
   }
   .flavour-title {
     font-size: 18px;
@@ -1411,6 +1444,11 @@ h1 {
   .flavour-details li {
     font-size: 14px;
   }
+
+  #introduction-section.flavours-hero {
+  background-image: url("../images/flav-bg.webp");
+  background-size: 750px;
+}
 }
 
 
@@ -1511,13 +1549,14 @@ h1 {
 }
 
 #introduction-section.flavours-hero .flavours-hero-text {
-    position: static;           /* return to document flow */
-    max-width: 100%;
-    margin: 20px auto 0;       /* restore spacing and center */
-    left: auto;
-    bottom: auto;
-    z-index: auto;
-    padding: 0;
+    position: static;           /* put it back in normal flow under the H2 on small screens */
+    transform: none;
+    top: auto;
+    width: 100%;
+    max-width: 720px;
+    margin: 16px auto 0;
+    padding: 10px;
+    font-size: 15px;
     text-align: center;
   }
 
@@ -1569,12 +1608,7 @@ h1 {
 .comparison-heading {
   margin-bottom: 20px;
 }
-.flavours-hero-text {
-    font-size: 15px;
-    width: 80%;
-    height: 190px;
-    margin-bottom: 10px;
-  }
+
   .fc-logo {
     width: 130px;
     height: auto;
@@ -1588,6 +1622,12 @@ h1 {
   margin-bottom: 0;
  
 }
+    #introduction-section.flavours-hero .flavours-hero-text {
+    font-size: 15px;
+    max-width: 500px;
+    height: 190px;
+    margin-bottom: 10px;
+    }
 /* TABLE COMPARISON - smaller text */
   .nutrient-table thead th {
     font-size: 16px;
@@ -1891,8 +1931,9 @@ h1 {
   .community-questions-heading {
     font-size: 18px;
   }
-  .flavours-hero-text {
+      #introduction-section.flavours-hero .flavours-hero-text {
     font-size: 13px;
+    max-width: 400px;
   }
 #faq-section {
     padding: 40px 0 60px;
