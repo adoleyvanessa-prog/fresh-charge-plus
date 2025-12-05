@@ -1908,10 +1908,6 @@ footer {
   .flavour-img {
     max-width: 210px;
   }
-
-  #fruits-splash {
-    display: none;
-  }
 }
 
 /*-- end of footer and media queries block --*/
