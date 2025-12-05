@@ -522,10 +522,11 @@ nav {
 #introduction-section.flavours-hero {
   background-image: url("../images/flav-bg.webp"); /* Hero bg for flavours page */
   background-repeat: no-repeat; /* No repeat */
-  background-size: 1200px; /* Size image */
+  background-size: 1100px; /* Size image */
   background-position: left bottom; /* Position image */
   margin-left: 0;
   position: relative; /* For overlaying text */
+  overflow: hidden; /* Hide overflow of image */
 }
 
 .flavours-hero-text {
@@ -542,6 +543,15 @@ nav {
   background: rgba(206, 221, 187, 0.6); /* Translucent bg */
   padding: 12px;
   border-radius: 6px;
+}
+
+#fruits-splash {
+  position: absolute; /* Overlay position */
+  right: 0; /* Right side */
+  margin-bottom: 0px; /* Bottom align */
+  width: 600px; /* Image size */
+  height: auto; /* Maintain aspect */
+  z-index: 2; /* Above bg */
 }
 
 #flavours-can-section {
@@ -1213,7 +1223,11 @@ footer {
   }
   #introduction-section.flavours-hero {
     background-image: url("../images/flav-bg.webp");
-    background-size: 900px;
+    background-size: 800px;
+  }
+
+  #fruits-splash {
+    width: 500px;
   }
 }
 
@@ -1324,6 +1338,10 @@ footer {
   .flavour-details li {
     font-size: 16px;
   }
+
+  #fruits-splash {
+    width: 400px;
+  }
 }
 
 /* ------- 992px and down: Tablets and smaller desktops */
@@ -1413,7 +1431,13 @@ footer {
     font-size: 14px;
   }
   #introduction-section.flavours-hero {
-    background-size: 750px;
+    background-size: 650px;
+  }
+
+  #fruits-splash {
+    right: 15px;
+    width: 350px;
+    bottom: -120px;
   }
 }
 
@@ -1594,6 +1618,10 @@ footer {
   }
   .flavour-img {
     max-width: 240px;
+  }
+/* image dissapears from 768px down */
+  #fruits-splash {
+    display: none;
   }
 }
 
@@ -1839,6 +1867,10 @@ footer {
   }
   .flavour-img {
     max-width: 210px;
+  }
+
+  #fruits-splash {
+    display: none;
   }
 }
 
