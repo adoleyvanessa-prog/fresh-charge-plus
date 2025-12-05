@@ -533,12 +533,6 @@ nav {
   position: relative;
 }
 
-/* Pull up the features to overlap the hero background */
-.flavours-features {
-  margin-top: -200px;           /* Pull up to overlap hero background */
-  position: relative;
-  z-index: 2;                   /* Ensure it sits on top of the image */
-}
 
 /* Make hero text overlay the background (no longer pushes section height) */
 .flavours-hero-text {
@@ -671,10 +665,6 @@ nav {
   max-width: 900px;
   margin: 0 auto;
   background-color: #ceddbb;
-}
-.table-nutrient-table {
-  width: 100%;
-  border-collapse: collapse;
 }
 
 .nutrient-table thead th {
@@ -826,11 +816,6 @@ nav {
   margin-bottom: 30px;
 }
 
-.faq-logo {
-  width: 90px;
-  height: auto;
-  margin-bottom: 8px;
-}
 
 /* Outer FAQ box like your Figma strip */
 .faq-wrapper {
@@ -1113,16 +1098,9 @@ footer {
     width: 160px;
   }
 
-  .hero-heading,
-  .brand-text-heading {
-    font-size: 60px;
-  }
 
   .nav-link {
     font-size: 18px;
-  }
-  .hero-subheading {
-    font-size: 20px;
   }
 
   #introduction-section {
@@ -1262,14 +1240,6 @@ footer {
     font-size: 16px;
   } 
 
-  .hero-heading,
-  .brand-text-heading {
-    font-size: 52px;
-  }
-
-  .hero-subheading {
-    font-size: 22px;
-  }
 
   #introduction-section {
     background-size: 1500px auto;
@@ -1538,14 +1508,7 @@ h1 {
     font-size: 11px;
   }
 
-  .hero-heading,
-  .brand-text-heading {
-    font-size: 42px;
-  }
 
-  .hero-subheading {
-    font-size: 18px;
-  }
   .why-freshcharge-text {
     text-align: center; /* For headings only */
   }
@@ -1631,9 +1594,6 @@ h1 {
     background-position: bottom right;
   }
 
-  .flavours-features {
-    margin-top: -80px;         /* smaller overlap on mobile */
-  }
 
 #flavours-can-section {
     margin-top: -140px;   /* negative margin pulls the section up */
@@ -1641,9 +1601,6 @@ h1 {
     z-index: 3;           /* keep cans above the hero background */
   }
 
-  .flavours-heading {
-    font-size: 32px;
-  }
 
   .flavour-img {
     max-width: 260px;
@@ -1850,15 +1807,6 @@ h1 {
     margin: 0;
   }
 
-  .brand-text-heading {
-    font-size: 38px;
-  }
-  .hero-heading {
-    font-size: 35px;
-  }
-.hero-subheading {
-    font-size: 15px;
-  }
   /* Pull the cans section up so it overlaps the bottom of the flavours hero
      and removes the unwanted gap on small screens. Tweak the -140px value as needed. */
   #flavours-can-section {
@@ -2019,9 +1967,6 @@ h1 {
     padding: 40px 0 60px;
   }
 
-  .faq-logo {
-    width: 70px;
-  }
 
   #faq-section .accordion-button {
     font-size: 14px;
