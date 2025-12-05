@@ -264,6 +264,7 @@ nav {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+
 /* ========== FEATURE STRIP ========== */
 
 /* both feature strips (home + flavours) */
@@ -311,8 +312,8 @@ nav {
 
 /* ========== WHY FRESHCHARGE+ ========== */
 
-#why-freshcharge-section, .click-link-text {
-  background-color: #dae0d0;
+#why-freshcharge-section {
+  background: linear-gradient(to bottom, #dae0d0 0%, #ceddbb 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -343,7 +344,12 @@ nav {
 }
 .click-link-text {
   padding:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
+
 .comparison-link-list {
   display: block;
   margin-top: 15px;
@@ -358,6 +364,19 @@ nav {
   font-size: 22px;
   color: #1e1e1e;
 }
+
+.fc-check-list {
+  list-style: none;        /* Remove bullets */
+  padding: 0;
+  margin-top: 20px;
+}
+
+
+.fc-check-list i {
+  color: #0B667A;         /* FreshCharge+ blue */
+  font-size: 20px;
+}
+
 
 /* ========== WHEN TO DRINK SECTION ========== */
 
@@ -1983,4 +2002,8 @@ h1 {
   .contact-note {
     font-size: 11px;
   }
+
+  .fc-check-list i {
+  font-size: 10px;
+}
 }
