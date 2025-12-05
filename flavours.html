@@ -145,7 +145,7 @@
           <div class="row g-4 justify-content-center"> <!-- .row for Bootstrap grid; g-4 gives gap between columns -->
             <!-- CITRUS LIFT flavour card -->
             <div class="col-md-4"> <!-- Bootstrap column (1/3 width on medium screens and above) -->
-              <div class="card flavour-card flavour-card--citrus h-100"> <!-- Bootstrap card component, custom class for branding -->
+              <div class="card flavour-card flavour-card--citrus"> <!-- Bootstrap card component, custom class for branding -->
                 <div class="flavour-badge">NEW!</div> <!-- Badge overlay for new products -->
                 <img
                   src="assets/images/citrus-lift.webp"
@@ -183,7 +183,7 @@
 
             <!-- JUICY BERRY flavour card -->
             <div class="col-md-4">
-              <div class="card flavour-card flavour-card--berry h-100">
+              <div class="card flavour-card flavour-card--berry">
                 <div class="flavour-badge">NEW!</div>
                 <img
                   src="assets/images/juicy-berry.webp"
@@ -217,7 +217,8 @@
 
             <!-- APPLE RUSH flavour card (same layout/logic as CITRUS LIFT, but different details and image) -->
             <div class="col-md-4">
-              <div class="card flavour-card flavour-card--apple h-100">
+              <!-- Removed Bootstrap h-100 class on each card to let cards open individually -->
+              <div class="card flavour-card flavour-card--apple">
                 <div class="flavour-badge">NEW!</div>
                 <img
                   src="assets/images/apple-rush.webp"
