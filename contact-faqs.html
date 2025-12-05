@@ -30,7 +30,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
 
-    <!-- Favicon -->
+    <!-- Favicon and backups for older devices  -->
     <link rel="icon" href="assets/icons/fc-logo.webp" type="image/webp" />
     <link rel="icon" href="assets/icons/backup-fav.png" type="image/png" />
     <link rel="apple-touch-icon" href="assets/icons/backup-fav.png" />
@@ -99,27 +99,57 @@
       </div>
     </header>
 
-    <!-- ================= MAIN ================= -->
+        <!-- ================= MAIN ================= -->
     <main>
       <!-- ========== FAQS SECTION ========== -->
+      <!--
+        FAQ SECTION:
+        - Uses Bootstrap's .container for responsive width.
+        - Uses Bootstrap's accordion component for collapsible Q&A.
+        - Custom classes (faq-wrapper, faq-answer, faq-chevron, etc.) are styled in your CSS.
+      -->
       <section id="faq-section">
+        <!-- Bootstrap container: keeps content centered and responsive -->
         <div class="container">
-          <!-- Logo + Heading -->
+          <!-- Logo + Heading wrapper, centered using Bootstrap's .text-center -->
           <div class="faq-heading-wrap text-center">
+            <!-- Brand logo at the top of the FAQ section -->
             <img
               src="assets/icons/fc-logo.webp"
               alt="FreshCharge+ logo"
               class="fc-logo community-logo"
             />
+            <!-- Section heading using global h2 styles -->
             <h2>FAQs</h2>
           </div>
 
-          <!-- FAQ Box -->
+          <!-- Outer FAQ box with custom styling (border, background) -->
           <div class="faq-wrapper">
+            <!--
+              Bootstrap accordion:
+              - .accordion is the wrapper.
+              - Each Q/A pair is an .accordion-item.
+              - id="faqAccordion" is the parent group; used by data-bs-parent
+                so only one question is open at a time.
+            -->
             <div class="accordion" id="faqAccordion">
-              <!-- Q1 -->
+              <!-- ========== FAQ ITEM 1 ========== -->
               <div class="accordion-item">
+                <!--
+                  Accordion header:
+                  - h3 for semantic heading.
+                  - Each header has a unique id (faqHeadingOne) linked with aria-labelledby.
+                -->
                 <h3 class="accordion-header" id="faqHeadingOne">
+                  <!--
+                    Accordion toggle button:
+                    - .accordion-button is Bootstrap's clickable trigger.
+                    - .faq-question adds your custom layout (question text + chevron).
+                    - .collapsed means it starts in the closed state.
+                    - data-bs-toggle="collapse" tells Bootstrap JS to use collapse behaviour.
+                    - data-bs-target="#faqCollapseOne" connects this button to the matching answer div.
+                    - aria-controls / aria-expanded improve accessibility.
+                  -->
                   <button
                     class="accordion-button faq-question collapsed"
                     type="button"
@@ -128,17 +158,33 @@
                     aria-expanded="false"
                     aria-controls="faqCollapseOne"
                   >
+                    <!-- Question text -->
                     <span>Is FreshCharge+ sugar-free?</span>
+                    <!--
+                      Font Awesome chevron icon:
+                      - faq-chevron is used in CSS to rotate on open/close.
+                    -->
                     <i class="fa-solid fa-chevron-down faq-chevron"></i>
                   </button>
                 </h3>
 
+                <!--
+                  Accordion collapse container:
+                  - id matches data-bs-target from the button.
+                  - .accordion-collapse.collapse is standard Bootstrap.
+                  - data-bs-parent="#faqAccordion" ensures only one item is open at once.
+                  - aria-labelledby links back to the header for screen readers.
+                -->
                 <div
                   id="faqCollapseOne"
                   class="accordion-collapse collapse"
                   aria-labelledby="faqHeadingOne"
                   data-bs-parent="#faqAccordion"
                 >
+                  <!--
+                    .accordion-body is Bootstrap's content area.
+                    .faq-answer adds your custom background, padding, typography.
+                  -->
                   <div class="accordion-body faq-answer">
                     FreshCharge+ uses a small amount of natural sweetener
                     (stevia), keeping sugars at 0–1g per 330ml can.
@@ -146,7 +192,7 @@
                 </div>
               </div>
 
-              <!-- Q2 -->
+              <!-- ========== FAQ ITEM 2 ========== -->
               <div class="accordion-item">
                 <h3 class="accordion-header" id="faqHeadingTwo">
                   <button
@@ -158,6 +204,10 @@
                     aria-controls="faqCollapseTwo"
                   >
                     <span>Is it suitable for daily use?</span>
+                    <!--
+                      aria-hidden="true" on icons:
+                      - Hides decorative icons from screen readers.
+                    -->
                     <i
                       class="fa-solid fa-chevron-down faq-chevron"
                       aria-hidden="true"
@@ -178,7 +228,7 @@
                 </div>
               </div>
 
-              <!-- Q3 -->
+              <!-- ========== FAQ ITEM 3 ========== -->
               <div class="accordion-item">
                 <h3 class="accordion-header" id="faqHeadingThree">
                   <button
@@ -210,7 +260,7 @@
                 </div>
               </div>
 
-              <!-- Q4 (extra) -->
+              <!-- ========== FAQ ITEM 4 ========== -->
               <div class="accordion-item">
                 <h3 class="accordion-header" id="faqHeadingFour">
                   <button
@@ -241,7 +291,7 @@
                 </div>
               </div>
 
-              <!-- Q5 (extra) -->
+              <!-- ========== FAQ ITEM 5 ========== -->
               <div class="accordion-item">
                 <h3 class="accordion-header" id="faqHeadingFive">
                   <button
@@ -272,7 +322,7 @@
                 </div>
               </div>
 
-              <!-- Q6 (extra) -->
+              <!-- ========== FAQ ITEM 6 ========== -->
               <div class="accordion-item">
                 <h3 class="accordion-header" id="faqHeadingSix">
                   <button
@@ -283,10 +333,10 @@
                     aria-expanded="false"
                     aria-controls="faqCollapseSix"
                   >
-                    <span
-                      >Do I get discounts for joining the FreshCharge+
-                      Community?</span
-                    >
+                    <span>
+                      Do I get discounts for joining the FreshCharge+
+                      Community?
+                    </span>
                     <i
                       class="fa-solid fa-chevron-down faq-chevron"
                       aria-hidden="true"
@@ -307,7 +357,7 @@
                 </div>
               </div>
 
-              <!-- Q7 (extra) -->
+              <!-- ========== FAQ ITEM 7 ========== -->
               <div class="accordion-item">
                 <h3 class="accordion-header" id="faqHeadingSeven">
                   <button
@@ -339,7 +389,7 @@
                 </div>
               </div>
 
-              <!-- Q8 -->
+              <!-- ========== FAQ ITEM 8 ========== -->
               <div class="accordion-item">
                 <h3 class="accordion-header" id="faqHeadingEight">
                   <button
@@ -368,7 +418,7 @@
                 </div>
               </div>
 
-              <!-- Q9 -->
+              <!-- ========== FAQ ITEM 9 ========== -->
               <div class="accordion-item">
                 <h3 class="accordion-header" id="faqHeadingNine">
                   <button
@@ -396,25 +446,53 @@
                 </div>
               </div>
             </div>
+            <!-- End .accordion -->
           </div>
+          <!-- End .faq-wrapper -->
         </div>
+        <!-- End .container -->
       </section>
 
-      <!-- STILL HAVE QUESTIONS STRIP -->
+      <!-- ========== STILL HAVE QUESTIONS STRIP ========== -->
+      <!--
+        This strip sits directly under the FAQ section.
+        - Uses a dark background (styled in CSS via #faq-still-questions).
+        - .still-questions-inner centers icon + text using flexbox (in CSS).
+      -->
       <section id="faq-still-questions">
         <div class="still-questions-inner">
+          <!-- Font Awesome question-circle icon -->
           <i class="fa-regular fa-circle-question" aria-hidden="true"></i>
           <span>Still have questions?</span>
         </div>
       </section>
 
-      <!-- CONTACT SECTION -->
+      <!-- ========== CONTACT SECTION ========== -->
+      <!--
+        CONTACT SECTION:
+        - Uses Bootstrap .container for layout.
+        - Reuses .community-wrapper styles for the card look (border + background).
+        - Uses Bootstrap form utility classes: .mb-3, .form-label, .form-control, etc.
+      -->
       <section id="contact-section">
+        <!-- Bootstrap container to center the content -->
         <div class="container">
+          <!--
+            community-wrapper:
+              - Reused from your community page for consistent card styling.
+            contact-wrapper:
+              - Adds any contact-specific layout tweaks from your CSS.
+          -->
           <div class="community-wrapper contact-wrapper">
-            <!-- Heading / intro -->
+            <!-- Heading / intro, centered with Bootstrap's .text-center -->
             <div class="text-center mb-4">
               <h2>Contact us</h2>
+              <!--
+                contact-intro:
+                  - Custom paragraph style from CSS.
+                - <a href="mailto:..."> creates a clickable "open email app" link.
+                - id="mail-to" is styled in CSS (blue highlight).
+              -->
               <p class="contact-intro">
                 Can't find your question? Contact us at
                 <a href="mailto:hello@freshcharge.com" id="mail-to"
@@ -425,13 +503,32 @@
               </p>
             </div>
 
-            <!-- Contact form (reusing community-form styles) -->
+            <!--
+              Contact form:
+              - class="community-form contact-form"
+                => Reuses your custom form styling from the community section
+                   (borders, spacing) while allowing contact-specific tweaks if needed.
+              - No action/method specified (by default it will reload page).
+                Later you could connect this to a backend or service.
+            -->
             <form class="community-form contact-form">
-              <!-- Full name -->
+              <!-- Full name field -->
               <div class="mb-3">
+                <!--
+                  form-label (Bootstrap):
+                    - Gives consistent spacing/typography for labels.
+                  for="contactFullName":
+                    - Links label to input with matching id for accessibility.
+                -->
                 <label for="contactFullName" class="form-label"
                   >Full Name:</label
                 >
+                <!--
+                  form-control (Bootstrap):
+                    - Gives a full-width, nicely styled input.
+                  required:
+                    - HTML5 validation (form won’t submit if empty).
+                -->
                 <input
                   type="text"
                   class="form-control"
@@ -441,7 +538,7 @@
                 />
               </div>
 
-              <!-- Email -->
+              <!-- Email field -->
               <div class="mb-3">
                 <label for="contactEmail" class="form-label">Email:</label>
                 <input
@@ -453,9 +550,14 @@
                 />
               </div>
 
-              <!-- Message -->
+              <!-- Message textarea -->
               <div class="mb-4">
                 <label for="contactMessage" class="form-label">Message:</label>
+                <!--
+                  textarea:
+                    - rows="4" controls height.
+                    - placeholder gives a light hint of what to type.
+                -->
                 <textarea
                   class="form-control"
                   id="contactMessage"
@@ -466,22 +568,31 @@
                 ></textarea>
               </div>
 
-              <!-- Note + submit button -->
+              <!-- Note about response time -->
               <p class="contact-note text-center">
                 We aim to reply within 24–48 hours. Thanks for reaching out to
                 the FreshCharge team.
               </p>
 
+              <!-- Submit button row, centered using Bootstrap's .text-center -->
               <div class="text-center mt-3">
+                <!--
+                  btn-hero + primary-btn:
+                    - Reuse your custom hero button styling (so the form button
+                      matches the rest of the brand).
+                -->
                 <button type="submit" class="btn-hero primary-btn">
                   Submit
                 </button>
               </div>
             </form>
           </div>
+          <!-- End .community-wrapper.contact-wrapper -->
         </div>
+        <!-- End .container -->
       </section>
     </main>
+    <!-- ================= END MAIN ================= -->
 
     <!-- ================= FOOTER ================= -->
     <footer>

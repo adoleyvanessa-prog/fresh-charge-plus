@@ -2,10 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Ensures the page is responsive and scales for mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FreshCharge</title>
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts: preconnect for improved loading speed, then loads "Exo 2" and "Lexend Exa" for headings and text in CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,7 +14,10 @@
       rel="stylesheet"
     />
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS:
+      - Loads from CDN with version 5.3.8.
+      - Used for navbar, grid, cards, forms, buttons, and utility classes (responsive, spacing, layout).
+    -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,16 +25,16 @@
       crossorigin="anonymous"
     />
 
-    <!-- Font Awesome -->
+    <!-- Font Awesome (CDN): Provides icons for checkmarks, social networks, etc. -->
     <script
       src="https://kit.fontawesome.com/720fe4f688.js"
       crossorigin="anonymous"
     ></script>
 
-    <!-- Custom CSS -->
+    <!-- Custom CSS with your site’s full branding and overrides -->
     <link rel="stylesheet" href="assets/css/style.css" />
 
-        <!-- Favicon -->
+    <!-- Favicons for browser/tab and iOS home screen shortcut -->
     <link rel="icon" href="assets/icons/fc-logo.webp" type="image/webp" />
     <link rel="icon" href="assets/icons/backup-fav.png" type="image/png" />
     <link rel="apple-touch-icon" href="assets/icons/backup-fav.png" />
@@ -38,26 +42,20 @@
   <body>
     <!-- ================= HEADER ================= -->
     <header>
+      <!-- Bootstrap Navbar: dark look, expands/collapses on mobile, sticky at top -->
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
+          <!-- Brand name link -->
           <a class="navbar-brand" href="index.html">FreshCharge</a>
 
-          <!-- Countdown in NAV: only on XL screens and up -->
+          <!-- Countdown only visible on extra-large screens. Uses Bootstrap d-none d-xl-flex for conditional visibility. -->
           <div class="nav-countdown d-none d-xl-flex">
-            <div class="countdown-box">
-              <span class="count-number">6</span>
-              <span class="count-label">Days</span>
-            </div>
-            <div class="countdown-box">
-              <span class="count-number">17</span>
-              <span class="count-label">Hours</span>
-            </div>
-            <div class="countdown-box">
-              <span class="count-number">59</span>
-              <span class="count-label">Min</span>
-            </div>
+            <div class="countdown-box"><span class="count-number">6</span><span class="count-label">Days</span></div>
+            <div class="countdown-box"><span class="count-number">17</span><span class="count-label">Hours</span></div>
+            <div class="countdown-box"><span class="count-number">59</span><span class="count-label">Min</span></div>
           </div>
 
+          <!-- Hamburger toggle for navbar collapse (for mobile/tablet view) -->
           <button
             class="navbar-toggler"
             type="button"
@@ -70,211 +68,177 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
+          <!-- Bootstrap collapsible nav links (ms-auto = margin start auto: pushes links to right) -->
           <div class="collapse navbar-collapse" id="navbarNav">
             <div class="navbar-nav ms-auto">
               <a class="nav-link" href="index.html">Home</a>
-              <a class="nav-link"
-                href="flavours.html"
-                >Flavours</a
-              >
-              <a class="nav-link active"
-                aria-current="page" href="community.html">Community</a>
+              <a class="nav-link" href="flavours.html">Flavours</a>
+              <a class="nav-link active" aria-current="page" href="community.html">Community</a>
             </div>
           </div>
         </div>
       </nav>
 
-            <!-- MOBILE / TABLET COUNTDOWN UNDER NAV -->
+      <!-- Countdown for mobile/tablet screens below nav (Bootstrap responsive d-flex/d-xl-none) -->
       <div class="community-countdown-wrapper d-flex d-xl-none">
         <div class="nav-countdown nav-countdown-community">
-          <div class="countdown-box">
-            <span class="count-number">6</span>
-            <span class="count-label">Days</span>
-          </div>
-          <div class="countdown-box">
-            <span class="count-number">17</span>
-            <span class="count-label">Hours</span>
-          </div>
-          <div class="countdown-box">
-            <span class="count-number">59</span>
-            <span class="count-label">Min</span>
-          </div>
+          <div class="countdown-box"><span class="count-number">6</span><span class="count-label">Days</span></div>
+          <div class="countdown-box"><span class="count-number">17</span><span class="count-label">Hours</span></div>
+          <div class="countdown-box"><span class="count-number">59</span><span class="count-label">Min</span></div>
         </div>
       </div>
-
     </header>
 
     <!-- ================= MAIN ================= -->
     <main>
-      <!-- ================= COMMUNITY SIGN-UP ================= -->
-<section id="community-section">
-  <div class="container">
-    <div class="community-wrapper">
-<img
-            src="assets/icons/fc-logo.webp"
-            alt="FreshCharge logo"
-            class="fc-logo community-logo"
-          />
-      <!-- Heading / intro -->
-      <div class="text-center mb-4">
-        <h2>Join the <span class="brand-text">FreshCharge+</span> Community</h2>
-        <p class="community-intro">
-          Be the first to hear about new flavours, pre-launch drops, and updates.
-        </p>
-      </div>
+      <!-- ================= COMMUNITY SIGN-UP SECTION ================= -->
+      <section id="community-section">
+        <div class="container">
+          <div class="community-wrapper">
 
-      <!-- Form card -->
-      <form class="community-form">
-
-        <!-- Full name -->
-        <div class="mb-3">
-          <label for="fullName" class="form-label">Full Name:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="fullName"
-            name="fullName"
-            required
-          />
-        </div>
-
-        <!-- Email -->
-        <div class="mb-3">
-          <label for="email" class="form-label">Email:</label>
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            name="email"
-            required
-          />
-        </div>
-
-        <!-- Flavours you’re most excited about -->
-        <div class="mb-3">
-          <p class="mb-1 fw-semibold">
-            Flavours you're most excited about:
-          </p>
-
-          <div class="form-check">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value="citrus-lift"
-              id="flavourCitrus"
-              name="flavours[]"
+            <!-- Logo branding at top of card -->
+            <img
+              src="assets/icons/fc-logo.webp"
+              alt="FreshCharge logo"
+              class="fc-logo community-logo"
             />
-            <label class="form-check-label" for="flavourCitrus">
-              Citrus Lift
-            </label>
+
+            <!-- Intro text, centered, margin-bottom (Bootstrap mb-4) -->
+            <div class="text-center mb-4">
+              <h2>Join the <span class="brand-text">FreshCharge+</span> Community</h2>
+              <p class="community-intro">
+                Be the first to hear about new flavours, pre-launch drops, and updates.
+              </p>
+            </div>
+
+            <!-- SIGN-UP FORM: Uses Bootstrap's grid & form styling -->
+            <form class="community-form">
+
+              <!-- Full Name input (Bootstrap spacing mb-3, label/form-control styling) -->
+              <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fullName"
+                  name="fullName"
+                  required
+                />
+              </div>
+
+              <!-- Email input (same as above) -->
+              <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+
+              <!-- Flavours checkbox group: Bootstrap .form-check for styled checkboxes -->
+              <div class="mb-3">
+                <!-- Small paragraph to contextualize the section (Bootstrap fw-semibold for bolder text, mb-1 for micro-spacing) -->
+                <p class="mb-1 fw-semibold">Flavours you're most excited about:</p>
+                
+                <!-- Each option: Bootstrap .form-check for automatic alignment and styling -->
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="citrus-lift"
+                    id="flavourCitrus"
+                    name="flavours[]"
+                  />
+                  <label class="form-check-label" for="flavourCitrus">Citrus Lift</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="apple-rush"
+                    id="flavourApple"
+                    name="flavours[]"
+                  />
+                  <label class="form-check-label" for="flavourApple">Apple Rush</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="juicy-berry"
+                    id="flavourBerry"
+                    name="flavours[]"
+                  />
+                  <label class="form-check-label" for="flavourBerry">Juicy Berry</label>
+                </div>
+              </div>
+
+              <!-- Why you're interested text box (optional input) -->
+              <div class="mb-4">
+                <label for="interestMessage" class="form-label">
+                  Why you're interested (optional):
+                </label>
+                <textarea
+                  class="form-control"
+                  id="interestMessage"
+                  name="interestMessage"
+                  rows="3"
+                  placeholder="Message..."
+                ></textarea>
+              </div>
+
+              <!-- Early perks section with tick icons, styled via Font Awesome and Bootstrap utility spacing (mb-3 for last box) -->
+              <h4 class="community-perks-heading">Join & get early perks:</h4>
+
+              <div class="perk-box"><i class="fa-solid fa-check"></i>Early pre-launch updates</div>
+              <div class="perk-box"><i class="fa-solid fa-check"></i>Early previews of future flavours</div>
+              <div class="perk-box mb-3"><i class="fa-solid fa-check"></i>Chance to be among the first to try FreshCharge+</div>
+
+              <!-- Opt-in checkbox for marketing/news email list -->
+              <div class="form-check mb-4">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value="yes"
+                  id="marketingOptIn"
+                  name="marketingOptIn"
+                />
+                <label class="form-check-label" for="marketingOptIn">
+                  Send me pre-launch updates and news.
+                </label>
+              </div>
+
+              <!-- Submit button, styled to match hero/button branding, centered with Bootstrap text-center -->
+              <div class="text-center">
+                <button type="submit" class="btn-hero primary-btn">Submit</button>
+              </div>
+
+              <!-- Privacy note displayed under the form (Bootstrap mt-3 for margin-top, text-center for centering) -->
+              <p class="community-privacy mt-3 text-center">
+                Your information is only used to send FreshCharge updates.
+                No spam – ever.
+              </p>
+            </form>
+
+            <!-- FAQ/Contact link underneath: Bootstrap text-center & mt-4 for spacing -->
+            <div class="text-center mt-4">
+              <p class="community-questions-heading">Questions?</p>
+              <p>
+                Go to our <a href="contact-faqs.html" class="comparison-link-list"><strong>FAQs/Contact</strong></a> page for more information.
+              </p>
+            </div>
           </div>
-
-          <div class="form-check">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value="apple-rush"
-              id="flavourApple"
-              name="flavours[]"
-            />
-            <label class="form-check-label" for="flavourApple">
-              Apple Rush
-            </label>
-          </div>
-
-          <div class="form-check">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value="juicy-berry"
-              id="flavourBerry"
-              name="flavours[]"
-            />
-            <label class="form-check-label" for="flavourBerry">
-              Juicy Berry
-            </label>
-          </div>
         </div>
-
-        <!-- Why you're interested (optional) -->
-        <div class="mb-4">
-          <label for="interestMessage" class="form-label">
-            Why you're interested (optional):
-          </label>
-          <textarea
-            class="form-control"
-            id="interestMessage"
-            name="interestMessage"
-            rows="3"
-            placeholder="Message..."
-          ></textarea>
-        </div>
-
-        <!-- Join & get early perks -->
-        <h4 class="community-perks-heading">Join & get early perks:</h4>
-
-        <div class="perk-box">
-          <i class="fa-solid fa-check"></i>
-          Early pre-launch updates
-        </div>
-
-        <div class="perk-box">
-          <i class="fa-solid fa-check"></i>
-          Early previews of future flavours
-        </div>
-
-        <div class="perk-box mb-3">
-          <i class="fa-solid fa-check"></i>
-          Chance to be among the first to try FreshCharge+
-        </div>
-
-        <!-- Opt-in checkbox -->
-        <div class="form-check mb-4">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            value="yes"
-            id="marketingOptIn"
-            name="marketingOptIn"
-          />
-          <label class="form-check-label" for="marketingOptIn">
-            Send me pre-launch updates and news.
-          </label>
-        </div>
-
-        <!-- Submit button -->
-        <div class="text-center">
-          <button type="submit" class="btn-hero primary-btn">
-            Submit
-          </button>
-        </div>
-
-        <!-- Small privacy note -->
-        <p class="community-privacy mt-3 text-center">
-          Your information is only used to send FreshCharge updates.
-          No spam – ever.
-        </p>
-      </form>
-
-      <!-- Questions link under form -->
-      <div class="text-center mt-4">
-        <p class="community-questions-heading">Questions?</p>
-        <p>
-          Go to our <a href="contact-faqs.html" class="comparison-link-list"><strong>FAQs/Contact</strong></a> page for more information.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
+      </section>
     </main>
 
     <!-- ================= FOOTER ================= -->
     <footer>
       <div class="footer-inner">
-        <!-- Left: logo -->
+        <!-- Left: logo image for branding -->
         <div class="footer-col footer-logo-col">
           <img
             src="assets/icons/fc-logo-plus.webp"
@@ -282,8 +246,7 @@
             id="footer-logo"
           />
         </div>
-
-        <!-- Right: links + contact grouped together -->
+        <!-- Right: two-column group, navigation links and contact socials/address -->
         <div class="footer-right">
           <div class="footer-col footer-links">
             <ul>
@@ -293,44 +256,15 @@
               <li><a href="contact-faqs.html">Contact/FAQs</a></li>
             </ul>
           </div>
-
           <div class="footer-col footer-contact">
             <h4 class="footer-heading">Connect with us</h4>
-
+            <!-- Font Awesome icons for social media, each opens in a new tab -->
             <div class="footer-socials">
-              <a
-                href="https://www.instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-              </a>
-
-              <a
-                href="https://www.facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
-              </a>
-
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
-              </a>
-
-              <a
-                href="https://www.youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-brands fa-youtube" aria-hidden="true"></i>
-              </a>
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+              <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
             </div>
-
             <h4 class="footer-heading address-heading">Address:</h4>
             <p class="footer-address">
               FreshCharge HQ<br />
@@ -341,13 +275,12 @@
           </div>
         </div>
       </div>
-
       <p class="footer-bottom">
         © 2025 FreshCharge by Vanessa Addo. All rights reserved.
       </p>
     </footer>
 
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap JS bundle: enables responsive nav collapse, modal, form elements, etc. -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

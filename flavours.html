@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FreshCharge</title>
+    <meta charset="UTF-8" /> <!-- Declares character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures responsive scaling on mobile devices -->
+    <title>FreshCharge</title> <!-- Sets the browser tab title -->
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts: preconnect for faster font lookups and imports two font families for headings and body text -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS: Loads version 5.3.8 from CDN for grid, cards, buttons, tables, layout, and responsive design -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,16 +21,16 @@
       crossorigin="anonymous"
     />
 
-    <!-- Font Awesome -->
+    <!-- Font Awesome: Icons for ticks, chevrons, vegan/recyclable/hydration features, social media, etc. -->
     <script
       src="https://kit.fontawesome.com/720fe4f688.js"
       crossorigin="anonymous"
     ></script>
 
-    <!-- Custom CSS -->
+    <!-- custom CSS file for the visual branding and custom styles -->
     <link rel="stylesheet" href="assets/css/style.css" />
 
-    <!-- Favicon -->
+    <!-- Favicon: Icons shown in browser tab or on mobile home screen -->
     <link rel="icon" href="assets/icons/fc-logo.webp" type="image/webp" />
     <link rel="icon" href="assets/icons/backup-fav.png" type="image/png" />
     <link rel="apple-touch-icon" href="assets/icons/backup-fav.png" />
@@ -38,11 +38,12 @@
   <body>
     <!-- ================= HEADER ================= -->
     <header>
+      <!-- Bootstrap navbar, expands on large screens, uses .navbar-dark (white text on dark bg) -->
       <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">FreshCharge</a>
+        <div class="container-fluid"> <!-- Bootstrap container for automatic spacing and responsiveness -->
+          <a class="navbar-brand" href="index.html">FreshCharge</a> <!-- Brand logo/title -->
 
-          <!-- Countdown in NAV: only on XL screens and up -->
+          <!-- Countdown in nav, only shown on extra large (XL) screens and above (Bootstrap d-none d-xl-flex for responsive visibility) -->
           <div class="nav-countdown d-none d-xl-flex">
             <div class="countdown-box">
               <span class="count-number">6</span>
@@ -58,6 +59,7 @@
             </div>
           </div>
 
+          <!-- Bootstrap hamburger toggler for collapsed nav at medium/small screens -->
           <button
             class="navbar-toggler"
             type="button"
@@ -70,8 +72,9 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
+          <!-- Bootstrap collapsible navigation links (responsive feature) -->
           <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="navbar-nav ms-auto">
+            <div class="navbar-nav ms-auto"> <!-- ms-auto (Bootstrap): right-aligns links -->
               <a class="nav-link" href="index.html">Home</a>
               <a
                 class="nav-link active"
@@ -88,23 +91,26 @@
 
     <!-- ================= MAIN ================= -->
     <main>
-      <!-- HERO -->
+      <!-- HERO Section (main visual intro) -->
       <section id="introduction-section" class="flavours-hero">
         <div class="content-hero">
+          <!-- Logo displayed for branding above the headline -->
           <img
             src="assets/icons/fc-logo.webp"
             alt="FreshCharge logo"
             class="fc-logo"
           />
 
+          <!-- Main headline for page: What's new in FreshCharge+ -->
           <h1>What is new in <span class="brand-text">FreshCharge+</span></h1>
 
+          <!-- Subheading text (with line break) -->
           <h3>
             Same natural, plant-powered base - now with more energy<br />
             and fewer calories.
           </h3>
 
-          <!-- Countdown in HERO: only below XL -->
+          <!-- Countdown shown for users below XL screen size (Bootstrap: d-flex, d-xl-none) -->
           <div class="hero-countdown d-flex d-xl-none">
             <div class="countdown-box">
               <span class="count-number">6</span>
@@ -120,6 +126,7 @@
             </div>
           </div>
         </div>
+        <!-- Overlay intro text, blur background for contrast, summary of the upgraded formula -->
         <div class="flavours-hero-text">
           <p>
             FreshCharge was already known for its natural ingredients and smooth
@@ -131,22 +138,21 @@
         </div>
       </section>
 
-      <!-- FLAVOUR CANS -->
-      <section id="flavours-can-section" class="py-5">
-        <div class="container">
-          <div class="row g-4 justify-content-center">
-            <!-- CITRUS LIFT -->
-            <div class="col-md-4">
-              <div class="card flavour-card h-100">
-                <div class="flavour-badge">NEW!</div>
-
+      <!-- FLAVOUR CANS Section -->
+      <section id="flavours-can-section" class="py-5"> <!-- py-5: Bootstrap vertical padding -->
+        <div class="container"> <!-- Bootstrap container for responsive padding/margin -->
+          <div class="row g-4 justify-content-center"> <!-- .row for Bootstrap grid; g-4 gives gap between columns -->
+            <!-- CITRUS LIFT flavour card -->
+            <div class="col-md-4"> <!-- Bootstrap column (1/3 width on medium screens and above) -->
+              <div class="card flavour-card h-100"> <!-- Bootstrap card component, custom class for branding -->
+                <div class="flavour-badge">NEW!</div> <!-- Badge overlay for new products -->
                 <img
                   src="assets/images/citrus-lift.webp"
                   class="card-img-top flavour-img"
                   alt="Citrus Lift can splashing in water"
                 />
-
                 <div class="card-body">
+                  <!-- Bootstrap button: collapses flavour details (variant: btn-link for link style, w-100 text-center for full width alignment) -->
                   <button
                     class="flavour-title btn btn-link p-0 w-100 text-center"
                     type="button"
@@ -161,6 +167,7 @@
                     ></i>
                   </button>
 
+                  <!-- Collapsible details: uses Bootstrap collapse JS to slide open/closed -->
                   <div id="citrusDetails" class="collapse flavour-details mt-2">
                     <ul>
                       <li>Lemon-lime freshness</li>
@@ -172,17 +179,15 @@
               </div>
             </div>
 
-            <!-- APPLE RUSH -->
+            <!-- APPLE RUSH flavour card (same layout/logic as CITRUS LIFT, but different details and image) -->
             <div class="col-md-4">
               <div class="card flavour-card h-100">
                 <div class="flavour-badge">NEW!</div>
-
                 <img
                   src="assets/images/apple-rush.webp"
                   class="card-img-top flavour-img"
                   alt="Apple Rush can splashing in water"
                 />
-
                 <div class="card-body">
                   <button
                     class="flavour-title btn btn-link p-0 w-100 text-center"
@@ -197,7 +202,6 @@
                       class="fa-solid fa-chevron-down ms-2 flavour-chevron"
                     ></i>
                   </button>
-
                   <div id="appleDetails" class="collapse flavour-details mt-2">
                     <ul>
                       <li>Green apple flavour</li>
@@ -209,17 +213,15 @@
               </div>
             </div>
 
-            <!-- JUICY BERRY -->
+            <!-- JUICY BERRY flavour card -->
             <div class="col-md-4">
               <div class="card flavour-card h-100">
                 <div class="flavour-badge">NEW!</div>
-
                 <img
                   src="assets/images/juicy-berry.webp"
                   class="card-img-top flavour-img"
                   alt="Juicy Berry can splashing in water"
                 />
-
                 <div class="card-body">
                   <button
                     class="flavour-title btn btn-link p-0 w-100 text-center"
@@ -234,7 +236,6 @@
                       class="fa-solid fa-chevron-down ms-2 flavour-chevron"
                     ></i>
                   </button>
-
                   <div id="berryDetails" class="collapse flavour-details mt-2">
                     <ul>
                       <li>Mixed berry taste</li>
@@ -246,18 +247,19 @@
               </div>
             </div>
           </div>
-          <!-- /row -->
+          <!-- /Bootstrap row ends -->
         </div>
-        <!-- /container -->
+        <!-- /container ends -->
       </section>
 
-      <!-- FRESHCHARGE VS NEW FRESHCHARGE+  -->
+      <!-- PRODUCT COMPARISON TABLE -->
       <section id="table-comparison">
         <div class="container">
+          <!-- Comparison heading ("FreshCharge vs FreshCharge+") -->
           <h2 class="comparison-heading text-center">
             <span class="brand-text">FreshCharge</span> vs new <span class="brand-text">FreshCharge+</span>
           </h2>
-
+          <!-- Bootstrap responsive table for product differences -->
           <div class="table-responsive">
             <table class="table nutrient-table">
               <thead>
@@ -292,6 +294,7 @@
             </table>
           </div>
         </div>
+        <!-- Detailed notes and warnings under table -->
         <div class="table-note">
           <p id="value">*Values per 330ml can</p>
           <p>
@@ -307,44 +310,35 @@
           </p>
         </div>
       </section>
-            <!-- FLAVOURS FEATURE STRIP  -->
-      <section id="flavours-feature-strip">
-  <div class="feature-item">
-    <i class="fa-solid fa-leaf features-icon-fa" aria-hidden="true"></i>
-    <p>Vegan</p>
-  </div>
 
+      <!-- FLAVOURS FEATURE STRIP: Show feature icons for vegan, hydrating, recyclable (Font Awesome icons) -->
+      <section id="flavours-feature-strip">
         <div class="feature-item">
-          <i
-            class="fa-solid fa-droplet features-icon-fa"
-            aria-hidden="true"
-          ></i>
+          <i class="fa-solid fa-leaf features-icon-fa" aria-hidden="true"></i>
+          <p>Vegan</p>
+        </div>
+        <div class="feature-item">
+          <i class="fa-solid fa-droplet features-icon-fa" aria-hidden="true"></i>
           <p>Hydrating</p>
         </div>
-
         <div class="feature-item">
-          <i
-            class="fa-solid fa-recycle features-icon-fa"
-            aria-hidden="true"
-          ></i>
+          <i class="fa-solid fa-recycle features-icon-fa" aria-hidden="true"></i>
           <p>100% Recyclable</p>
         </div>
       </section>
 
-      <!-- COMMUNITY CALL TO ACTION  -->
+      <!-- COMMUNITY CALL TO ACTION: Banner for user sign-up -->
       <section id="community-call">
-  <div id="community-call-text" class="text-center">
-    <h2>
-      Ready to try the improved <span class="brand-text">FreshCharge+</span>?
-    </h2>
-    <p class="community-call-subtext">
-      Join the community for pre-launch updates and early news.
-    </p>
-    <div class="hero-buttons">
-      <a href="community.html" class="btn-hero primary-btn">Join the community</a>
-    </div>
+        <div id="community-call-text" class="text-center">
+          <h2>Ready to try the improved <span class="brand-text">FreshCharge+</span>?</h2>
+          <p class="community-call-subtext">
+            Join the community for pre-launch updates and early news.
+          </p>
+          <div class="hero-buttons">
+            <a href="community.html" class="btn-hero primary-btn">Join the community</a>
+          </div>
+        </div>
       </section>
-
     </main>
 
     <!-- ================= FOOTER ================= -->
@@ -358,9 +352,9 @@
             id="footer-logo"
           />
         </div>
-
         <!-- Right: links + contact grouped together -->
         <div class="footer-right">
+          <!-- Navigation links column -->
           <div class="footer-col footer-links">
             <ul>
               <li><a href="index.html">Home</a></li>
@@ -369,10 +363,9 @@
               <li><a href="contact-faqs.html">Contact/FAQs</a></li>
             </ul>
           </div>
-
+          <!-- Contact/social column -->
           <div class="footer-col footer-contact">
             <h4 class="footer-heading">Connect with us</h4>
-
             <div class="footer-socials">
               <a
                 href="https://www.instagram.com"
@@ -381,7 +374,6 @@
               >
                 <i class="fa-brands fa-instagram" aria-hidden="true"></i>
               </a>
-
               <a
                 href="https://www.facebook.com"
                 target="_blank"
@@ -389,7 +381,6 @@
               >
                 <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
               </a>
-
               <a
                 href="https://twitter.com"
                 target="_blank"
@@ -397,7 +388,6 @@
               >
                 <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
               </a>
-
               <a
                 href="https://www.youtube.com"
                 target="_blank"
@@ -406,7 +396,6 @@
                 <i class="fa-brands fa-youtube" aria-hidden="true"></i>
               </a>
             </div>
-
             <h4 class="footer-heading address-heading">Address:</h4>
             <p class="footer-address">
               FreshCharge HQ<br />
@@ -417,13 +406,12 @@
           </div>
         </div>
       </div>
-
       <p class="footer-bottom">
         © 2025 FreshCharge by Vanessa Addo. All rights reserved.
       </p>
     </footer>
 
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap JS: Enables navbar collapse/expand, modal, and other interactive features -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
