@@ -30,7 +30,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
 
-        <!-- Favicon -->
+    <!-- Favicon -->
     <link rel="icon" href="assets/icons/fc-logo.webp" type="image/webp" />
     <link rel="icon" href="assets/icons/backup-fav.png" type="image/png" />
     <link rel="apple-touch-icon" href="assets/icons/backup-fav.png" />
@@ -73,17 +73,14 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <div class="navbar-nav ms-auto">
               <a class="nav-link" href="index.html">Home</a>
-              <a class="nav-link"
-                href="flavours.html"
-                >Flavours</a
-              >
+              <a class="nav-link" href="flavours.html">Flavours</a>
               <a class="nav-link" href="community.html">Community</a>
             </div>
           </div>
         </div>
       </nav>
 
-            <!-- MOBILE / TABLET COUNTDOWN UNDER NAV -->
+      <!-- MOBILE / TABLET COUNTDOWN UNDER NAV -->
       <div class="community-countdown-wrapper d-flex d-xl-none">
         <div class="nav-countdown nav-countdown-community">
           <div class="countdown-box">
@@ -100,258 +97,390 @@
           </div>
         </div>
       </div>
-
     </header>
 
     <!-- ================= MAIN ================= -->
     <main>
       <!-- ========== FAQS SECTION ========== -->
-<section id="faq-section">
-  <div class="container">
+      <section id="faq-section">
+        <div class="container">
+          <!-- Logo + Heading -->
+          <div class="faq-heading-wrap text-center">
+            <img
+              src="assets/icons/fc-logo.webp"
+              alt="FreshCharge+ logo"
+              class="fc-logo community-logo"
+            />
+            <h2>FAQs</h2>
+          </div>
 
-    <!-- Logo + Heading -->
-    <div class="faq-heading-wrap text-center">
-      <img
-        src="assets/icons/fc-logo.webp"
-        alt="FreshCharge+ logo"
-        class="fc-logo community-logo"
-      />
-      <h2>FAQs</h2>
-    </div>
+          <!-- FAQ Box -->
+          <div class="faq-wrapper">
+            <div class="accordion" id="faqAccordion">
+              <!-- Q1 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeadingOne">
+                  <button
+                    class="accordion-button faq-question collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapseOne"
+                    aria-expanded="false"
+                    aria-controls="faqCollapseOne"
+                  >
+                    <span>Is FreshCharge+ sugar-free?</span>
+                    <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                  </button>
+                </h3>
 
-    <!-- FAQ Box -->
-    <div class="faq-wrapper">
-      <div class="accordion" id="faqAccordion">
+                <div
+                  id="faqCollapseOne"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faqHeadingOne"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body faq-answer">
+                    FreshCharge+ uses a small amount of natural sweetener
+                    (stevia), keeping sugars at 0–1g per 330ml can.
+                  </div>
+                </div>
+              </div>
 
-        <!-- Q1 -->
-        <div class="accordion-item">
-          <h3 class="accordion-header" id="faqHeadingOne">
-            <button
-              class="accordion-button faq-question"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#faqCollapseOne"
-              aria-expanded="true"
-              aria-controls="faqCollapseOne"
-            >
-              <span>Is FreshCharge+ sugar-free?</span>
-              <i class="fa-solid fa-chevron-down faq-chevron" aria-hidden="true"></i>
-            </button>
-          </h3>
-          <div
-            id="faqCollapseOne"
-            class="accordion-collapse collapse show"
-            aria-labelledby="faqHeadingOne"
-            data-bs-parent="#faqAccordion"
-          >
-            <div class="accordion-body faq-answer">
-              FreshCharge+ uses a small amount of natural sweetener (stevia),
-              keeping sugars at 0–1g per 330ml can.
+              <!-- Q2 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeadingTwo">
+                  <button
+                    class="accordion-button faq-question collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapseTwo"
+                    aria-expanded="false"
+                    aria-controls="faqCollapseTwo"
+                  >
+                    <span>Is it suitable for daily use?</span>
+                    <i
+                      class="fa-solid fa-chevron-down faq-chevron"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+                </h3>
+                <div
+                  id="faqCollapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faqHeadingTwo"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body faq-answer">
+                    FreshCharge+ is designed for everyday moments when you want
+                    a light, clean energy lift. As with any caffeinated drink,
+                    we recommend enjoying it in moderation.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q3 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeadingThree">
+                  <button
+                    class="accordion-button faq-question collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapseThree"
+                    aria-expanded="false"
+                    aria-controls="faqCollapseThree"
+                  >
+                    <span>When does it launch?</span>
+                    <i
+                      class="fa-solid fa-chevron-down faq-chevron"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+                </h3>
+                <div
+                  id="faqCollapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faqHeadingThree"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body faq-answer">
+                    FreshCharge+ is currently in pre-launch. Join the community
+                    to be the first to hear about the official launch date and
+                    early drops.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q4 (extra) -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeadingFour">
+                  <button
+                    class="accordion-button faq-question collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapseFour"
+                    aria-expanded="false"
+                    aria-controls="faqCollapseFour"
+                  >
+                    <span>Is FreshCharge+ vegan?</span>
+                    <i
+                      class="fa-solid fa-chevron-down faq-chevron"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+                </h3>
+                <div
+                  id="faqCollapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faqHeadingFour"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body faq-answer">
+                    Yes. FreshCharge+ is made with plant-based ingredients and
+                    contains no animal-derived products.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q5 (extra) -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeadingFive">
+                  <button
+                    class="accordion-button faq-question collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapseFive"
+                    aria-expanded="false"
+                    aria-controls="faqCollapseFive"
+                  >
+                    <span>How much caffeine is in each can?</span>
+                    <i
+                      class="fa-solid fa-chevron-down faq-chevron"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+                </h3>
+                <div
+                  id="faqCollapseFive"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faqHeadingFive"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body faq-answer">
+                    Each 330ml can contains 75–85mg of natural caffeine from
+                    green tea, depending on the flavour.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q6 (extra) -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeadingSix">
+                  <button
+                    class="accordion-button faq-question collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapseSix"
+                    aria-expanded="false"
+                    aria-controls="faqCollapseSix"
+                  >
+                    <span
+                      >Do I get discounts for joining the FreshCharge+
+                      Community?</span
+                    >
+                    <i
+                      class="fa-solid fa-chevron-down faq-chevron"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+                </h3>
+                <div
+                  id="faqCollapseSix"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faqHeadingSix"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body faq-answer">
+                    Yes! Members receive exclusive early-bird discounts during
+                    pre-launch drops and special promotions. These offers are
+                    only available to community subscribers.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q7 (extra) -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeadingSeven">
+                  <button
+                    class="accordion-button faq-question collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapseSeven"
+                    aria-expanded="false"
+                    aria-controls="faqCollapseSeven"
+                  >
+                    <span>How often will I receive email updates?</span>
+                    <i
+                      class="fa-solid fa-chevron-down faq-chevron"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+                </h3>
+                <div
+                  id="faqCollapseSeven"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faqHeadingSeven"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body faq-answer">
+                    You’ll only receive updates when they matter, such as new
+                    flavours, important announcements, exclusive offers, and
+                    early previews. No spam.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q8 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeadingEight">
+                  <button
+                    class="accordion-button faq-question collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapseEight"
+                    aria-expanded="false"
+                    aria-controls="faqCollapseEight"
+                  >
+                    <span>Is joining the FreshCharge+ Community free?</span>
+                    <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                  </button>
+                </h3>
+                <div
+                  id="faqCollapseEight"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faqHeadingEight"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body faq-answer">
+                    Yes, signing up is completely free and unlocks perks such as
+                    early updates, exclusive offers, and first access to new
+                    flavours.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q9 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeadingNine">
+                  <button
+                    class="accordion-button faq-question collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faqCollapseNine"
+                    aria-expanded="false"
+                    aria-controls="faqCollapseNine"
+                  >
+                    <span>Will my information be shared or sold?</span>
+                    <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                  </button>
+                </h3>
+                <div
+                  id="faqCollapseNine"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faqHeadingNine"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body faq-answer">
+                    Never. Your details are used only to send FreshCharge+
+                    updates. We do not share or sell your data, ever.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <!-- Q2 -->
-        <div class="accordion-item">
-          <h3 class="accordion-header" id="faqHeadingTwo">
-            <button
-              class="accordion-button faq-question collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#faqCollapseTwo"
-              aria-expanded="false"
-              aria-controls="faqCollapseTwo"
-            >
-              <span>Is it suitable for daily use?</span>
-              <i class="fa-solid fa-chevron-down faq-chevron" aria-hidden="true"></i>
-            </button>
-          </h3>
-          <div
-            id="faqCollapseTwo"
-            class="accordion-collapse collapse"
-            aria-labelledby="faqHeadingTwo"
-            data-bs-parent="#faqAccordion"
-          >
-            <div class="accordion-body faq-answer">
-              FreshCharge+ is designed for everyday moments when you
-              want a light, clean energy lift. As with any caffeinated drink,
-              we recommend enjoying it in moderation.
+      <!-- STILL HAVE QUESTIONS STRIP -->
+      <section id="faq-still-questions">
+        <div class="still-questions-inner">
+          <i class="fa-regular fa-circle-question" aria-hidden="true"></i>
+          <span>Still have questions?</span>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact-section">
+        <div class="container">
+          <div class="community-wrapper contact-wrapper">
+            <!-- Heading / intro -->
+            <div class="text-center mb-4">
+              <h2>Contact us</h2>
+              <p class="contact-intro">
+                Can't find your question? Contact us at
+                <a href="mailto:hello@freshcharge.com" id="mail-to"
+                  ><strong>hello@freshcharge.com</strong></a
+                >
+                or fill out the form below with your full name, email &amp;
+                message.
+              </p>
             </div>
+
+            <!-- Contact form (reusing community-form styles) -->
+            <form class="community-form contact-form">
+              <!-- Full name -->
+              <div class="mb-3">
+                <label for="contactFullName" class="form-label"
+                  >Full Name:</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="contactFullName"
+                  name="contactFullName"
+                  required
+                />
+              </div>
+
+              <!-- Email -->
+              <div class="mb-3">
+                <label for="contactEmail" class="form-label">Email:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="contactEmail"
+                  name="contactEmail"
+                  required
+                />
+              </div>
+
+              <!-- Message -->
+              <div class="mb-4">
+                <label for="contactMessage" class="form-label">Message:</label>
+                <textarea
+                  class="form-control"
+                  id="contactMessage"
+                  name="contactMessage"
+                  rows="4"
+                  placeholder="Message..."
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Note + submit button -->
+              <p class="contact-note text-center">
+                We aim to reply within 24–48 hours. Thanks for reaching out to
+                the FreshCharge team.
+              </p>
+
+              <div class="text-center mt-3">
+                <button type="submit" class="btn-hero primary-btn">
+                  Submit
+                </button>
+              </div>
+            </form>
           </div>
         </div>
-
-        <!-- Q3 -->
-        <div class="accordion-item">
-          <h3 class="accordion-header" id="faqHeadingThree">
-            <button
-              class="accordion-button faq-question collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#faqCollapseThree"
-              aria-expanded="false"
-              aria-controls="faqCollapseThree"
-            >
-              <span>When does it launch?</span>
-              <i class="fa-solid fa-chevron-down faq-chevron" aria-hidden="true"></i>
-            </button>
-          </h3>
-          <div
-            id="faqCollapseThree"
-            class="accordion-collapse collapse"
-            aria-labelledby="faqHeadingThree"
-            data-bs-parent="#faqAccordion"
-          >
-            <div class="accordion-body faq-answer">
-              FreshCharge+ is currently in pre-launch. Join the community
-              to be the first to hear about the official launch date and
-              early drops.
-            </div>
-          </div>
-        </div>
-
-        <!-- Q4 (extra) -->
-        <div class="accordion-item">
-          <h3 class="accordion-header" id="faqHeadingFour">
-            <button
-              class="accordion-button faq-question collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#faqCollapseFour"
-              aria-expanded="false"
-              aria-controls="faqCollapseFour"
-            >
-              <span>Is FreshCharge+ vegan?</span>
-              <i class="fa-solid fa-chevron-down faq-chevron" aria-hidden="true"></i>
-            </button>
-          </h3>
-          <div
-            id="faqCollapseFour"
-            class="accordion-collapse collapse"
-            aria-labelledby="faqHeadingFour"
-            data-bs-parent="#faqAccordion"
-          >
-            <div class="accordion-body faq-answer">
-              Yes. FreshCharge+ is made with plant-based ingredients and
-              contains no animal-derived products.
-            </div>
-          </div>
-        </div>
-
-        <!-- Q5 (extra) -->
-        <div class="accordion-item">
-          <h3 class="accordion-header" id="faqHeadingFive">
-            <button
-              class="accordion-button faq-question collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#faqCollapseFive"
-              aria-expanded="false"
-              aria-controls="faqCollapseFive"
-            >
-              <span>How much caffeine is in each can?</span>
-              <i class="fa-solid fa-chevron-down faq-chevron" aria-hidden="true"></i>
-            </button>
-          </h3>
-          <div
-            id="faqCollapseFive"
-            class="accordion-collapse collapse"
-            aria-labelledby="faqHeadingFive"
-            data-bs-parent="#faqAccordion"
-          >
-            <div class="accordion-body faq-answer">
-              Each 330ml can contains 75–85mg of natural caffeine from
-              green tea, depending on the flavour.
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- STILL HAVE QUESTIONS STRIP -->
-<section id="faq-still-questions">
-  <div class="still-questions-inner">
-    <i class="fa-regular fa-circle-question" aria-hidden="true"></i>
-    <span>Still have questions?</span>
-  </div>
-</section>
-
-<!-- CONTACT SECTION -->
-<section id="contact-section">
-  <div class="container">
-    <div class="community-wrapper contact-wrapper">
-
-      <!-- Heading / intro -->
-      <div class="text-center mb-4">
-        <h2>Contact us</h2>
-        <p class="contact-intro">
-          Can't find your question? Contact us at
-          <a href="mailto:hello@freshcharge.com" id="mail-to"><strong>hello@freshcharge.com</strong></a>
-          or fill out the form below with your full name, email &amp; message.
-        </p>
-      </div>
-
-      <!-- Contact form (reusing community-form styles) -->
-      <form class="community-form contact-form">
-
-        <!-- Full name -->
-        <div class="mb-3">
-          <label for="contactFullName" class="form-label">Full Name:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="contactFullName"
-            name="contactFullName"
-            required
-          />
-        </div>
-
-        <!-- Email -->
-        <div class="mb-3">
-          <label for="contactEmail" class="form-label">Email:</label>
-          <input
-            type="email"
-            class="form-control"
-            id="contactEmail"
-            name="contactEmail"
-            required
-          />
-        </div>
-
-        <!-- Message -->
-        <div class="mb-4">
-          <label for="contactMessage" class="form-label">Message:</label>
-          <textarea
-            class="form-control"
-            id="contactMessage"
-            name="contactMessage"
-            rows="4"
-            placeholder="Message..."
-            required
-          ></textarea>
-        </div>
-
-        <!-- Note + submit button -->
-        <p class="contact-note text-center">
-          We aim to reply within 24–48 hours. Thanks for reaching out to the FreshCharge team.
-        </p>
-
-        <div class="text-center mt-3">
-          <button type="submit" class="btn-hero primary-btn">
-            Submit
-          </button>
-        </div>
-
-      </form>
-
-    </div>
-  </div>
-</section>
-
-
+      </section>
     </main>
 
     <!-- ================= FOOTER ================= -->
@@ -371,7 +500,9 @@
           <div class="footer-col footer-links">
             <ul>
               <li><a href="index.html">Home</a></li>
-              <li><a href="flavours.html#flavours-can-section">What’s new</a></li>
+              <li>
+                <a href="flavours.html#flavours-can-section">What’s new</a>
+              </li>
               <li><a href="community.html">Community</a></li>
               <li><a href="contact-faqs.html">Contact/FAQs</a></li>
             </ul>
