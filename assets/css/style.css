@@ -1740,6 +1740,22 @@ h1 {
   .nav-countdown-community .count-label {
     font-size: 11px;
   }
+
+    /* Flavour cards – tablet / large phones */
+  #flavours-can-section .container {
+    max-width: 520px;           /* stop the container going full width */
+  }
+
+  .flavour-card {
+    max-width: 380px;           /* nice vertical card */
+    margin: 0 auto;             /* center it */
+    padding: 28px 18px 26px;    /* a bit less padding on small screens */
+  }
+
+  .flavour-img {
+    max-width: 240px;           /* shrink the circle a little */
+  }
+
   
 }
 
@@ -2051,4 +2067,20 @@ h1 {
   .fc-check-list i {
   font-size: 10px;
 }
+
+  /* Flavour cards – small phones */
+  #flavours-can-section .container {
+    max-width: 360px;
+  }
+
+  .flavour-card {
+    max-width: 320px;
+    margin: 0 auto 20px;
+    padding: 24px 16px 24px;
+  }
+
+  .flavour-img {
+    max-width: 210px;
+  }
+
 }
