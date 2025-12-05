@@ -577,6 +577,36 @@ nav {
   position: relative; /* For badge overlay */
 }
 
+/* Citrus Lift gradient */
+.flavour-card--citrus {
+  background: linear-gradient(
+    135deg,
+    #fff9e3 0%,
+    #f9ffd9 45%,
+    #eeffcd 100%
+  );
+}
+
+/* Apple Rush gradient */
+.flavour-card--apple {
+  background: linear-gradient(
+    135deg,
+    #f5ffe7 0%,
+    #e8fbd3 50%,
+    #c0f5c9 100%
+  );
+}
+
+/* Juicy Berry gradient */
+.flavour-card--berry {
+  background: linear-gradient(
+    135deg,
+    #fffbfd 40%,
+    #ffe6f1 50%,
+    #e4e4ff 100%
+  );
+}
+
 .flavour-card:hover {
   transform: translateY(-8px); /* Animate on hover */
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.28);
@@ -598,7 +628,7 @@ nav {
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #0b667a;
+  color: #1e1e1e;
   text-decoration: none;
   border: none;
   background: none;
@@ -606,7 +636,7 @@ nav {
 
 .flavour-title:hover {
   text-decoration: none;
-  color: #0d9bbc;
+  color: #0b667a;
 }
 
 .flavour-chevron {
