@@ -2,462 +2,457 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lexend+Exa:wght@100..900&display=swap");
 
 /* Color Scheme Reference:
+Text in black divs:          #DAE0D0
+Headings / titles / links:   #0B667A
+Paragraphs:                  #1E1E1E
+Main background:             #CEDDBB
+Accent blue (buttons etc.):  #0D9BBC
+Secondary dark text:         #424242
+*/
 
-Text in black divs make lightest-green #DAE0D0
-text in heading, titles, forms etc. blue #0B667A
-paragraphs off-black #1E1E1E
-background green #CEDDBB
-Black div with title blue #0D9BBC
-lighter black text (extra comments) #424242  */
-
-/* ========== GLOBAL RESET ========== */
-
+/* Reset default margins, padding and set border-box sizing on all elements */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Include padding and border in element's total width/height */
 }
 
-/* Body container - flexbox layout for sticky footer */
+/* Set up flex column layout, minimum height, and base font styles for body */
 body {
-  
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  font-family: "Lexend Exa", sans-serif;
-  font-weight: 400;
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack children vertically */
+  min-height: 100vh; /* Ensure body takes full viewport height */
+  font-family: "Lexend Exa", sans-serif; /* Set main font family */
+  font-weight: 400; /* Regular font weight */
 }
+
 /* ========== GLOBAL HEADINGS ========== */
 
 h1 {
-  font-family: "Exo 2", sans-serif;
-  font-weight: 700;
-  font-size: 80px;       /* same as old hero-heading */
-  line-height: 1.2;
-  color: #0b667a;
-  margin: 0;
-  text-align: center;
+  font-family: "Exo 2", sans-serif; /* Heading font */
+  font-weight: 700; /* Bold */
+  font-size: 80px; /* Large hero heading */
+  line-height: 1.2; /* Proper line spacing */
+  color: #0b667a; /* Primary heading color */
+  margin: 0; /* Reset margin */
+  text-align: center; /* Centered text */
 }
 
 h2 {
-  font-family: "Exo 2", sans-serif;
-  font-weight: 700;
-  font-size: 58px;       /* same as old hero-subheading base size */
-  color: #0b667a;
-  margin: 0;
-  text-align: center;
+  font-family: "Exo 2", sans-serif; /* Heading font */
+  font-weight: 700; /* Bold */
+  font-size: 58px; /* Subheading size */
+  color: #0b667a; /* Heading color */
+  margin: 0; /* Reset margin */
+  text-align: center; /* Centered title */
 }
 
-/* “FreshCharge+” accent inside headings */
 h1 .brand-text,
 h2 .brand-text {
-  font-style: italic;
-  font-weight: 700;
-  color: #0b667a;
+  font-style: italic; /* Italic styling for brand text */
+  font-weight: 700; /* Bold */
+  color: #0b667a; /* Accent color */
 }
 
 h3 {
-  font-family: "Lexend Exa", sans-serif;
-  font-weight: 700;
-  font-size: 28px;       /* same as old hero-subheading base size */
-  color: #1e1e1e;
-  margin: 0;
-  text-align: center;
-}
-/* Extra breathing room under these main section headings */
-.why-freshcharge,
-.comparison-heading {
-  margin-bottom: 28px;   /* space between the h2 and the content under it */
-  text-align: center;
+  font-family: "Lexend Exa", sans-serif; /* Heading font */
+  font-weight: 700; /* Bold */
+  font-size: 28px; /* Section heading */
+  color: #1e1e1e; /* Heading color */
+  margin: 0; /* Remove default margin */
+  text-align: center; /* Centered */
 }
 
-/* Header - top of page */
+.why-freshcharge,
+.comparison-heading {
+  margin-bottom: 28px; /* Space below major headings */
+  text-align: center; /* Center headings */
+}
+
+/* ========== HEADER & MAIN CONTAINER ========== */
+
+/* Remove background for header */
 header {
   background: none;
 }
 
-/* Main content area */
 main {
-  background-color: #ceddbb;
-  flex: 1;
+  background-color: #ceddbb; /* Main page background */
+  flex: 1; /* Take available space for sticky footer */
 }
 
 .container-fluid {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 50px; /* Left padding for layout */
+  padding-right: 50px; /* Right padding for layout */
 }
+
 p {
-  color: #1e1e1e;
+  color: #1e1e1e; /* Paragraph text color */
 }
+
 /* ========== NAVBAR ========== */
 
 nav {
-  background-color: #1e1e1e;
-  /* let the height be automatic */
-  padding: 8px 0;   /* small vertical padding so it still feels 60–70px high */
+  background-color: #1e1e1e; /* Navbar background */
+  padding: 8px 0; /* Vertical padding */
 }
 
-
 .navbar .container-fluid {
-  display: flex;
-  align-items: center;
-  gap: 24px;
+  display: flex; /* Navbar wrapper uses flex layout */
+  align-items: center; /* Vertically center navbar items */
+  gap: 24px; /* Horizontal gap between elements */
 }
 
 .navbar-brand {
-  color: #0d9bbc;
-  font-family: "Exo 2", sans-serif !important;
-  font-weight: 600;
-  font-style: italic;
-  font-size: 30px;
+  color: #0d9bbc; /* Brand color */
+  font-family: "Exo 2", sans-serif !important; /* Font */
+  font-weight: 600; /* Semi-bold */
+  font-style: italic; /* Italicized brand */
+  font-size: 30px; /* Large brand font */
 }
 
 .navbar-nav {
-  margin-left: auto;
-  gap: 24px;
+  margin-left: auto; /* Push nav links to the right */
+  gap: 24px; /* Spacing between links */
 }
 
 .nav-link {
-  color: #dae0d0 !important;
-  font-size: 20px;
+  color: #dae0d0 !important; /* Nav link color */
+  font-size: 20px; /* Link font size */
 }
 
 .nav-link.active {
-  text-decoration: underline !important;
+  text-decoration: underline !important; /* Active link underline */
 }
 
 .nav-link:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Link underline on hover */
 }
-/* ===== HAMBURGER ICON STYLING ===== */
 
-/* Make the button border your light green */
+/* Hamburger button for mobile nav */
 .navbar-toggler {
-  border: none !important;
-  box-shadow: none !important;
-  background: none !important;
-  padding: 0;
-  color: #dae0d0 !important;
+  border: none !important; /* Remove border */
+  box-shadow: none !important; /* Remove shadow */
+  background: none !important; /* No background */
+  padding: 0; /* No padding */
+  color: #dae0d0 !important; /* Hamburger icon color */
 }
 
-/* Custom hamburger icon in #DAE0D0 */
 .navbar-toggler-icon {
+  /* Custom hamburger lines color in SVG (light green) */
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(218,224,208,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* ========== COUNTDOWN (USED IN NAV + HERO) ========== */
+/* ========== COUNTDOWN BOXES ========== */
 
 .nav-countdown {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-left: 200px;
+  display: flex; /* Layout countdown horizontally */
+  align-items: center; /* Vertically center countdown */
+  gap: 12px; /* Space between countdown boxes */
+  margin-left: 200px; /* Offset for desktop nav */
 }
 
-/* Countdown bar under nav on community page (for < 1200px) */
+/* Countdown bar for mobile/tablet under nav in community page */
 .community-countdown-wrapper {
-  background-color: #1E1E1E;
-  justify-content: center;
-  padding: 14px 0;
+  background-color: #1e1e1e; /* Black bar */
+  justify-content: center; /* Center items */
+  padding: 14px 0; /* Padding top and bottom */
 }
 
 .nav-countdown-community {
-  margin-left: 0;              /* override desktop offset */
+  margin-left: 0; /* Reset left margin for mobile */
   gap: 12px;
 }
 
-
 .hero-countdown {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  margin-top: 16px;
+  display: flex; /* Layout for hero countdown */
+  justify-content: center; /* Center container */
+  align-items: center; /* Vertically center */
+  gap: 16px; /* Space between boxes */
+  margin-top: 16px; /* Space above hero countdown */
 }
 
-/* Box shared styles */
+/* Individual countdown box styles */
 .countdown-box {
-  border: 2px solid #0d9bbc;
-  padding: 4px 10px;
-  text-align: center;
-  color: #dae0d0;
-  font-family: "Lexend Exa", sans-serif;
-  border-radius: 4px;
-  min-width: 54px;
-  background-color: #1e1e1e;
+  border: 2px solid #0d9bbc; /* Colored border */
+  padding: 4px 10px; /* Inner padding */
+  text-align: center; /* Center numbers/labels */
+  color: #dae0d0; /* Text color */
+  font-family: "Lexend Exa", sans-serif; /* Font */
+  border-radius: 4px; /* Slightly rounded corners */
+  min-width: 54px; /* Minimum width */
+  background-color: #1e1e1e; /* Box background */
 }
 
 .count-number {
-  display: block;
-  font-size: 19px;
-  font-weight: 700;
+  display: block; /* Force new line */
+  font-size: 19px; /* Number font size */
+  font-weight: 700; /* Bold number */
 }
 
 .count-label {
-  font-size: 15px;
-  opacity: 0.9;
+  font-size: 15px; /* Label font size */
+  opacity: 0.9; /* Slightly faded label */
 }
 
 /* ========== HERO SECTION ========== */
 
 #introduction-section {
-  position: relative;
-  background-image: url("../images/splash-cans-bg.webp");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: cover;
-  padding-bottom: 400px;
+  position: relative; /* For overlay effects */
+  background-image: url("../images/splash-cans-bg.webp"); /* Hero background image */
+  background-repeat: no-repeat; /* Don't repeat */
+  background-position: center bottom; /* Center image at bottom */
+  background-size: cover; /* Cover section */
+  padding-bottom: 400px; /* Space below hero */
 }
 
 .content-hero {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding-top: 10px;
-  gap: 3px;
+  position: relative; /* Layer on top of background */
+  z-index: 1; /* Above background */
+  display: flex; /* Center hero contents */
+  flex-direction: column; /* Stack vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Center text */
+  padding-top: 10px; /* Top spacing */
+  gap: 3px; /* Space between hero elements */
 }
 
 .fc-logo {
-  width: 230px;
-  height: auto;
+  width: 230px; /* Logo size */
+  height: auto; /* Keep aspect ratio */
 }
-/* hero buttons */
 
+/* Hero section buttons */
 .hero-buttons {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-  justify-content: center;
+  display: flex; /* Lay out buttons horizontally */
+  gap: 20px; /* Space between buttons */
+  margin-top: 20px; /* Space above buttons */
+  justify-content: center; /* Center buttons */
 }
 
 .btn-hero {
-  font-family: "Lexend Exa", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  padding: 12px 28px;
-  border-radius: 6px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: 0.25s ease;
+  font-family: "Lexend Exa", sans-serif; /* Button font */
+  font-size: 18px; /* Button text size */
+  font-weight: 600; /* Semi-bold */
+  padding: 12px 28px; /* Button padding */
+  border-radius: 6px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  cursor: pointer; /* Pointer cursor */
+  transition: 0.25s ease; /* Smooth transitions */
 }
 
 .primary-btn {
-  background-color: #1e1e1e;
-  color: #dae0d0;
-  border: 2px solid #1e1e1e;
+  background-color: #1e1e1e; /* Solid color for primary btn */
+  color: #dae0d0; /* Button text color */
+  border: 2px solid #1e1e1e; /* Border matches background */
 }
 
 .primary-btn:hover {
-  background-color: #333;
+  background-color: #333; /* Darken on hover */
 }
 
 .outline-btn {
-  background-color: transparent;
-  border: 2px solid #1e1e1e;
-  color: #1e1e1e;
+  background-color: transparent; /* Outline style */
+  border: 2px solid #1e1e1e; /* Solid border */
+  color: #1e1e1e; /* Text color */
 }
 
 .outline-btn:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1); /* Subtle hover bg */
 }
 
+/* ========== FEATURE STRIP SECTION ========== */
 
-/* ========== FEATURE STRIP ========== */
-
-/* both feature strips (home + flavours) */
+/* Both home and flavours feature strips */
 #feature-strip,
 #flavours-feature-strip {
-  background-color: #1e1e1e;
-  padding: 20px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 180px;
-  text-align: center;
-  flex-wrap: wrap;
+  background-color: #1e1e1e; /* Section background */
+  padding: 20px 20px; /* Inner spacing */
+  display: flex; /* Horizontal layout for features */
+  justify-content: center; /* Center items */
+  align-items: center; /* Vertically align */
+  gap: 180px; /* Big gap between features */
+  text-align: center; /* Center feature texts */
+  flex-wrap: wrap; /* Allow wrap for small screens */
 }
 
-
-
-
-
 .feature-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: flex; /* Stack icon and text vertically */
+  flex-direction: column; /* Icon over text */
+  align-items: center; /* Center items */
 }
 
 .features-icon {
-  width: 90px;
+  width: 90px; /* Icon size */
   height: auto;
-  margin-bottom: 5px;
+  margin-bottom: 5px; /* Gap below icon */
 }
 
 .feature-item p {
-  font-family: "Lexend Exa", sans-serif;
-  color: #dae0d0;
-  font-size: 20px;
-  margin: 0;
+  font-family: "Lexend Exa", sans-serif; /* Text font */
+  color: #dae0d0; /* Feature font color */
+  font-size: 20px; /* Feature text size */
+  margin: 0; /* Remove margin */
 }
-/* font-awesome icons used in flavours feature strip */
+
+/* Font Awesome icons for flavour features */
 .features-icon-fa {
-  font-size: 44px;
-  color: #dae0d0;
-  margin-bottom: 12px;
+  font-size: 44px; /* Bigger icon */
+  color: #dae0d0; /* Feature icon color */
+  margin-bottom: 12px; /* Space below icon */
 }
 
-
-/* ========== WHY FRESHCHARGE+ ========== */
+/* ========== WHY FRESHCHARGE+ SECTION ========== */
 
 #why-freshcharge-section {
-  background: linear-gradient(to bottom, #dae0d0 0%, #ceddbb 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-  padding: 60px 50px;
+  background: linear-gradient(
+    to bottom,
+    #dae0d0 0%,
+    #ceddbb 100%
+  ); /* Soft gradient background */
+  display: flex; /* Layout image/text side by side */
+  align-items: center; /* Vertically center items */
+  justify-content: center; /* Horizontally center items */
+  gap: 60px; /* Space between image and text */
+  padding: 60px 50px; /* Section padding */
 }
 
 .why-freshcharge-sub {
-  color: #1e1e1e;
-  font-size: 28px;
-  font-family: "Lexend Exa", sans-serif;
-  font-weight: 600;
+  color: #1e1e1e; /* Subheading color */
+  font-size: 28px; /* Subheading size */
+  font-family: "Lexend Exa", sans-serif; /* Font family */
+  font-weight: 600; /* Semi-bold */
 }
 
 .brand-text {
-  font-style: italic;
-  font-weight: 700;
-  color: #0b667a;
+  font-style: italic; /* Italicise "FreshCharge+" */
+  font-weight: 700; /* Bold brand text */
+  color: #0b667a; /* Brand accent */
 }
-
-
-
 
 #three-cans-image {
-  border-radius: 100%;
-  width: 700px;
-  height: auto;
+  border-radius: 100%; /* Circular image */
+  width: 700px; /* Large can image */
+  height: auto; /* Maintain aspect */
 }
+
 .click-link-text {
-  padding:0;
-  display: flex;
+  padding: 0; /* Remove padding */
+  display: flex; /* Center text horizontally */
   align-items: center;
   justify-content: center;
-
 }
 
 .comparison-link-list {
-  display: block;
-  margin-top: 15px;
-  font-size: 20px;
-  color: #0b667a;
-  text-decoration: underline;
-  text-align: center;
+  display: block; /* Takes full width */
+  margin-top: 15px; /* Gap above link */
+  font-size: 20px; /* Link text size */
+  color: #0b667a; /* Link color */
+  text-decoration: underline; /* Underlined link */
+  text-align: center; /* Center link */
 }
 
 .why-freshcharge-list {
-  margin-top: 20px;
-  font-size: 22px;
-  color: #1e1e1e;
+  margin-top: 20px; /* Space above list */
+  font-size: 22px; /* List font size */
+  color: #1e1e1e; /* List color */
 }
 
 .fc-check-list {
-  list-style: none;        /* Remove bullets */
+  list-style: none; /* Remove bullets */
   padding: 0;
   margin-top: 20px;
 }
 
-
 .fc-check-list i {
-  color: #0B667A;         /* FreshCharge+ blue */
-  font-size: 20px;
+  color: #0b667a; /* Check icon color */
+  font-size: 20px; /* Icon size */
 }
-
 
 /* ========== WHEN TO DRINK SECTION ========== */
 
 #when-to-drink-section {
-  background: linear-gradient(to bottom, #dae0d0 0%, #ceddbb 100%);
-  margin-top: 50px;
-  padding: 60px 50px;
-  text-align: center;
-  align-items: center;
+  background: linear-gradient(
+    to bottom,
+    #dae0d0 0%,
+    #ceddbb 100%
+  ); /* Section gradient */
+  margin-top: 50px; /* Space above */
+  padding: 60px 50px; /* Section padding */
+  text-align: center; /* Center text */
+  align-items: center; /* Align cards */
 }
 
 .card-div-section {
-  background-color: #dae0d0;
-  margin-top: 20px;
-  width: 90%;
-  margin: 20px auto 0;
+  background-color: #dae0d0; /* Card wrapper background */
+  margin-top: 20px; /* Space above cards */
+  width: 90%; /* Responsive width */
+  margin: 20px auto 0; /* Center cards */
 }
 
 .when-to-drink-cards {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  flex-wrap: wrap;
+  display: flex; /* Layout horizontally */
+  justify-content: center; /* Center cards */
+  gap: 60px; /* Space between cards */
+  flex-wrap: wrap; /* Wrap on small screens */
 }
 
 .when-to-drink-card {
-  flex: 1;
-  max-width: 300px;
-  text-align: center;
+  flex: 1; /* Flexible card width */
+  max-width: 300px; /* Card size limit */
+  text-align: center; /* Center card content */
 }
 
 .when-to-drink-img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  margin: 0 auto 20px;
-  border-radius: 100%;
-  display: block;
+  width: 100%; /* Responsive image width */
+  max-width: 300px; /* Image size limit */
+  height: auto; /* Keep aspect ratio */
+  margin: 0 auto 20px; /* Center and space image */
+  border-radius: 100%; /* Circular image */
+  display: block; /* Block layout */
 }
 
 .when-to-drink-card-text {
-  font-size: 22px;
+  font-size: 22px; /* Card description size */
 }
+
 .when-to-drink-card-heading {
-  color: #0b667a;
-  font-weight: 600;
-  font-size: 28px;
+  color: #0b667a; /* Card heading color */
+  font-weight: 600; /* Semi-bold heading */
+  font-size: 28px; /* Card heading size */
 }
 
 /* ========== REVIEW SECTION ========== */
 
 #review-section {
-  background-color: #dae0d0;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 600px;
+  background-color: #dae0d0; /* Section background */
+  padding-top: 20px; /* Space above reviews */
+  padding-bottom: 20px; /* Space below reviews */
+  display: flex; /* Layout horizontally */
+  justify-content: center; /* Center reviews */
+  align-items: center; /* Vertically center */
+  min-height: 600px; /* Section height */
 }
 
 .review-section-heading {
-  text-align: center;
+  text-align: center; /* Center heading */
 }
+
 .review-section-divider {
-  display: flex;
+  display: flex; /* Stack review elements vertically */
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  margin: 0 auto;
-  gap: 20px;
+  width: 80%; /* Width restriction */
+  margin: 0 auto; /* Center divider */
+  gap: 20px; /* Space between items */
 }
 
-
-
 .review-summary {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
+  display: flex; /* Stars and score side by side */
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Center horizontally */
+  gap: 12px; /* Gap between stars/score */
   margin-top: 10px;
   margin-bottom: 24px;
 }
@@ -522,80 +517,74 @@ nav {
   cursor: pointer;
 }
 
-/* ========== FLAVOURS PAGE HERO ========== */
+/* ========== FLAVOURS PAGE HERO SECTION ========== */
 
 #introduction-section.flavours-hero {
-  background-image: url("../images/flav-bg.webp");
-  background-repeat: no-repeat;
-  background-size: 1200px;
-  background-position: left bottom;
+  background-image: url("../images/flav-bg.webp"); /* Hero bg for flavours page */
+  background-repeat: no-repeat; /* No repeat */
+  background-size: 1200px; /* Size image */
+  background-position: left bottom; /* Position image */
   margin-left: 0;
-  position: relative;
+  position: relative; /* For overlaying text */
 }
 
-
-/* Make hero text overlay the background (no longer pushes section height) */
 .flavours-hero-text {
-  position: absolute;           /* keep it out of document flow so it won't increase section height */
-  left: 50%;                    /* center horizontally relative to the hero */
-  transform: translateX(-50%);  /* exact horizontal centering */
-  top: 450px;                   /* place vertically under the H2 — tweak this value as needed */
-  width: 80%;
-  max-width: 610px;
-  text-align: center;           /* center text lines inside the box */
-  font-size: 22px;
-  margin: 0;                    /* reset margins for absolute element */
-  z-index: 3;                   /* sits above hero image / features */
-  background: rgba(206, 221, 187, 0.6); /* subtle green backdrop with opacity */
+  position: absolute; /* Overlay position */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center correction */
+  top: 450px; /* Place under heading */
+  width: 80%; /* Responsive text box */
+  max-width: 610px; /* Limit width */
+  text-align: center; /* Center text in box */
+  font-size: 22px; /* Text size */
+  margin: 0; /* Remove margin */
+  z-index: 3; /* Above background */
+  background: rgba(206, 221, 187, 0.6); /* Translucent bg */
   padding: 12px;
   border-radius: 6px;
 }
 
 #flavours-can-section {
-  background-image: url("../images/background-splash.webp");
-  background-repeat: no-repeat;
-  background-size: cover;        /* fills full width + height */
-  background-position: center;   /* centers the splash */
-  background-attachment: fixed; /* parallax effect */
-  padding-top: 120px;            /* more breathing room */
-  padding-bottom: 120px;
+  background-image: url("../images/background-splash.webp"); /* Flavours bg image */
+  background-repeat: no-repeat; /* No repeat */
+  background-size: cover; /* Scale to cover */
+  background-position: center; /* Center image */
+  background-attachment: fixed; /* Parallax effect */
+  padding-top: 120px; /* Top spacing */
+  padding-bottom: 120px; /* Bottom spacing */
 }
 
-
-/* Card base (Bootstrap card customised) */
+/* Flavour card layout and hover effects */
 .flavour-card {
-  background-color: #ceddbb;
+  background-color: #ceddbb; /* Card background */
   border: none;
-  border-radius: 6px !important;
-  padding: 40px 15px 38px;   /* more padding */
-  text-align: center;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 6px !important; /* Rounded corners */
+  padding: 40px 15px 38px; /* Card padding */
+  text-align: center; /* Center card text */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12); /* Subtle shadow */
   transition: transform 0.25s ease, box-shadow 0.25s ease,
-              background-color 0.25s ease;
-  position: relative;
+    background-color 0.25s ease;
+  position: relative; /* For badge overlay */
 }
 
-/* Hover “toggle” – lift & glow */
 .flavour-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-8px); /* Animate on hover */
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.28);
   background-color: #dfe8cc;
 }
 
-/* Circular can image */
-/* bigger circular image */
 .flavour-img {
   width: 100%;
-  max-width: 380px;   /* was smaller – increase for bigger circle */
-  border-radius: 50%;
-  margin: 0 auto 24px;
+  max-width: 380px; /* Large image size */
+  border-radius: 50%; /* Circular can */
+  margin: 0 auto 24px; /* Center + space below img */
   display: block;
 }
 
-/* slightly larger title */
+/* Flavour card title styles */
 .flavour-title {
-  font-family: "Lexend Exa", sans-serif;
-  font-size: 34px;    /* bump up if you like, e.g. 36px–38px */
+  font-family: "Lexend Exa", sans-serif; /* Title font */
+  font-size: 34px; /* Large title */
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -610,17 +599,16 @@ nav {
   color: #0d9bbc;
 }
 
-/* Little chevron rotates when open */
 .flavour-chevron {
   font-size: 14px;
   transition: transform 0.2s ease;
 }
 
 .flavour-title[aria-expanded="true"] .flavour-chevron {
-  transform: rotate(180deg);
+  transform: rotate(180deg); /* Chevron rotation for open */
 }
 
-/* Dropdown details */
+/* Flavour detail dropdown */
 .flavour-details ul {
   list-style: disc;
   padding-left: 1.2rem;
@@ -635,7 +623,8 @@ nav {
   color: #1e1e1e;
   margin-bottom: 4px;
 }
-/* NEW! badge */
+
+/* "NEW!" badge overlay on can */
 .flavour-badge {
   position: absolute;
   top: 18px;
@@ -651,16 +640,13 @@ nav {
   z-index: 5;
 }
 
-/* ====== Table comparison section ======== */
+/* ========== TABLE COMPARISON SECTION ========== */
+
 #table-comparison {
-  /* same gradient as when-to-drink section */
   background: linear-gradient(to bottom, #dae0d0 0%, #ceddbb 100%);
   padding: 60px 50px 40px;
 }
 
-
-
-/* custom table look */
 .nutrient-table {
   max-width: 900px;
   margin: 0 auto;
@@ -674,12 +660,14 @@ nav {
   font-size: 24px;
   color: #1e1e1e;
 }
+
 .nutrient-table td {
   font-size: 20px;
 }
+
 .nutrient-table th,
 .nutrient-table td {
-  border-color: transparent;          /* remove default grey borders */
+  border-color: transparent;
   padding: 14px 18px;
 }
 
@@ -692,38 +680,37 @@ nav {
 .nutrient-table tbody tr:nth-child(even) th {
   background-color: #ceddbb;
 }
+
 .table-note {
   font-size: 20px;
   font-weight: 600;
   max-width: 900px;
-  margin: 40px auto 0;               /* Center horizontally */
-  padding: 20px 0;              /* Add vertical spacing */
-  text-align: center;           /* Center text inside */
+  margin: 40px auto 0;
+  padding: 20px 0;
+  text-align: center;
 }
+
 #value {
   text-decoration: underline;
 }
-/* ========== FLAVOURS PAGE END ========== */
-/* wrapper text styles */
+
+/* ========== COMMUNITY SECTION ========== */
+
 #community-call-text {
   font-weight: 600;
 }
 
-/* section background + padding (breathing room) */
 #community-call {
   background-color: #dae0d0;
-  padding: 60px 50px 70px;        /* top/right/left/bottom spacing */
+  padding: 60px 50px 70px;
   text-align: center;
 }
 
-/* subtext spacing */
 .community-call-subtext {
   font-size: 20px;
   margin-top: 8px;
   margin-bottom: 26px;
 }
-
-/* ============= COMMUNITY FORM SECTION ==========*/
 
 .community-logo {
   width: 180px;
@@ -731,6 +718,7 @@ nav {
   display: block;
   margin: 0 auto 20px;
 }
+
 #community-section {
   background-image: url("../images/community-bg.webp");
   background-repeat: no-repeat;
@@ -743,8 +731,8 @@ nav {
 .community-wrapper {
   max-width: 780px;
   margin: 0 auto;
-  background-color: #DAE0D0;
-  border: 2px solid #1E1E1E;
+  background-color: #dae0d0;
+  border: 2px solid #1e1e1e;
   padding: 30px 40px;
 }
 
@@ -753,7 +741,6 @@ nav {
   font-weight: 600;
 }
 
-/* Bootstrap form controls inside the card */
 .community-form .form-label {
   font-weight: 600;
   margin-bottom: 4px;
@@ -761,12 +748,11 @@ nav {
 
 .community-form .form-control {
   border-radius: 0;
-  border: 2px solid #1E1E1E;
+  border: 2px solid #1e1e1e;
 }
 
-/* Perks section with Font Awesome ticks */
 .community-perks-heading {
-  color: #0B667A;
+  color: #0b667a;
   font-family: "Lexend Exa", sans-serif;
   font-size: 22px;
   font-weight: 700;
@@ -774,10 +760,10 @@ nav {
 }
 
 .perk-box {
-  background-color: #CEDDBB;
+  background-color: #ceddbb;
   padding: 10px 14px;
   margin-bottom: 10px;
-  border: 2px solid #1E1E1E;
+  border: 2px solid #1e1e1e;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -786,19 +772,17 @@ nav {
 }
 
 .perk-box i {
-  color: #0B667A;
+  color: #0b667a;
   font-size: 18px;
 }
 
-/* Tiny text under button */
 .community-privacy {
   font-size: 13px;
   opacity: 0.85;
 }
 
-/* “Questions?” heading */
 .community-questions-heading {
-  color: #0B667A;
+  color: #0b667a;
   font-weight: 700;
   margin-bottom: 4px;
   font-size: 22px;
@@ -811,34 +795,29 @@ nav {
   padding: 60px 0 80px;
 }
 
-/* Logo + heading */
 .faq-heading-wrap {
   margin-bottom: 30px;
 }
 
-
-/* Outer FAQ box like your Figma strip */
 .faq-wrapper {
   max-width: 900px;
   margin: 0 auto;
-  background-color: #DAE0D0;
-  border: 2px solid #1E1E1E;
+  background-color: #dae0d0;
+  border: 2px solid #1e1e1e;
 }
 
-/* Remove default accordion borders */
 #faq-section .accordion-item {
   border: none;
-  border-bottom: 1px solid #1E1E1E;
+  border-bottom: 1px solid #1e1e1e;
 }
 
 #faq-section .accordion-item:last-child {
   border-bottom: none;
 }
 
-/* Question row */
 #faq-section .accordion-button {
-  background-color: #DAE0D0;
-  color: #1E1E1E;
+  background-color: #dae0d0;
+  color: #1e1e1e;
   font-family: "Lexend Exa", sans-serif;
   font-size: 18px;
   font-weight: 600;
@@ -847,54 +826,46 @@ nav {
   box-shadow: none;
 }
 
-/* Keep same background when open (flat strip look) */
 #faq-section .accordion-button:not(.collapsed) {
-    background-color: #ceddbb;
-  color: #1E1E1E;
+  background-color: #ceddbb;
+  color: #1e1e1e;
   box-shadow: none;
 }
 
-/* Subtle hover state */
 #faq-section .accordion-button:hover {
   background-color: #ceddbb;
 }
 
-/* Hide Bootstrap default chevron */
 #faq-section .accordion-button::after {
   display: none;
 }
 
-/* Flex layout for text + chevron */
 .faq-question {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* Chevron icon */
 .faq-chevron {
   margin-left: 20px;
   font-size: 18px;
   transition: transform 0.2s ease;
 }
 
-/* Rotate chevron when open */
 #faq-section .accordion-button[aria-expanded="true"] .faq-chevron {
   transform: rotate(180deg);
 }
 
-/* Answer area */
 .faq-answer {
-  background-color: #DAE0D0;
-  border-top: 1px solid #1E1E1E;
+  background-color: #dae0d0;
+  border-top: 1px solid #1e1e1e;
   font-size: 16px;
   line-height: 1.6;
   padding: 16px 24px 20px;
 }
 
-/* ===== STILL HAVE QUESTIONS STRIP (under FAQs) ===== */
 #faq-still-questions {
-  background-color: #1E1E1E;      /* black bar like your nav */
+  background-color: #1e1e1e;
   padding: 16px 20px;
 }
 
@@ -905,7 +876,7 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  color: #DAE0D0;                 /* light green/cream text */
+  color: #dae0d0;
   font-family: "Lexend Exa", sans-serif;
   font-size: 18px;
   font-weight: 600;
@@ -918,37 +889,38 @@ nav {
   font-size: 22px;
 }
 
-/* ===== FAQ + strip: mobile tweaks ===== */
+/* ========== FAQ + strip: MOBILE MEDIA QUERIES ========== */
+
 @media (max-width: 576px) {
   #faq-section {
-    padding: 40px 0 60px;
+    padding: 40px 0 60px; /* FAQ section padding for small screens */
   }
 
   .faq-logo {
-    width: 70px;
+    width: 70px; /* Smaller logo */
   }
 
   #faq-section .accordion-button {
-    font-size: 14px;
-    padding: 12px 16px;
+    font-size: 14px; /* Smaller question text */
+    padding: 12px 16px; /* Reduced spacing */
   }
 
   .faq-answer {
-    font-size: 13px;
+    font-size: 13px; /* Smaller answer text */
     padding: 12px 16px 16px;
   }
 
   .faq-chevron {
-    font-size: 14px;
+    font-size: 14px; /* Smaller chevron */
     margin-left: 12px;
   }
 
   #faq-still-questions {
-    padding: 12px 14px;
+    padding: 12px 14px; /* Less padding */
   }
 
   .still-questions-inner {
-    font-size: 14px;
+    font-size: 14px; /* Smaller strip text */
     gap: 8px;
   }
 
@@ -957,20 +929,18 @@ nav {
   }
 }
 
-
 /* ========== CONTACT SECTION ========== */
 
 #contact-section {
-  background-color: #ceddbb;      
-  padding: 60px 50px 80px;
+  background-color: #ceddbb; /* Contact bg */
+  padding: 60px 50px 80px; /* Section spacing */
 }
 
 .contact-wrapper {
-  max-width: 780px;                 /* same as community-wrapper */
+  max-width: 780px;
   margin: 0 auto;
 }
 
-/* Intro text above form */
 .contact-intro {
   font-size: 14px;
   max-width: 620px;
@@ -978,7 +948,6 @@ nav {
   line-height: 1.5;
 }
 
-/* 24–48 hours note */
 .contact-note {
   font-size: 13px;
   margin-top: 8px;
@@ -992,13 +961,22 @@ nav {
 
 /* ========== FOOTER ========== */
 
+/* Footer main element:
+   - Sets a dark background (#1e1e1e)
+   - Uses light green text (#dae0d0)
+   - Padding: 40px top, 60px right/left, 20px bottom for breathing room */
 footer {
   background-color: #1e1e1e;
   color: #dae0d0;
   padding: 40px 60px 20px;
 }
 
-/* outer container */
+/* Footer inner container:
+   - Max width 1200px to keep content from stretching too far
+   - Centers the content horizontally
+   - Uses flexbox to create horizontal columns
+   - 80px gap between columns
+   - Columns are aligned at the top and spaced to the edges */
 .footer-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -1008,78 +986,103 @@ footer {
   justify-content: space-between;
 }
 
-/* each column */
+/* Basic column for footer sections - makes them flex evenly */
 .footer-col {
   flex: 1;
 }
 
-/* left logo column */
+/* Logo column takes up equal space */
 .footer-logo-col {
   flex: 1;
 }
 
+/* Logo image:
+   - Width set to 230px
+   - Height scales automatically
+   - Displayed as a block element for easy layout */
 #footer-logo {
   width: 230px;
   height: auto;
   display: block;
 }
 
-/* right side group (will contain links + contact) */
+/* Main right section of the footer contains links & contact info:
+   - Takes up twice the space as logo section
+   - Horizontal flex layout
+   - 80px gap between the two groups (links/contact) */
 .footer-right {
   flex: 2;
   display: flex;
   gap: 80px;
 }
 
-/* two columns inside right group */
+/* Left and right columns inside footer-right, split evenly */
 .footer-links,
 .footer-contact {
   flex: 1;
 }
 
+/* Remove bullets and spacing for the navigation list */
 .footer-links ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+/* Space navigation links vertically */
 .footer-links li {
   margin-bottom: 10px;
 }
 
+/* Styling for navigation links:
+   - Light green color
+   - No underline by default
+   - 18px font size for prominence */
 .footer-links a {
   color: #dae0d0;
   text-decoration: none;
   font-size: 18px;
 }
-
 .footer-links a:hover {
   text-decoration: underline;
 }
 
+/* Headings in footer (links, address, contact):
+   - Big, bold, spaced below heading */
 .footer-heading {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 12px;
 }
 
+/* Social icons row for address section:
+   - Flex layout
+   - 14px gap between icon links
+   - 18px margin below for spacing */
 .footer-socials {
   display: flex;
   gap: 14px;
   margin-bottom: 18px;
 }
-
 .footer-socials a {
   color: #dae0d0;
   font-size: 22px;
 }
 
+/* Address styling:
+   - 16px font for readability
+   - 1.6 line height for clarity
+   - Consistent color with rest of footer */
 .footer-address {
   font-size: 16px;
   line-height: 1.6;
   color: #dae0d0;
 }
 
+/* Copyright row at the very bottom of the footer:
+   - Centered
+   - Spaced above with mt: 40px
+   - Slightly smaller text and faded for subtlety */
 .footer-bottom {
   text-align: center;
   margin-top: 40px;
@@ -1088,32 +1091,32 @@ footer {
   opacity: 0.9;
 }
 
-
-
 /* ========== MEDIA QUERIES ========== */
 
-/* Slightly smaller for typical laptops (≤ 1400px) */
+/* ------- 1400px and down: Slightly smaller logo and adjust some elements for big laptops */
 @media (max-width: 1400px) {
+  /* Make logo smaller for medium screens */
   .fc-logo {
     width: 160px;
   }
 
-
+  /* Make nav link font smaller */
   .nav-link {
     font-size: 18px;
   }
 
+  /* Make hero image background smaller and decrease bottom padding */
   #introduction-section {
     background-size: 1700px auto;
     padding-bottom: 320px;
   }
 
+  /* Shrink three cans image */
   #three-cans-image {
     width: 500px;
   }
 
- 
-
+  /* Adjust heading and brand text size */
   .brand-text {
     font-size: 48px;
   }
@@ -1121,12 +1124,11 @@ footer {
   .why-freshcharge-sub {
     font-size: 24px;
   }
-
   .why-freshcharge-list {
     font-size: 18px;
   }
 
-  /* Box shared styles */
+  /* Countdown box sizing */
   .countdown-box {
     border: 2px solid #0d9bbc;
     padding: 2px 8px;
@@ -1137,19 +1139,18 @@ footer {
     min-width: 50px;
     background-color: #1e1e1e;
   }
-
   .count-number {
     display: block;
     font-size: 17px;
     font-weight: 700;
   }
-
   .count-label {
     font-size: 13px;
     opacity: 0.9;
   }
 
-    #feature-strip,
+  /* Adjust feature strip gap/padding for medium screens */
+  #feature-strip,
   #flavours-feature-strip {
     background-color: #1e1e1e;
     color: #dae0d0;
@@ -1162,23 +1163,19 @@ footer {
     flex-wrap: wrap;
   }
 
-.table-note {
-  font-size: 16px;
-}
-  
-
+  .table-note {
+    font-size: 16px;
+  }
   .feature-item {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   .features-icon {
     width: 60px;
     height: auto;
     margin-bottom: 12px;
   }
-
   .feature-item p {
     font-family: "Lexend Exa", sans-serif;
     font-size: 20px;
@@ -1192,172 +1189,130 @@ footer {
   .when-to-drink-card-text {
     font-size: 18px;
   }
-  /* HERO HEADING */
+
+  /* Heading sizes */
   h1 {
-    font-size: 60px;      /* was hero-heading 60px */
+    font-size: 60px;
   }
-
-  /* SECONDARY HEADINGS (WHY FC+, WHEN TO DRINK, REVIEWS) */
   h2 {
-    font-size: 44px;      /* matches old .why-freshcharge/.review-section-heading */
+    font-size: 44px;
   }
-
-  /* BRAND TEXT INSIDE HEADINGS */
   h1 .brand-text,
   h2 .brand-text {
     font-size: inherit;
   }
-
-  /* SUBHEADING (your h3 under hero) */
   h3 {
     font-size: 26px;
   }
   .flavours-hero-text {
     font-size: 18px;
     top: 350px;
-
   }
   .flavour-title {
     font-size: 26px;
   }
   #introduction-section.flavours-hero {
-  background-image: url("../images/flav-bg.webp");
-  background-size: 900px;
+    background-image: url("../images/flav-bg.webp");
+    background-size: 900px;
+  }
 }
-}
-/* ======== 12000px Medium laptops and large tablets =====*/
-/* ≤ 1200px */
+
+/* ------- 1200px and down: Medium laptops/tablets, adjust more elements */
 @media (max-width: 1200px) {
   .fc-logo {
     width: 140px;
   }
 
-  /* Make nav countdown (under nav) centered on smaller screens */
+  /* Center nav countdown below nav in smaller screens */
   .nav-countdown-community {
     justify-content: center;
   }
   .nav-link {
     font-size: 16px;
-  } 
-
+  }
 
   #introduction-section {
     background-size: 1500px auto;
     padding-bottom: 260px;
   }
-
   .when-to-drink-card {
     flex: 1 1 45%;
     max-width: 320px;
   }
-
   .when-to-drink-img {
     max-width: 220px;
   }
-
   .when-to-drink-card-text {
     font-size: 16px;
   }
-
-
-
   .brand-text {
     font-size: 43px;
   }
-
-  .see-all-reviews {
-    font-size: 16px;
-  }
-
+  .see-all-reviews,
   .comparison-link-list {
     font-size: 16px;
   }
-
   .why-freshcharge-sub {
     font-size: 22px;
   }
-
   .why-freshcharge-list {
     font-size: 18px;
   }
   #three-cans-image {
     width: 350px;
   }
-      #feature-strip,
+
+  #feature-strip,
   #flavours-feature-strip {
     background-color: #1e1e1e;
     color: #dae0d0;
     padding: 12px 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 120px;
-    text-align: center;
-    flex-wrap: wrap;
   }
 
-
-.flavour-title {
+  .flavour-title {
     font-size: 22px;
   }
-  
-
-  .feature-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   .features-icon {
     width: 55px;
     height: auto;
     margin-bottom: 12px;
   }
-
   .feature-item p {
-    font-family: "Lexend Exa", sans-serif;
     font-size: 17px;
-    margin: 0;
   }
-  
-.hero-buttons {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-  justify-content: center;
-}
-
-.btn-hero {
-  font-family: "Lexend Exa", sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  padding: 8px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: 0.25s ease;
-}
-#flavours-can-section .container {
-  max-width: 1400px;   /* default is 1140px – this makes each col wider */
-}
-#introduction-section.flavours-hero {
-  background-image: url("../images/flav-bg.webp");
-  background-size: 800px;
-}
-
-h1 {
+  .hero-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  .btn-hero {
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 8px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.25s ease;
+  }
+  #flavours-can-section .container {
+    max-width: 1400px;
+  }
+  #introduction-section.flavours-hero {
+    background-size: 800px;
+  }
+  h1 {
     font-size: 52px;
   }
-
   h2 {
     font-size: 40px;
   }
-
   h1 .brand-text,
   h2 .brand-text {
     font-size: inherit;
   }
-
   h3 {
     font-size: 22px;
   }
@@ -1371,13 +1326,11 @@ h1 {
   }
 }
 
-
-/*=========== ≤ 992px (tablets)=========== */
+/* ------- 992px and down: Tablets and smaller desktops */
 @media (max-width: 992px) {
   #feature-strip {
     gap: 40px;
   }
-
   .features-icon {
     width: 55px;
   }
@@ -1386,82 +1339,63 @@ h1 {
     flex-direction: column;
     text-align: center;
   }
-
   #three-cans-image {
     width: 460px;
   }
   .why-freshcharge-text {
-    text-align: center; /* For headings only */
+    text-align: center;
+  }
+  .why-freshcharge-list {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
   }
 
-  .why-freshcharge-list {
-    text-align: left; /* Make list left-aligned */
-    margin-left: auto; /* Keep it centered inside container */
-    margin-right: auto;
-    display: inline-block; /* Prevent it from stretching full width */
-  }
-   /* remove big side padding so dropdown is full-width */
   header .container-fluid {
     padding-left: 0;
     padding-right: 0;
     flex-wrap: wrap;
   }
-
-  /* brand + burger move in from the edges a bit */
   .navbar-brand {
     padding-left: 16px;
   }
-
   .navbar-toggler {
     margin-right: 16px;
   }
-
-  /* dropdown bar: full-width & attached to nav */
   .navbar-collapse {
     background-color: #1e1e1e;
     width: 100%;
-    margin-top: 0;     /* no gap above links */
+    margin-top: 0;
   }
-
   .navbar-nav {
     gap: 16px;
     padding: 12px 16px 16px;
   }
-
   .navbar-nav .nav-link {
-    color: #DAE0D0 !important;
+    color: #dae0d0 !important;
     display: block;
   }
   .hero-buttons {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-  justify-content: center;
-}
-
-.btn-hero {
-  font-family: "Lexend Exa", sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  padding: 8px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: 0.25s ease;
-}
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  .btn-hero {
+    font-size: 15px;
+    padding: 8px 24px;
+  }
   h1 {
     font-size: 48px;
   }
-
   h2 {
     font-size: 36px;
   }
-
   h1 .brand-text,
   h2 .brand-text {
     font-size: inherit;
   }
-
   h3 {
     font-size: 20px;
   }
@@ -1478,105 +1412,79 @@ h1 {
   .flavour-details li {
     font-size: 14px;
   }
-
   #introduction-section.flavours-hero {
-  background-image: url("../images/flav-bg.webp");
-  background-size: 750px;
-}
+    background-size: 750px;
+  }
 }
 
-
-/*=========== ≤ 768px (large phones / small tablets) */
+/* ------- 768px and down: Large phones/small tablets, stack footer and adjust images/text */
 @media (max-width: 768px) {
   .hero-countdown {
     gap: 8px;
     margin-top: 12px;
   }
-.features-icon {
+  .features-icon {
     width: 50px;
-}
+  }
   .countdown-box {
     padding: 2px 6px;
     min-width: 44px;
   }
-
   .count-number {
     font-size: 14px;
   }
-
   .count-label {
     font-size: 11px;
   }
 
-
   .why-freshcharge-text {
-    text-align: center; /* For headings only */
+    text-align: center;
   }
-
   .why-freshcharge-list {
-    text-align: left; /* Make list left-aligned */
-    margin-left: auto; /* Keep it centered inside container */
+    text-align: left;
+    margin-left: auto;
     margin-right: auto;
-    display: inline-block; /* Prevent it from stretching full width */
+    display: inline-block;
   }
- 
 
+  /* Footer stacks vertically, centers logo and links/contact */
   footer {
     padding: 30px 20px 20px;
   }
-
-  /* STACK EVERYTHING FIRST */
   .footer-inner {
-    flex-direction: column;     /* logo on top */
-    align-items: center;        /* center logo */
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     gap: 24px;
   }
-
-  /* LOGO centered */
   #footer-logo {
     width: 120px;
     margin-bottom: 10px;
   }
-
-  /* --- TWO COLUMNS UNDER LOGO --- */
   .footer-right {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;   /* 2 equal columns */
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     text-align: left;
   }
-
-  /* Left column = links */
-  .footer-links {
-    text-align: left;
-  }
-
-  /* Right column = socials + address */
+  .footer-links,
   .footer-contact {
     text-align: left;
   }
-
-  /* Icon row alignment */
   .footer-socials {
     justify-content: flex-start;
   }
-  .when-to-drink-img {
-  width: 100%;
-  max-width: 290px;
-  height: auto;
-  margin: 0 auto 20px;
-  border-radius: 100%;
-  display: block;
-}
-.review-stars i {
-  color: #1e1e1e;
-  font-size: 15px;
-}
 
-#introduction-section.flavours-hero .flavours-hero-text {
-    position: static;           /* put it back in normal flow under the H2 on small screens */
+  /* When-to-drink images/cards, review stars, and mobile hero text adjustments */
+  .when-to-drink-img {
+    max-width: 290px;
+  }
+  .review-stars i {
+    font-size: 15px;
+  }
+  #introduction-section.flavours-hero .flavours-hero-text {
+    position: static;
     transform: none;
     top: auto;
     width: 100%;
@@ -1586,84 +1494,67 @@ h1 {
     font-size: 15px;
     text-align: center;
   }
-
-  /* reduce the hero padding so mobile doesn't have huge empty space */
   #introduction-section.flavours-hero {
     padding-bottom: 320px;
     background-size: 80% auto;
     background-position: bottom right;
   }
-
-
-#flavours-can-section {
-    margin-top: -140px;   /* negative margin pulls the section up */
-    position: relative;   /* allow z-index to work */
-    z-index: 3;           /* keep cans above the hero background */
+  #flavours-can-section {
+    margin-top: -140px;
+    position: relative;
+    z-index: 3;
   }
-
-
   .flavour-img {
     max-width: 260px;
   }
-
   .flavour-title {
     font-size: 18px;
   }
-
   .flavour-details li {
     font-size: 14px;
   }
   h1 {
     font-size: 42px;
   }
-
-  /* section headings like “Why FreshCharge+?” */
   h2 {
     font-size: 32px;
   }
-
   h3 {
     font-size: 18px;
   }
   .why-freshcharge,
-.comparison-heading {
-  margin-bottom: 20px;
-}
-
+  .comparison-heading {
+    margin-bottom: 20px;
+  }
   .fc-logo {
     width: 130px;
-    height: auto;
   }
-
   #introduction-section.flavours-hero {
-  background-image: url("../images/background-flavours.webp");
-  background-repeat: no-repeat;
-  background-size: 1200px;        /* fills full width + height */
-  background-position: 70%;
-  margin-bottom: 0;
- 
-}
-    #introduction-section.flavours-hero .flavours-hero-text {
+    background-image: url("../images/background-flavours.webp");
+    background-repeat: no-repeat;
+    background-size: 1200px;
+    background-position: 70%;
+    margin-bottom: 0;
+  }
+  #introduction-section.flavours-hero .flavours-hero-text {
     font-size: 15px;
     max-width: 500px;
     height: 190px;
     margin-bottom: 10px;
-    }
-/* TABLE COMPARISON - smaller text */
+  }
+
+  /* Table comparison section font sizes/cell padding */
   .nutrient-table thead th {
     font-size: 16px;
     padding: 12px 10px;
   }
-
   .nutrient-table td {
     font-size: 16px;
     padding: 12px 10px;
   }
-
   .nutrient-table th {
     font-size: 15px;
   }
-  /* TABLE NOTE - decreased sizing */
   .table-note {
     font-size: 14px;
     font-weight: 600;
@@ -1672,12 +1563,10 @@ h1 {
     padding: 14px 18px;
     text-align: center;
   }
-
   .table-note p {
     margin: 10px 0;
     font-size: 12px;
   }
-
   #value {
     text-decoration: underline;
     font-size: 15px;
@@ -1689,37 +1578,27 @@ h1 {
     min-width: 46px;
     padding: 2px 6px;
   }
-
   .nav-countdown-community .count-number {
     font-size: 14px;
   }
-
   .nav-countdown-community .count-label {
     font-size: 11px;
   }
-
-    /* Flavour cards – tablet / large phones */
   #flavours-can-section .container {
-    max-width: 520px;           /* stop the container going full width */
+    max-width: 520px;
   }
-
   .flavour-card {
-    max-width: 380px;           /* nice vertical card */
-    margin: 0 auto;             /* center it */
-    padding: 28px 18px 26px;    /* a bit less padding on small screens */
+    max-width: 380px;
+    margin: 0 auto;
+    padding: 28px 18px 26px;
   }
-
   .flavour-img {
-    max-width: 240px;           /* shrink the circle a little */
+    max-width: 240px;
   }
-
-  
 }
 
-
-  /* ========== EXTRA SMALL SCREENS (MOBILE) ========== */
+/* ------- 576px and down: Extra small screens/mobile - shrink text and elements for compact fit */
 @media (max-width: 576px) {
-  /* TYPO SIZING */
   .footer-heading {
     font-size: 12px;
     margin-bottom: 8px;
@@ -1727,29 +1606,26 @@ h1 {
   .navbar-brand {
     font-size: 24px;
   }
-
   .nav-link {
     font-size: 15px;
   }
-
   .footer-links a {
     font-size: 12px;
   }
-.when-to-drink-card-heading {
-  font-size: 24px;
-}
+  .when-to-drink-card-heading {
+    font-size: 24px;
+  }
   .footer-address {
     font-size: 12px;
   }
   .footer-bottom {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 10px;
-  color: #dae0d0;
-  opacity: 0.9;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 10px;
+    color: #dae0d0;
+    opacity: 0.9;
   }
-   
-    .brand-text {
+  .brand-text {
     font-size: 33px;
   }
   #three-cans-image {
@@ -1758,14 +1634,13 @@ h1 {
   .why-freshcharge-sub {
     font-size: 18px;
   }
-
   .why-freshcharge-list {
     font-size: 14px;
   }
   .comparison-link-list {
     font-size: 12px;
   }
-      #feature-strip,
+  #feature-strip,
   #flavours-feature-strip {
     background-color: #1e1e1e;
     color: #dae0d0;
@@ -1777,21 +1652,18 @@ h1 {
     text-align: center;
     flex-wrap: wrap;
   }
-
-.fc-logo {
-  max-width: 120px;
-  height: auto;
-}
+  .fc-logo {
+    max-width: 120px;
+    height: auto;
+  }
   .flavour-badge {
     font-size: 15px;
   }
-
   .feature-item {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   .features-icon {
     max-width: 40px;
     height: auto;
@@ -1800,41 +1672,28 @@ h1 {
   .features-icon-fa {
     font-size: 20px;
   }
-
   .feature-item p {
-    font-family: "Lexend Exa", sans-serif;
     font-size: 14px;
-    margin: 0;
   }
-
-  /* Pull the cans section up so it overlaps the bottom of the flavours hero
-     and removes the unwanted gap on small screens. Tweak the -140px value as needed. */
   #flavours-can-section {
-    margin-top: -140px;   /* negative margin pulls the section up */
-    position: relative;   /* allow z-index to work */
-    z-index: 3;           /* keep cans above the hero background */
+    margin-top: -140px;
+    position: relative;
+    z-index: 3;
   }
-
-  /* Reduce hero bottom padding on small screens so extra empty space is minimized */
   #introduction-section.flavours-hero {
-    padding-bottom: 320px; /* reduce from larger desktop value */
+    padding-bottom: 320px;
   }
-/* TABLE COMPARISON - smaller text */
   .nutrient-table thead th {
     font-size: 14px;
     padding: 10px 8px;
   }
-
   .nutrient-table td {
     font-size: 14px;
     padding: 10px 8px;
   }
-
   .nutrient-table th {
     font-size: 13px;
   }
-
-  /* TABLE NOTE - decreased sizing */
   .table-note {
     font-size: 12px;
     font-weight: 600;
@@ -1843,32 +1702,25 @@ h1 {
     padding: 12px 16px;
     text-align: center;
   }
-
   .table-note p {
     margin: 8px 0;
     font-size: 10px;
   }
-
   #value {
     text-decoration: underline;
     font-size: 13px;
   }
-
-  /* COMMUNITY CALL - smaller heading */
   #community-call {
     padding: 40px 20px 50px;
   }
-
   #community-call-text h2 {
     font-size: 28px;
   }
-
   .community-call-subtext {
     font-size: 14px;
     margin-top: 8px;
     margin-bottom: 16px;
   }
-
   .hero-buttons {
     display: flex;
     gap: 12px;
@@ -1876,156 +1728,118 @@ h1 {
     justify-content: center;
     flex-wrap: wrap;
   }
-
   .btn-hero {
     font-size: 12px;
     padding: 8px 16px;
   }
-
   .review-text {
     font-size: 14px;
   }
-
   .see-all-reviews {
     font-size: 12px;
   }
-  
-  /* Move overall-stars below review-score on small screens */
   .review-summary {
-    flex-direction: column;       /* stack vertically */
-    gap: 12px;                    /* space between stars and score */
+    flex-direction: column;
+    gap: 12px;
   }
-
   .overall-stars {
-    order: 2;                     /* put stars after score */
+    order: 2;
   }
-
   .review-score {
-    order: 1;                     /* put score first */
+    order: 1;
   }
-
   .reviewer-name {
     font-size: 16px;
   }
-
-   /* Wrapper (form card) */
   .community-wrapper {
     padding: 20px 22px;
     border-width: 1.5px;
   }
-
-  /* Intro text */
   .community-intro {
     font-size: 15px;
     line-height: 1.4;
   }
-
-  /* Form fields */
   .community-form .form-label {
     font-size: 14px;
   }
-
   .community-form .form-control {
     padding: 8px 10px;
     font-size: 14px;
     border-width: 1.5px;
   }
-
-  /* Perks title */
   .community-perks-heading {
     font-size: 18px;
     margin-bottom: 8px;
   }
-
-  /* Perk boxes */
   .perk-box {
     padding: 8px 10px;
     font-size: 14px;
     gap: 8px;
     border-width: 1.5px;
   }
-
   .perk-box i {
     font-size: 15px;
   }
-
-  /* Privacy text */
   .community-privacy {
     font-size: 11px;
     margin-top: 6px;
   }
-
-  /* Questions heading */
   .community-questions-heading {
     font-size: 18px;
   }
-      #introduction-section.flavours-hero .flavours-hero-text {
+  #introduction-section.flavours-hero .flavours-hero-text {
     font-size: 13px;
     max-width: 400px;
   }
-#faq-section {
+  #faq-section {
     padding: 40px 0 60px;
   }
-
-
   #faq-section .accordion-button {
     font-size: 14px;
     padding: 12px 16px;
   }
-
   .faq-answer {
     font-size: 13px;
     padding: 12px 16px 16px;
   }
-
   .faq-chevron {
     font-size: 14px;
     margin-left: 12px;
   }
-
   #faq-still-questions {
     padding: 12px 14px;
   }
-
   .still-questions-inner {
     font-size: 14px;
     gap: 8px;
   }
-
   .still-questions-inner i {
     font-size: 18px;
   }
-  
   #contact-section {
     padding: 40px 20px 60px;
   }
-
   .contact-intro {
     font-size: 12px;
     margin-top: 10px;
   }
-
   .contact-note {
     font-size: 11px;
   }
-
   .fc-check-list i {
-  font-size: 10px;
-}
-
-  /* Flavour cards – small phones */
+    font-size: 10px;
+  }
   #flavours-can-section .container {
     max-width: 360px;
   }
-
   .flavour-card {
     max-width: 320px;
     margin: 0 auto 20px;
-    padding: 24px 16px 24px;
+    padding: 24px 16px;
   }
-
   .flavour-img {
     max-width: 210px;
   }
-
 }
+
+/*-- end of footer and media queries block --*/
