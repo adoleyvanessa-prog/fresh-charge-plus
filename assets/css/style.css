@@ -982,7 +982,11 @@ nav {
 /* ========== CONTACT SECTION ========== */
 
 #contact-section {
-  background-color: #ceddbb; /* Contact bg */
+  background-image: url("../images/community-bg.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   padding: 60px 50px 80px; /* Section spacing */
 }
 
