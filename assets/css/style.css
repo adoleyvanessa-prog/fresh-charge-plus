@@ -114,7 +114,8 @@ nav {
   gap: 24px; /* Horizontal gap between elements */
 }
 
-.navbar { /* Fixed navbar at top */
+.navbar {
+  /* Fixed navbar at top */
   position: fixed;
   top: 0; /* Stick to top */
   left: 0;
@@ -283,6 +284,18 @@ nav {
 /* ========== FEATURE STRIP SECTION ========== */
 
 /* Both home and flavours feature strips */
+.visually-hidden {
+  /* hidden element to remove warning */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 #feature-strip,
 #flavours-feature-strip {
   background-color: #1e1e1e; /* Section background */
@@ -598,32 +611,17 @@ nav {
 
 /* Citrus Lift gradient */
 .flavour-card--citrus {
-  background: linear-gradient(
-    135deg,
-    #fff8e3 0%,
-    #f9ffd9 45%,
-    #eeffcd 100%
-  );
+  background: linear-gradient(135deg, #fff8e3 0%, #f9ffd9 45%, #eeffcd 100%);
 }
 
 /* Apple Rush gradient */
 .flavour-card--apple {
-  background: linear-gradient(
-    135deg,
-    #f5ffe7 0%,
-    #e8fbd3 50%,
-    #c0f5d0 100%
-  );
+  background: linear-gradient(135deg, #f5ffe7 0%, #e8fbd3 50%, #c0f5d0 100%);
 }
 
 /* Juicy Berry gradient */
 .flavour-card--berry {
-  background: linear-gradient(
-    135deg,
-    #fffbfd 40%,
-    #ffe6f1 50%,
-    #e4e4ff 100%
-  );
+  background: linear-gradient(135deg, #fffbfd 40%, #ffe6f1 50%, #e4e4ff 100%);
 }
 
 .flavour-card:hover {
@@ -1672,7 +1670,7 @@ footer {
   .flavour-img {
     max-width: 240px;
   }
-/* image disappears from 768px down */
+  /* image disappears from 768px down */
   #fruits-splash {
     display: none;
   }

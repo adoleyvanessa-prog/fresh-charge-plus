@@ -99,7 +99,7 @@
       </div>
     </header>
 
-        <!-- ================= MAIN ================= -->
+    <!-- ================= MAIN ================= -->
     <main>
       <!-- ========== FAQS SECTION ========== -->
       <!--
@@ -180,6 +180,7 @@
                   class="accordion-collapse collapse"
                   aria-labelledby="faqHeadingOne"
                   data-bs-parent="#faqAccordion"
+                  role="region"
                 >
                   <!--
                     .accordion-body is Bootstrap's content area.
@@ -219,6 +220,7 @@
                   class="accordion-collapse collapse"
                   aria-labelledby="faqHeadingTwo"
                   data-bs-parent="#faqAccordion"
+                  role="region"
                 >
                   <div class="accordion-body faq-answer">
                     FreshCharge+ is designed for everyday moments when you want
@@ -251,6 +253,7 @@
                   class="accordion-collapse collapse"
                   aria-labelledby="faqHeadingThree"
                   data-bs-parent="#faqAccordion"
+                  role="region"
                 >
                   <div class="accordion-body faq-answer">
                     FreshCharge+ is currently in pre-launch. Join the community
@@ -283,6 +286,7 @@
                   class="accordion-collapse collapse"
                   aria-labelledby="faqHeadingFour"
                   data-bs-parent="#faqAccordion"
+                  role="region"
                 >
                   <div class="accordion-body faq-answer">
                     Yes. FreshCharge+ is made with plant-based ingredients and
@@ -314,6 +318,7 @@
                   class="accordion-collapse collapse"
                   aria-labelledby="faqHeadingFive"
                   data-bs-parent="#faqAccordion"
+                  role="region"
                 >
                   <div class="accordion-body faq-answer">
                     Each 330ml can contains 75–85mg of natural caffeine from
@@ -334,8 +339,7 @@
                     aria-controls="faqCollapseSix"
                   >
                     <span>
-                      Do I get discounts for joining the FreshCharge+
-                      Community?
+                      Do I get discounts for joining the FreshCharge+ Community?
                     </span>
                     <i
                       class="fa-solid fa-chevron-down faq-chevron"
@@ -348,6 +352,7 @@
                   class="accordion-collapse collapse"
                   aria-labelledby="faqHeadingSix"
                   data-bs-parent="#faqAccordion"
+                  role="region"
                 >
                   <div class="accordion-body faq-answer">
                     Yes! Members receive exclusive early-bird discounts during
@@ -380,6 +385,7 @@
                   class="accordion-collapse collapse"
                   aria-labelledby="faqHeadingSeven"
                   data-bs-parent="#faqAccordion"
+                  role="region"
                 >
                   <div class="accordion-body faq-answer">
                     You’ll only receive updates when they matter, such as new
@@ -409,6 +415,7 @@
                   class="accordion-collapse collapse"
                   aria-labelledby="faqHeadingEight"
                   data-bs-parent="#faqAccordion"
+                  role="region"
                 >
                   <div class="accordion-body faq-answer">
                     Yes, signing up is completely free and unlocks perks such as
@@ -438,6 +445,7 @@
                   class="accordion-collapse collapse"
                   aria-labelledby="faqHeadingNine"
                   data-bs-parent="#faqAccordion"
+                  role="region"
                 >
                   <div class="accordion-body faq-answer">
                     Never. Your details are used only to send FreshCharge+
@@ -459,7 +467,15 @@
         - Uses a dark background (styled in CSS via #faq-still-questions).
         - .still-questions-inner centers icon + text using flexbox (in CSS).
       -->
-      <section id="faq-still-questions">
+      <section
+        id="faq-still-questions"
+        aria-labelledby="faqStillQuestionsHeading"
+      >
+        <!-- Hidden heading for accessibility / validators -->
+        <h2 id="faqStillQuestionsHeading" class="visually-hidden">
+          Still have questions
+        </h2>
+
         <div class="still-questions-inner">
           <!-- Font Awesome question-circle icon -->
           <i class="fa-regular fa-circle-question" aria-hidden="true"></i>

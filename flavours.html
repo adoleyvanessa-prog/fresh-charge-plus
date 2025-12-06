@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" /> <!-- Declares character encoding for the document -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures responsive scaling on mobile devices -->
-    <title>FreshCharge</title> <!-- Sets the browser tab title -->
+    <meta charset="UTF-8" />
+    <!-- Declares character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures responsive scaling on mobile devices -->
+    <title>FreshCharge</title>
+    <!-- Sets the browser tab title -->
 
     <!-- Google Fonts: preconnect for faster font lookups and imports two font families for headings and body text -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -40,8 +43,10 @@
     <header>
       <!-- Bootstrap navbar, expands on large screens, uses .navbar-dark (white text on dark bg) -->
       <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid"> <!-- Bootstrap container for automatic spacing and responsiveness -->
-          <a class="navbar-brand" href="index.html">FreshCharge</a> <!-- Brand logo/title -->
+        <div class="container-fluid">
+          <!-- Bootstrap container for automatic spacing and responsiveness -->
+          <a class="navbar-brand" href="index.html">FreshCharge</a>
+          <!-- Brand logo/title -->
 
           <!-- Countdown in nav, only shown on extra large (XL) screens and above (Bootstrap d-none d-xl-flex for responsive visibility) -->
           <div class="nav-countdown d-none d-xl-flex">
@@ -74,7 +79,8 @@
 
           <!-- Bootstrap collapsible navigation links (responsive feature) -->
           <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="navbar-nav ms-auto"> <!-- ms-auto (Bootstrap): right-aligns links -->
+            <div class="navbar-nav ms-auto">
+              <!-- ms-auto (Bootstrap): right-aligns links -->
               <a class="nav-link" href="index.html">Home</a>
               <a
                 class="nav-link active"
@@ -130,23 +136,37 @@
         <div class="flavours-hero-text">
           <p>
             FreshCharge was already known for its natural ingredients and smooth
-            lift - but <strong>FreshCharge+</strong> takes it even further. The new pre-launch
-            formula is <strong>cleaner, lighter,</strong> and <strong>stronger,</strong> with improved <strong>hydration</strong>
-            and more <strong>natural caffeine.</strong> It’s the same refreshing taste, now
-            upgraded for <strong>better energy</strong> and <strong>fewer calories.</strong>
+            lift - but <strong>FreshCharge+</strong> takes it even further. The
+            new pre-launch formula is <strong>cleaner, lighter,</strong> and
+            <strong>stronger,</strong> with improved
+            <strong>hydration</strong> and more
+            <strong>natural caffeine.</strong> It’s the same refreshing taste,
+            now upgraded for <strong>better energy</strong> and
+            <strong>fewer calories.</strong>
           </p>
         </div>
-        <img src="assets/images/fruits-splash.webp" alt="Fruits splash" id="fruits-splash"/>
+        <img
+          src="assets/images/fruits-splash.webp"
+          alt="Fruits splash"
+          id="fruits-splash"
+        />
       </section>
 
       <!-- FLAVOUR CANS Section -->
-      <section id="flavours-can-section" class="py-5"> <!-- py-5: Bootstrap vertical padding -->
-        <div class="container"> <!-- Bootstrap container for responsive padding/margin -->
-          <div class="row g-4 justify-content-center"> <!-- .row for Bootstrap grid; g-4 gives gap between columns -->
+      <section id="flavours-can-section" class="py-5">
+        <h2 class="visually-hidden">FreshCharge+ Feature Highlights</h2>
+        <!-- py-5: Bootstrap vertical padding -->
+        <div class="container">
+          <!-- Bootstrap container for responsive padding/margin -->
+          <div class="row g-4 justify-content-center">
+            <!-- .row for Bootstrap grid; g-4 gives gap between columns -->
             <!-- CITRUS LIFT flavour card -->
-            <div class="col-md-4"> <!-- Bootstrap column (1/3 width on medium screens and above) -->
-              <div class="card flavour-card flavour-card--citrus"> <!-- Bootstrap card component, custom class for branding -->
-                <div class="flavour-badge">NEW!</div> <!-- Badge overlay for new products -->
+            <div class="col-md-4">
+              <!-- Bootstrap column (1/3 width on medium screens and above) -->
+              <div class="card flavour-card flavour-card--citrus">
+                <!-- Bootstrap card component, custom class for branding -->
+                <div class="flavour-badge">NEW!</div>
+                <!-- Badge overlay for new products -->
                 <img
                   src="assets/images/citrus-lift.webp"
                   class="card-img-top flavour-img"
@@ -179,7 +199,6 @@
                 </div>
               </div>
             </div>
-
 
             <!-- JUICY BERRY flavour card -->
             <div class="col-md-4">
@@ -260,7 +279,8 @@
         <div class="container">
           <!-- Comparison heading ("FreshCharge vs FreshCharge+") -->
           <h2 class="comparison-heading text-center">
-            <span class="brand-text">FreshCharge</span> vs new <span class="brand-text">FreshCharge+</span>
+            <span class="brand-text">FreshCharge</span> vs new
+            <span class="brand-text">FreshCharge+</span>
           </h2>
           <!-- Bootstrap responsive table for product differences -->
           <div class="table-responsive">
@@ -316,16 +336,23 @@
 
       <!-- FLAVOURS FEATURE STRIP: Show feature icons for vegan, hydrating, recyclable (Font Awesome icons) -->
       <section id="flavours-feature-strip">
+        <h2 class="visually-hidden">FreshCharge+ Feature Highlights</h2>
         <div class="feature-item">
           <i class="fa-solid fa-leaf features-icon-fa" aria-hidden="true"></i>
           <p>Vegan</p>
         </div>
         <div class="feature-item">
-          <i class="fa-solid fa-droplet features-icon-fa" aria-hidden="true"></i>
+          <i
+            class="fa-solid fa-droplet features-icon-fa"
+            aria-hidden="true"
+          ></i>
           <p>Hydrating</p>
         </div>
         <div class="feature-item">
-          <i class="fa-solid fa-recycle features-icon-fa" aria-hidden="true"></i>
+          <i
+            class="fa-solid fa-recycle features-icon-fa"
+            aria-hidden="true"
+          ></i>
           <p>100% Recyclable</p>
         </div>
       </section>
@@ -333,12 +360,17 @@
       <!-- COMMUNITY CALL TO ACTION: Banner for user sign-up -->
       <section id="community-call">
         <div id="community-call-text" class="text-center">
-          <h2>Ready to try the improved <span class="brand-text">FreshCharge+</span>?</h2>
+          <h2>
+            Ready to try the improved
+            <span class="brand-text">FreshCharge+</span>?
+          </h2>
           <p class="community-call-subtext">
             Join the community for pre-launch updates and early news.
           </p>
           <div class="hero-buttons">
-            <a href="community.html" class="btn-hero primary-btn">Join the community</a>
+            <a href="community.html" class="btn-hero primary-btn"
+              >Join the community</a
+            >
           </div>
         </div>
       </section>
@@ -361,7 +393,9 @@
           <div class="footer-col footer-links">
             <ul>
               <li><a href="index.html">Home</a></li>
-              <li><a href="flavours.html#flavours-can-section">What’s new</a></li>
+              <li>
+                <a href="flavours.html#flavours-can-section">What’s new</a>
+              </li>
               <li><a href="community.html">Community</a></li>
               <li><a href="contact-faqs.html">Contact/FAQs</a></li>
             </ul>
