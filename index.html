@@ -142,6 +142,10 @@
       </section>
 
       <!-- FEATURE STRIP: Three core features of FreshCharge+ -->
+      <!-- 
+          loading="lazy" tells the browser to only load this image
+          when it's close to scrolling into view.
+          This helps improve performance and Lighthouse scores. -->
       <section id="feature-strip">
         <h2 class="visually-hidden">FreshCharge+ Feature Highlights</h2>
         <div class="feature-item">
@@ -149,7 +153,7 @@
             src="assets/icons/sugar-icon.webp"
             alt="zero sugar icon"
             class="features-icon"
-            id="sugar"
+            loading="lazy"
           />
           <p>No Refined Sugars</p>
         </div>
@@ -158,6 +162,7 @@
             src="assets/icons/caffeine-icon.webp"
             alt="cafe bean icon"
             class="features-icon"
+            loading="lazy"
           />
           <p>Natural Caffeine</p>
         </div>
@@ -166,6 +171,7 @@
             src="assets/icons/drop-icon.webp"
             alt="water drop icon"
             class="features-icon"
+            loading="lazy"
           />
           <p>Hydrating Electrolytes</p>
         </div>
@@ -178,6 +184,7 @@
           src="assets/images/three-cans.webp"
           alt="three cans of freshcharge+"
           id="three-cans-image"
+          loading="lazy"
         />
         <div class="why-freshcharge-text">
           <h2 class="why-freshcharge">
@@ -231,6 +238,7 @@
                 src="assets/images/woman-desk.webp"
                 alt="Woman working on her desk"
                 class="when-to-drink-1 when-to-drink-img"
+                loading="lazy"
               />
               <h4 class="when-to-drink-card-heading">Morning Boost</h4>
               <p class="when-to-drink-card-text">
@@ -243,6 +251,7 @@
                 src="assets/images/gym-guy.webp"
                 alt="Guy on treadmill"
                 class="when-to-drink-2 when-to-drink-img"
+                loading="lazy"
               />
               <h4 class="when-to-drink-card-heading">Pre-Workout</h4>
               <p class="when-to-drink-card-text">
@@ -255,6 +264,7 @@
                 src="assets/images/woman-drinking.webp"
                 alt="Woman drinking FreshCharge+"
                 class="when-to-drink-3 when-to-drink-img"
+                loading="lazy"
               />
               <h4 class="when-to-drink-card-heading">Runs or even Hikes</h4>
               <p class="when-to-drink-card-text">
@@ -267,6 +277,7 @@
                 src="assets/images/old-couple.webp"
                 alt="Old couple playing games"
                 class="when-to-drink-4 when-to-drink-img"
+                loading="lazy"
               />
               <h4 class="when-to-drink-card-heading">Or just to have fun</h4>
               <p class="when-to-drink-card-text">
