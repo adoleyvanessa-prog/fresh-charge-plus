@@ -705,31 +705,43 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      // Smooth scroll helper with a small offset (for mobile comfort)
+      /*
+    scrollWithOffset()
+    -------------------
+    - Helper function that scrolls to an element *smoothly*
+    - Adds a small offset (default: 60–70px) so the element does not stick
+      to the very top of the screen, especially useful on mobile devices.
+  */
       function scrollWithOffset(element, offset = 60) {
-        const y = element.getBoundingClientRect().top + window.scrollY;
+        const y = element.getBoundingClientRect().top + window.scrollY; // Element position
         window.scrollTo({
-          top: y - offset,
+          top: y - offset, // Scroll smoothly with offset spacing
           behavior: "smooth",
         });
       }
 
+      // Select the contact form and success alert box
       const contactForm = document.querySelector(".contact-form");
       const successAlert = document.getElementById("contactSuccessAlert");
 
+      /*
+    Form submission handler:
+    - Prevents page reload (default browser behaviour)
+    - Shows success alert message
+    - Smoothly scrolls user to the alert (important on smaller screens)
+    - Clears input fields after submission
+    - Auto-hides the alert after 4 seconds
+  */
       contactForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent page reload
+        event.preventDefault(); // Stop page from refreshing
 
-        // Show success alert
-        successAlert.classList.remove("visually-hidden");
+        successAlert.classList.remove("visually-hidden"); // Reveal the alert box
 
-        // Scroll to the alert (works on small screens too)
-        scrollWithOffset(successAlert, 70);
+        scrollWithOffset(successAlert, 70); // Move screen to alert smoothly
 
-        // Reset the form fields
-        contactForm.reset();
+        contactForm.reset(); // Clear form fields
 
-        // Auto-hide the alert after 4 seconds
+        // Hide success alert after 4 seconds
         setTimeout(() => {
           successAlert.classList.add("visually-hidden");
         }, 4000);
