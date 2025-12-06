@@ -222,7 +222,7 @@ nav {
   background-image: url("../images/splash-cans-bg.webp"); /* Hero background image */
   background-repeat: no-repeat; /* Don't repeat */
   background-position: center bottom; /* Center image at bottom */
-  background-size: cover; /* Cover section */
+  background-size: 2200px; /* Cover section */
   padding-bottom: 400px; /* Space below hero */
 }
 
