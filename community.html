@@ -118,6 +118,15 @@
       <section id="community-section">
         <div class="container">
           <div class="community-wrapper">
+            <!-- Success alert: hidden until form is submitted -->
+            <div
+              id="communitySuccessAlert"
+              class="alert alert-success visually-hidden"
+              role="alert"
+            >
+              You’re in! Thanks for joining the FreshCharge+ Community.
+            </div>
+
             <!-- Logo branding at top of card -->
             <img
               src="assets/icons/fc-logo.webp"
@@ -354,5 +363,41 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script>
+      // Function to scroll to an element but with space added
+      // so the fixed navbar does NOT cover the alert.
+      function scrollWithOffset(element, offset = 100) {
+        const elementPosition =
+          element.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+          top: elementPosition - offset, // move down by offset amount
+          behavior: "smooth",
+        });
+      }
+
+      const communityForm = document.querySelector(".community-form");
+      const communitySuccessAlert = document.getElementById(
+        "communitySuccessAlert"
+      );
+
+      communityForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // stop page refresh
+
+        // Show alert
+        communitySuccessAlert.classList.remove("visually-hidden");
+
+        // Smooth scroll with offset so navbar doesn't hide the alert
+        scrollWithOffset(communitySuccessAlert, 110);
+        // ↑ adjust this number if needed depending on your nav height
+
+        // Reset form fields
+        communityForm.reset();
+
+        // Auto-hide alert after 4 seconds
+        setTimeout(() => {
+          communitySuccessAlert.classList.add("visually-hidden");
+        }, 4000);
+      });
+    </script>
   </body>
 </html>

@@ -500,6 +500,16 @@
               - Adds any contact-specific layout tweaks from your CSS.
           -->
           <div class="community-wrapper contact-wrapper">
+            <!-- Success alert: hidden until form is submitted -->
+            <div
+              id="contactSuccessAlert"
+              class="alert alert-success visually-hidden"
+              role="alert"
+            >
+              Your message has been sent successfully! We'll get back to you
+              shortly.
+            </div>
+
             <!-- Heading / intro, centered with Bootstrap's .text-center -->
             <div class="text-center mb-4">
               <h2>Contact us</h2>
@@ -694,5 +704,36 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script>
+      // Smooth scroll helper with a small offset (for mobile comfort)
+      function scrollWithOffset(element, offset = 60) {
+        const y = element.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+          top: y - offset,
+          behavior: "smooth",
+        });
+      }
+
+      const contactForm = document.querySelector(".contact-form");
+      const successAlert = document.getElementById("contactSuccessAlert");
+
+      contactForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent page reload
+
+        // Show success alert
+        successAlert.classList.remove("visually-hidden");
+
+        // Scroll to the alert (works on small screens too)
+        scrollWithOffset(successAlert, 70);
+
+        // Reset the form fields
+        contactForm.reset();
+
+        // Auto-hide the alert after 4 seconds
+        setTimeout(() => {
+          successAlert.classList.add("visually-hidden");
+        }, 4000);
+      });
+    </script>
   </body>
 </html>
