@@ -238,7 +238,8 @@ nav {
 }
 
 .fc-logo {
-  width: 230px; /* Logo size */
+  max-width: 210px; /* Logo size */
+  margin-top: 20px; /* Space above logo */
   height: auto; /* Keep aspect ratio */
 }
 
