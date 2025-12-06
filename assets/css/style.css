@@ -1,14 +1,14 @@
 /* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lexend+Exa:wght@100..900&display=swap");
 
-/* Color Scheme Reference:
+/* Main Color Scheme Reference:
 Text in black divs:          #DAE0D0
 Headings / titles / links:   #0B667A
 Paragraphs:                  #1E1E1E
 Main background:             #CEDDBB
 Accent blue (buttons etc.):  #0D9BBC
 Secondary dark text:         #424242
-flavour card colors:
+Flavour card colors:
 berry- #fffbfd 
        #ffe6f1 
        #e4e4ff
@@ -29,11 +29,12 @@ citrus- #fff8e3
 
 /* Set up flex column layout, minimum height, and base font styles for body */
 body {
-  display: flex; /* Use flexbox */
-  flex-direction: column; /* Stack children vertically */
-  min-height: 100vh; /* Ensure body takes full viewport height */
-  font-family: "Lexend Exa", sans-serif; /* Set main font family */
-  font-weight: 400; /* Regular font weight */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Lexend Exa", sans-serif;
+  font-weight: 400;
+  padding-top: 70px; /* Space for fixed navbar */
 }
 
 /* ========== GLOBAL HEADINGS ========== */
@@ -111,6 +112,14 @@ nav {
   display: flex; /* Navbar wrapper uses flex layout */
   align-items: center; /* Vertically center navbar items */
   gap: 24px; /* Horizontal gap between elements */
+}
+
+.navbar { /* Fixed navbar at top */
+  position: fixed;
+  top: 0; /* Stick to top */
+  left: 0;
+  right: 0;
+  z-index: 1100;
 }
 
 .navbar-brand {
@@ -1663,7 +1672,7 @@ footer {
   .flavour-img {
     max-width: 240px;
   }
-/* image dissapears from 768px down */
+/* image disappears from 768px down */
   #fruits-splash {
     display: none;
   }
@@ -1674,6 +1683,9 @@ footer {
   .footer-heading {
     font-size: 12px;
     margin-bottom: 8px;
+  }
+  body {
+    padding-top: 55px; /* fix gap under nav on smaller screens */
   }
   .navbar-brand {
     font-size: 24px;
