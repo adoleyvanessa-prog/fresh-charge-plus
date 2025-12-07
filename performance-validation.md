@@ -40,7 +40,7 @@ These warnings are informational only and do not impact the final website.
 ### CSS Validation Screenshot
 
 <p align="center">
-  <img src="assets/images/css.jpeg" alt="CSS Validation Screenshot" width="800">
+  <img src="assets/screenshots/css.jpeg" alt="CSS Validation Screenshot" width="800">
 </p>
 
 ---
@@ -58,7 +58,7 @@ All four pages returned no HTML errors.
 ### Home Page HTML Validation
 
 <p align="center">
-  <img src="assets/images/index-html.png" alt="Home HTML validation screenshot" width="750">
+  <img src="assets/screenshots/index-html.png" alt="Home HTML validation screenshot" width="750">
 </p>
 
 **Result:** No errors found  
@@ -69,7 +69,7 @@ All four pages returned no HTML errors.
 ### Flavours Page HTML Validation
 
 <p align="center">
-  <img src="assets/images/flavours-html.png" alt="Flavours HTML validation screenshot" width="750">
+  <img src="assets/screenshots/flavours-html.png" alt="Flavours HTML validation screenshot" width="750">
 </p>
 
 **Result:** No errors found  
@@ -80,7 +80,7 @@ All four pages returned no HTML errors.
 ### Community Page HTML Validation
 
 <p align="center">
-  <img src="assets/images/community-html.png" alt="Community HTML validation screenshot" width="750">
+  <img src="assets/screenshots/community-html.png" alt="Community HTML validation screenshot" width="750">
 </p>
 
 **Result:** No errors found  
@@ -91,7 +91,7 @@ All four pages returned no HTML errors.
 ### Contact / FAQs HTML Validation
 
 <p align="center">
-  <img src="assets/images/contact-faqs-html.png" alt="Contact and FAQs HTML validation screenshot" width="750">
+  <img src="assets/screenshots/contact-faqs-html.png" alt="Contact and FAQs HTML validation screenshot" width="750">
 </p>
 
 **Result:** No errors found  
@@ -115,7 +115,7 @@ The screenshots below show the final Lighthouse reports for each page and device
 <h3 id="home-lighthouse-desktop">Home – Desktop Lighthouse</h3>
 
 <p align="center">
-  <img src="assets/images/home-desktop.png" alt="Home page Lighthouse desktop report" width="800">
+  <img src="assets/screenshots/home-desktop.png" alt="Home page Lighthouse desktop report" width="800">
 </p>
 
 **Key scores (Desktop):**
@@ -130,7 +130,7 @@ The screenshots below show the final Lighthouse reports for each page and device
 <h3 id="home-lighthouse-mobile">Home – Mobile Lighthouse</h3>
 
 <p align="center">
-  <img src="assets/images/home-mobile.png" alt="Home page Lighthouse mobile report" width="800">
+  <img src="assets/screenshots/home-mobile.png" alt="Home page Lighthouse mobile report" width="800">
 </p>
 
 **Key scores (Mobile):**
@@ -145,7 +145,7 @@ The screenshots below show the final Lighthouse reports for each page and device
 <h3 id="flavours-lighthouse-desktop">Flavours – Desktop Lighthouse</h3>
 
 <p align="center">
-  <img src="assets/images/flavours-desktop.png" alt="Flavours page Lighthouse desktop report" width="800">
+  <img src="assets/screenshots/flavours-desktop.png" alt="Flavours page Lighthouse desktop report" width="800">
 </p>
 
 **Key scores (Desktop):**
@@ -160,7 +160,7 @@ The screenshots below show the final Lighthouse reports for each page and device
 <h3 id="flavours-lighthouse-mobile">Flavours – Mobile Lighthouse</h3>
 
 <p align="center">
-  <img src="assets/images/flavours-mobile.png" alt="Flavours page Lighthouse mobile report" width="800">
+  <img src="assets/screenshots/flavours-mobile.png" alt="Flavours page Lighthouse mobile report" width="800">
 </p>
 
 **Key scores (Mobile):**
@@ -175,7 +175,7 @@ The screenshots below show the final Lighthouse reports for each page and device
 <h3 id="community-lighthouse-desktop">Community – Desktop Lighthouse</h3>
 
 <p align="center">
-  <img src="assets/images/community-desktop.png" alt="Community page Lighthouse desktop report" width="800">
+  <img src="assets/screenshots/community-desktop.png" alt="Community page Lighthouse desktop report" width="800">
 </p>
 
 **Key scores (Desktop):**
@@ -190,7 +190,7 @@ The screenshots below show the final Lighthouse reports for each page and device
 <h3 id="community-lighthouse-mobile">Community – Mobile Lighthouse</h3>
 
 <p align="center">
-  <img src="assets/images/community-mobile.png" alt="Community page Lighthouse mobile report" width="800">
+  <img src="assets/screenshots/community-mobile.png" alt="Community page Lighthouse mobile report" width="800">
 </p>
 
 **Key scores (Mobile):**
@@ -205,7 +205,7 @@ The screenshots below show the final Lighthouse reports for each page and device
 <h3 id="contact-faqs-lighthouse-desktop">Contact / FAQs – Desktop Lighthouse</h3>
 
 <p align="center">
-  <img src="assets/images/contact-faqs-desktop.png" alt="Contact and FAQs page Lighthouse desktop report" width="800">
+  <img src="assets/screenshots/contact-faqs-desktop.png" alt="Contact and FAQs page Lighthouse desktop report" width="800">
 </p>
 
 **Key scores (Desktop):**
@@ -220,7 +220,7 @@ The screenshots below show the final Lighthouse reports for each page and device
 <h3 id="contact-faqs-lighthouse-mobile">Contact / FAQs – Mobile Lighthouse</h3>
 
 <p align="center">
-  <img src="assets/images/contact-faqs-mobile.png" alt="Contact and FAQs page Lighthouse mobile report" width="800">
+  <img src="assets/screenshots/contact-faqs-mobile.png" alt="Contact and FAQs page Lighthouse mobile report" width="800">
 </p>
 
 **Key scores (Mobile):**
