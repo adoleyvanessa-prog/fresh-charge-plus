@@ -1,53 +1,53 @@
-# FreshCharge+ — Full Screenshot Gallery
+# FreshCharge+ Full Screenshot Gallery
 
 This file contains the complete responsive screenshots for the FreshCharge+ product launch website.  
 Each page is shown at **three breakpoints**:
 
-- **344px – Mobile**
-- **768px – Tablet**
-- **1280px – Desktop**
+- **344px: Mobile**
+- **768px:Tablet**
+- **1280px: Desktop**
 
 ---
 
-## 🏠 Home Page
+## Home Page
 
 ### Desktop (1280px)
 <p align="center">
-  <img src="assets/screenshots/home-1280.png" width="800">
+  <img src="assets/screenshots/home-nest-1280px.png" width="800">
 </p>
 
 ### Tablet (768px)
 <p align="center">
-  <img src="assets/screenshots/home-768.png" width="600">
+  <img src="assets/screenshots/home-ipad-768px.png" width="600">
 </p>
 
 ### Mobile (344px)
 <p align="center">
-  <img src="assets/screenshots/home-344.png" width="300">
+  <img src="assets/screenshots/home-galaxy-344px.png" width="300">
 </p>
 
 ---
 
-## 🍋 Flavours Page
+## Flavours Page
 
 ### Desktop (1280px)
 <p align="center">
-  <img src="assets/screenshots/flavours-1280.png" width="800">
+  <img src="assets/screenshots/flavours-nest-1280px.png" width="800">
 </p>
 
 ### Tablet (768px)
 <p align="center">
-  <img src="assets/screenshots/flavours-768.png" width="600">
+  <img src="assets/screenshots/flavours-ipad-768px.png" width="600">
 </p>
 
 ### Mobile (344px)
 <p align="center">
-  <img src="assets/screenshots/flavours-344.png" width="300">
+  <img src="assets/screenshots/flavours-galaxy-344px.png" width="300">
 </p>
 
 ---
 
-## 👥 Community Page
+## Community Page
 
 ### Desktop (1280px)
 <p align="center">
@@ -66,7 +66,7 @@ Each page is shown at **three breakpoints**:
 
 ---
 
-## 📩 Contact / FAQs Page
+## Contact / FAQs Page
 
 ### Desktop (1280px)
 <p align="center">
